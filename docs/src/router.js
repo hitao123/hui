@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import button from '../../packages/button/index.vue';
-import index from '../../packages/icon/index.vue';
+import button from '../demos/views/button.vue';
+import index from '../demos/views/toast.vue';
 
 Vue.use(Router);
 

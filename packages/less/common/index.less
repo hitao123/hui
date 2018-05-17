@@ -1,0 +1,84 @@
+// 清除浮动
+.clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+//
+.multi-ellipsis {
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+          line-clamp: 2;
+  -webkit-box-orient: vertical;
+          box-orient: vertical
+}
+//
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.color(@name, @color) when (isColor(@color)) {
+  @{name}: @color;
+}
+
+.border-radius(@name, @radius) {
+  @{name}: @radius;
+}
+
+.set-border-by-width(@name, @width) when not(@width = 0) {
+  @{name}: 1px;
+}
+
+.border-width (@reg, @width, @borderStyle) when (mod(@reg , 10) = 1) {
+	.set-border-by-width(border-left-width, @width);
+	border-left-style: @borderStyle;
+}
+
+.border-width (@reg, @width, @borderStyle) when (mod(@reg , 100) >= 10) {
+	.set-border-by-width(border-bottom-width, @width);
+	border-bottom-style: @borderStyle;
+}
+
+.border-width (@reg, @width, @borderStyle) when (mod(@reg , 1000) >= 100) {
+	.set-border-by-width(border-right-width, @width);
+	border-right-style: @borderStyle;
+}
+
+.border-width (@reg, @width, @borderStyle) when (@reg >= 1000) {
+	.set-border-by-width(border-top-width, @width);
+	border-top-style: @borderStyle;
+}
+
+.border-handle(@border-width: 1111, @borderColor: #DDD, @borderStyle: solid, @radius: 0px) {
+	& {
+		position: relative;
+	}
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: "";
+		box-sizing: border-box;
+		pointer-events: none;
+		border: 0;
+		transform-origin: 0 0;
+		-webkit-transform-origin: 0 0;
+		width: 200%;
+		height: 200%;
+		transform: scale(0.5);
+		-webkit-transform: scale(0.5);
+		z-index: 99;
+	}
+	&:before {
+		.border-width(@border-width, @borderColor, @borderStyle);
+		.color(border-color, @borderColor);
+		.border-radius(border-radius, @radius);
+	}
+}
