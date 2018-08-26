@@ -10,10 +10,10 @@ import Button from '../../../packages/button';
 
 export default {
   components: {
-    hButton: Button,
+    hButton: Button
   },
   methods: {
-    handleClick(e) {
+    handleClick (e) {
 
     }
   }

@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import button from '../demos/views/button.vue';
-import index from '../demos/views/toast.vue';
+import button from './views/button';
+import toast from './views/toast';
+import loading from './views/loading'
 
 Vue.use(Router);
 
@@ -9,14 +10,19 @@ export default new Router({
   mode: 'hash',
   routes: [
     {
-      path: '/',
+      path: '/button',
       name: 'button',
       component: button
     },
     {
-      path: '/index',
-      name: 'index',
-      component: index
+      path: '/toast',
+      name: 'toast',
+      component: toast
+    },
+    {
+      path: '/loading',
+      name: 'loading',
+      component: loading
     }
   ]
 })

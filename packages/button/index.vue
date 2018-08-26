@@ -1,19 +1,35 @@
 <template>
   <button
     :type="nativeType"
-    :class="['h-button--' + type, 'h-button--' + size, {'is-plain': plain, 'is-disabled': disabled}]"
-    @click="onClick">
-    <span>
+    :class="bem([
+      type,
+      size,
+      {
+        block,
+        plain,
+        loading,
+        disabled
+      }
+    ])"
+    @click="onClick"
+  >
+    <loading v-if="loading" size="20px" />
+    <span :class="bem('text')">
       <slot>{{ text }}</slot>
     </span>
   </button>
 </template>
 
 <script>
-export default {
+import create from '../../utils/create';
+
+export default create({
   name: 'button',
   props: {
     text: String,
+    block: Boolean,
+    plain: Boolean,
+    loading: Boolean,
     type: {
       type: String,
       default: 'default'
@@ -23,16 +39,12 @@ export default {
       default: 'normal'
     },
     disabled: Boolean,
-    nativeType: String,
-    plain: Boolean,
+    nativeType: String
   },
   methods: {
-    onClick(event) {
+    onClick (event) {
       this.$emit('click', event)
     }
   }
-}
+})
 </script>
-
-
-

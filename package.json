@@ -13,6 +13,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "lodash": "^4.17.10",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
@@ -73,6 +74,9 @@
     "sinon": "^4.0.0",
     "sinon-chai": "^2.8.0",
     "style-loader": "^0.21.0",
+    "stylelint": "^9.5.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^1.0.0",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "uppercamelcase": "^3.0.0",
     "url-loader": "^0.5.8",
