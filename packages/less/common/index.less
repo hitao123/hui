@@ -1,27 +1,26 @@
 // 清除浮动
 .clearfix {
   &::after {
-    content: '';
     display: table;
     clear: both;
+    content: "";
   }
 }
 
 //
 .multi-ellipsis {
-  overflow : hidden;
+  display: box;
+  overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
   -webkit-line-clamp: 2;
-          line-clamp: 2;
-  -webkit-box-orient: vertical;
-          box-orient: vertical
+  line-clamp: 2; /* stylelint-disable-line */
+  box-orient: vertical; /* stylelint-disable-line */
 }
 //
 .ellipsis {
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .color(@name, @color) when (isColor(@color)) {
@@ -37,48 +36,46 @@
 }
 
 .border-width (@reg, @width, @borderStyle) when (mod(@reg , 10) = 1) {
-	.set-border-by-width(border-left-width, @width);
-	border-left-style: @borderStyle;
+  .set-border-by-width(border-left-width, @width);
+  border-left-style: @borderStyle;
 }
 
 .border-width (@reg, @width, @borderStyle) when (mod(@reg , 100) >= 10) {
-	.set-border-by-width(border-bottom-width, @width);
-	border-bottom-style: @borderStyle;
+  .set-border-by-width(border-bottom-width, @width);
+  border-bottom-style: @borderStyle;
 }
 
 .border-width (@reg, @width, @borderStyle) when (mod(@reg , 1000) >= 100) {
-	.set-border-by-width(border-right-width, @width);
-	border-right-style: @borderStyle;
+  .set-border-by-width(border-right-width, @width);
+  border-right-style: @borderStyle;
 }
 
 .border-width (@reg, @width, @borderStyle) when (@reg >= 1000) {
-	.set-border-by-width(border-top-width, @width);
-	border-top-style: @borderStyle;
+  .set-border-by-width(border-top-width, @width);
+  border-top-style: @borderStyle;
 }
 
 .border-handle(@border-width: 1111, @borderColor: #DDD, @borderStyle: solid, @radius: 0px) {
-	& {
-		position: relative;
-	}
-	&:before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		content: "";
-		box-sizing: border-box;
-		pointer-events: none;
-		border: 0;
-		transform-origin: 0 0;
-		-webkit-transform-origin: 0 0;
-		width: 200%;
-		height: 200%;
-		transform: scale(0.5);
-		-webkit-transform: scale(0.5);
-		z-index: 99;
-	}
-	&:before {
-		.border-width(@border-width, @borderColor, @borderStyle);
-		.color(border-color, @borderColor);
-		.border-radius(border-radius, @radius);
-	}
+  & { /* stylelint-disable-line */
+    position: relative;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    content: "";
+    border: 0;
+    transform: scale(.5);
+    transform-origin: 0 0;
+  }
+  &::before { /* stylelint-disable-line */
+    .border-width(@border-width, @borderColor, @borderStyle);
+    .color(border-color, @borderColor);
+    .border-radius(border-radius, @radius);
+  }
 }

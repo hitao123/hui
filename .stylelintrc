@@ -245,6 +245,7 @@
     "value-no-vendor-prefix": true
   },
   "ignoreFiles": [
-    "**/*.js"
+    "**/*.js",
+    "**/*.ttf"
   ]
 }

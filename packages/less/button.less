@@ -2,36 +2,38 @@
 
 .h-button {
   position: relative;
-  padding: 0;
+  box-sizing: border-box;
   display: inline-block;
   height: 45px;
-  line-height: 43px;
-  border-radius: 3px;
-  box-sizing: border-box;
+  padding: 0;
   font-size: 16px;
+  line-height: 43px;
   text-align: center;
-  -webkit-appearance: none;
+  border-radius: 3px;
+  -webkit-appearance: none; /* stylelint-disable-line */
 
   &::before {
-    content: " ";
     position: absolute;
     top: 50%;
     left: 50%;
-    opacity: 0;
     width: 100%;
     height: 100%;
+    content: " ";
+    background-color: @black;
     border: inherit;
     border-color: @black;
-    background-color: @black;
-    border-radius: inherit;/* inherit parent's border radius */
+    border-radius: inherit;
+    opacity: 0;
     transform: translate(-50%, -50%);
+
+    /* inherit parent's border radius */
   }
 
   &:active::before {
     opacity: .3;
   }
 
-  &--unclickable:before {
+  &--unclickable::before {
     display: none;
   }
 
@@ -65,19 +67,19 @@
   }
 
   &--small {
+    min-width: 60px;
     height: 30px;
     padding: 0 8px;
-    min-width: 60px;
     font-size: 12px;
     line-height: 28px;
   }
 
   &--loading {
-    .van-loading {
+    .h-loading {
       display: inline-block;
     }
 
-    .van-button__text {
+    .h-button__text {
       display: none;
     }
   }
@@ -87,30 +89,30 @@
     display: inline-block;
     width: 50px;
     height: 22px;
-    line-height: 20px;
     font-size: 10px;
+    line-height: 20px;
 
-    & + .van-button--mini {
+    & + .h-button--mini {
       margin-left: 5px;
     }
   }
 
   &--block {
-    width: 100%;
     display: block;
+    width: 100%;
   }
 
   &--bottom-action {
     width: 100%;
     height: 50px;
-    line-height: 50px;
-    border: 0;
-    border-radius: 0;
     font-size: 16px;
+    line-height: 50px;
     color: @button-bottom-action-default-color;
     background-color: @button-bottom-action-default-background-color;
+    border: 0;
+    border-radius: 0;
 
-    &.van-button--primary {
+    &.h-button--primary {
       background-color: @button-bottom-action-primary-background-color;
     }
   }
