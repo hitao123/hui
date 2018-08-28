@@ -9,7 +9,7 @@ function buildEntry() {
   const uninstallList = [
     'Lazyload'
   ];
-  const importList = Components.map(item => `import ${uppercamelcase(item)} from './${uppercamelcase(item)}';`);
+  const importList = Components.map(item => `import ${uppercamelcase(item)} from './${item}';`);
   const exportList = Components.map(item => `${uppercamelcase(item)}`);
   const installList = Components.filter(item => !~uninstallList.indexOf(uppercamelcase(item)));
 

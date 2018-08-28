@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import create from '../../utils/create-basic';
+import create from '../utils/create-basic';
 
 export default create({
   name: 'icon',

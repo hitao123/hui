@@ -1,15 +1,15 @@
 // This file is auto gererated by build/bin/build-entry.js
-import Button from './Button';
-import Icon from './Icon';
-import Toast from './Toast';
+import Button from './button';
+import Icon from './icon';
+import Toast from './toast';
 
-const components = [
-  button,
-  icon,
-  toast
+var components = [
+  Button,
+  Icon,
+  Toast
 ];
 
-const install = Vue => {
+var install = Vue => {
   components.forEach(item => {
     Vue.use(item);
   });
