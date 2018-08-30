@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
-    "test": "npm run unit",
+    "test": "npm run unit -- -u",
     "lint": "eslint --ext .js,.vue src test/unit",
     "css-lint": "stylelint .less packages --fix",
     "commit": "git-cz",
@@ -17,10 +17,12 @@
   },
   "dependencies": {
     "lodash": "^4.17.10",
-    "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vue-server-renderer": "^2.5.17"
   },
   "devDependencies": {
+    "@vue/server-test-utils": "^1.0.0-beta.24",
     "@vue/test-utils": "^1.0.0-beta.24",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
@@ -28,6 +30,7 @@
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-jest": "^23.4.2",
     "babel-loader": "^7.1.1",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-plugin-transform-vue-jsx": "^3.5.0",
@@ -82,7 +85,7 @@
     "vue-jest": "^2.6.0",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
-    "vue-template-compiler": "^2.5.2",
+    "vue-template-compiler": "^2.5.17",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",

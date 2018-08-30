@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon component should show Icon 1`] = `<i class="h-icon h-icon-add"></i>`;
+
+exports[`Icon component should show IconDemo 1`] = `
+<div class="demo-icon"><i class="h-icon h-icon-add-o" style="color:undefined;font-size:32px;"></i> <i class="h-icon h-icon-alipay" style="color:undefined;font-size:32px;"></i> <i class="h-icon h-icon-wechat" style="color:undefined;font-size:32px;"></i>
+  <i class="h-icon h-icon-add" style="color:undefined;font-size:32px;"></i> <i class="h-icon h-icon-add2" style="color:undefined;font-size:32px;"></i> <i class="h-icon h-icon-arrow-left" style="color:undefined;font-size:32px;"></i> <i class="h-icon h-icon-close"
+    style="color:undefined;font-size:32px;"></i> <i class="h-icon h-icon-passed" style="color:undefined;font-size:32px;"></i> <i class="h-icon h-icon-info-o" style="color:#f00;font-size:32px;"></i></div>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading component should Loading as Circular 1`] = `<div class="h-loading h-loading--spinner h-loading--white"><span class="h-loading__spinner h-loading__spinner--spinner"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <!----></span></div>`;
+
+exports[`Loading component should Loading as Spinner 1`] = `
+<div>
+  <div class="demo-loading">
+    <h3>circle</h3>
+    <div class="h-loading h-loading--circular h-loading--black"><span class="h-loading__spinner h-loading__spinner--circular"> <svg viewBox="25 25 50 50" class="h-loading__circular"><circle cx="50" cy="50" r="20" fill="none"></circle></svg></span></div>
+    <div class="h-loading h-loading--circular h-loading--white"><span class="h-loading__spinner h-loading__spinner--circular"> <svg viewBox="25 25 50 50" class="h-loading__circular"><circle cx="50" cy="50" r="20" fill="none"></circle></svg></span></div>
+  </div>
+  <div class="demo-loading">
+    <h3>spinning</h3>
+    <div class="h-loading h-loading--spinner h-loading--black"><span class="h-loading__spinner h-loading__spinner--spinner"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <!----></span></div>
+    <div class="h-loading h-loading--spinner h-loading--white"><span class="h-loading__spinner h-loading__spinner--spinner"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <!----></span></div>
+  </div>
+</div>
+`;

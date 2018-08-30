@@ -1,15 +1,22 @@
 import { shallowMount } from '@vue/test-utils';
+import { renderToString } from '@vue/server-test-utils';
 import Button from '../../../../packages/button';
+import ButtonDemo from '../../../../docs/src/views/button';
 
-describe('Loading component', () => {
-  it('should Loading as Circular', () => {
-    const warpper = shallowMount(Button);
-    warpper.find('svg');
-    expect(warpper.find('svg')).toBeDefined();
+describe('Button component', () => {
+  it('should show Button', () => {
+    const warpper = shallowMount(Button, {
+      propsData: {
+        text: 'Button',
+        block: false,
+        plain: true,
+        loading: false
+      }
+    });
+    expect(warpper.html()).toMatchSnapshot();
   });
 
-  it('should Loading as Spinner', () => {
-    const warpper = shallowMount(Button);
-    expect(warpper.find('svg')).toBeDefined();
+  it('should show Button Demo', () => {
+    expect(renderToString(ButtonDemo)).toMatchSnapshot();
   });
 });

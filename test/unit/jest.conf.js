@@ -21,5 +21,6 @@ module.exports = {
     'packages/**/*.{js,vue}',
     '!packages/index.js',
     '!**/node_modules/**'
-  ]
+  ],
+  collectCoverage: true
 };
