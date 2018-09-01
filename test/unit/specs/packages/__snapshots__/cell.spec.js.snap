@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cell component should show Cell 1`] = `
+<div class="h-cell h-hairline">
+  <!---->
+  <div class="h-cell__title"><span>Cell</span>
+    <div class="h-cell__label"></div>
+  </div>
+  <div class="h-cell__value"><span></span></div>
+  <!---->
+</div>
+`;
+
+exports[`Cell component should show CellDemo 1`] = `
+<div>
+  <div class="demo-cell">
+    <div class="h-cell-group h-hairline--top-bottom">
+      <div class="h-cell h-hairline">
+        <!---->
+        <div class="h-cell__title"><span>单元格</span>
+          <div class="h-cell__label"></div>
+        </div>
+        <div class="h-cell__value"><span></span></div>
+        <!---->
+      </div>
+      <div class="h-cell h-hairline">
+        <!---->
+        <div class="h-cell__title"><span>单元格</span>
+          <div class="h-cell__label"></div>
+        </div>
+        <div class="h-cell__value"><span>内容</span></div>
+        <!---->
+      </div>
+    </div>
+  </div>
+  <div class="demo-cell">
+    <div class="h-cell-group h-hairline--top-bottom">
+      <div class="h-cell h-hairline">
+        <!---->
+        <div class="h-cell__title"><span>单元格</span>
+          <div class="h-cell__label">描述</div>
+        </div>
+        <div class="h-cell__value"><span>内容</span></div>
+        <!---->
+      </div>
+    </div>
+  </div>
+</div>
+`;

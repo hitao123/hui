@@ -5,6 +5,7 @@ import button from './views/button';
 import toast from './views/toast';
 import loading from './views/loading';
 import icon from './views/icon';
+import cell from './views/cell';
 
 Vue.use(Router);
 
@@ -35,6 +36,11 @@ export default new Router({
       path: '/icon',
       name: 'icon',
       component: icon
+    },
+    {
+      path: '/cell',
+      name: 'cell',
+      component: cell
     }
   ]
 })

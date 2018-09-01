@@ -1,13 +1,27 @@
 <template>
-  <div></div>
+  <div>
+    <h-button @click="handleClick" text="click" size="large"></h-button>
+  </div>
 </template>
 
 <script>
-export default {
+import Toast from '../../../packages/toast/toast';
+import Button from '../../../packages/button';
 
+export default {
+  components: {
+    [Button.name]: Button
+  },
+  methods: {
+    handleClick () {
+      Toast({
+        message: 'hello'
+      })
+    }
+  }
 }
 </script>
 
-<style>
+<style lang="less">
 
 </style>

@@ -7,75 +7,67 @@
   }
 }
 
-//
+// 多行省略
 .multi-ellipsis {
-  display: box;
+  display: flex;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   line-clamp: 2; /* stylelint-disable-line */
-  box-orient: vertical; /* stylelint-disable-line */
 }
-//
+// 单行省略
 .ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.color(@name, @color) when (isColor(@color)) {
-  @{name}: @color;
+.hairline(@border-color: #e5e5e5) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  content: "";
+  border: 0 solid @border-color;
+  transform: scale(.5);
+  transform-origin: 0 0;
 }
 
-.border-radius(@name, @radius) {
-  @{name}: @radius;
-}
 
-.set-border-by-width(@name, @width) when not(@width = 0) {
-  @{name}: 1px;
-}
-
-.border-width (@reg, @width, @borderStyle) when (mod(@reg , 10) = 1) {
-  .set-border-by-width(border-left-width, @width);
-  border-left-style: @borderStyle;
-}
-
-.border-width (@reg, @width, @borderStyle) when (mod(@reg , 100) >= 10) {
-  .set-border-by-width(border-bottom-width, @width);
-  border-bottom-style: @borderStyle;
-}
-
-.border-width (@reg, @width, @borderStyle) when (mod(@reg , 1000) >= 100) {
-  .set-border-by-width(border-right-width, @width);
-  border-right-style: @borderStyle;
-}
-
-.border-width (@reg, @width, @borderStyle) when (@reg >= 1000) {
-  .set-border-by-width(border-top-width, @width);
-  border-top-style: @borderStyle;
-}
-
-.border-handle(@border-width: 1111, @borderColor: #DDD, @borderStyle: solid, @radius: 0px) {
-  & { /* stylelint-disable-line */
-    position: relative;
-  }
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-    box-sizing: border-box;
-    width: 200%;
-    height: 200%;
-    pointer-events: none;
-    content: "";
-    border: 0;
-    transform: scale(.5);
-    transform-origin: 0 0;
-  }
-  &::before { /* stylelint-disable-line */
-    .border-width(@border-width, @borderColor, @borderStyle);
-    .color(border-color, @borderColor);
-    .border-radius(border-radius, @radius);
+[class*="h-hairline"] {
+  position: relative;
+  &::after {
+    .hairline();
   }
 }
+
+.h-hairline {
+  &--top::after {
+    border-top-width: 1px;
+  }
+
+  &--left::after {
+    border-left-width: 1px;
+  }
+
+  &--right::after {
+    border-right-width: 1px;
+  }
+
+  &--bottom::after {
+    border-bottom-width: 1px;
+  }
+
+  &--top-bottom::after {
+    border-width: 1px 0;
+  }
+
+  &--surround::after {
+    border-width: 1px;
+  }
+}
+
+

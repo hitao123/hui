@@ -1,0 +1,35 @@
+@import "./common/var.less";
+
+.h-cell {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: @text-color;
+
+  &:not(:last-child)::after {
+    right: 0;
+    left: 15px;
+    width: auto;
+    border-bottom-width: 1px;
+    transform: scale(1, .5);
+  }
+
+  &__title,
+  &__value {
+    flex: 1;
+  }
+
+  &__value {
+    text-align: right;
+    vertical-align: middle;
+  }
+
+  &__label {
+    font-size: 12px;
+    line-height: 1.2;
+    color: @gray-darker;
+  }
+}
