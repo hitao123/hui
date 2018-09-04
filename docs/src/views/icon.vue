@@ -23,5 +23,7 @@ export default {
 </script>
 
 <style lang="less">
-
+  .demo-icon {
+    text-align: center;
+  }
 </style>

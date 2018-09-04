@@ -39,5 +39,5 @@ export default create({
 </script>
 
 <style>
- /* stylelint-disable */
+  /* stylelint-disable */
 </style>

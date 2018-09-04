@@ -6,6 +6,8 @@ import toast from './views/toast';
 import loading from './views/loading';
 import icon from './views/icon';
 import cell from './views/cell';
+import popup from './views/popup';
+import tab from './views/tab.vue';
 
 Vue.use(Router);
 
@@ -41,6 +43,16 @@ export default new Router({
       path: '/cell',
       name: 'cell',
       component: cell
+    },
+    {
+      path: '/popup',
+      name: 'popup',
+      component: popup
+    },
+    {
+      path: '/tab',
+      name: 'tab',
+      component: tab
     }
   ]
 })

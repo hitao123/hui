@@ -37,6 +37,14 @@ export default {
         {
           name: 'cell',
           path: '/cell'
+        },
+        {
+          name: 'pop',
+          path: '/pop'
+        },
+        {
+          name: 'tab',
+          path: '/tab'
         }
       ]
     }
