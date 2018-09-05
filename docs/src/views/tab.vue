@@ -24,3 +24,12 @@ export default {
   }
 }
 </script>
+
+<style lang="less">
+  .tab-demo {
+    .h-tab__pane {
+      padding: 30px;
+      background-color: #fff;
+    }
+  }
+</style>

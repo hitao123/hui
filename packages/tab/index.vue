@@ -1,5 +1,5 @@
 <template>
-  <div v-show="isSelected">
+  <div v-show="isSelected" :class="bem('pane')">
     <slot v-if="inited" />
     <div v-if="$slots.title" ref="title">
       <slot name="title"></slot>
@@ -19,6 +19,9 @@ export default create({
       inited: false
     }
   },
+  props: {
+    title: String
+  },
   computed: {
     index() {
       return this.parent.tabs.indexOf(this);
@@ -29,6 +32,12 @@ export default create({
   },
   created() {
     this.findParent('h-tabs');
+  },
+  mounted() {
+    // 这里对父组件的数据进行处理, 这里父节点自己处理了自己的数据,j将列表的内容加入 tabs
+    const { tabs } = this.parent;
+    const index = this.parent.$slots.default.indexOf(this.$vnode);
+    tabs.splice(index === -1 ? tabs.length : index, 0, this);
   },
   watch: {
     'parent.curActive' () {

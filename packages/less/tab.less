@@ -1,0 +1,39 @@
+@import './common/var.less';
+
+.h-tabs {
+  &__nav {
+    display: flex;
+    user-select: none;
+  }
+
+  // &__content {
+
+  // }
+  &__line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: @red;
+  }
+}
+
+.h-tab {
+  box-sizing: border-box;
+  flex: 1;
+  min-width: 0; /* hack for flex ellipsis */
+  padding: 0 5px;
+  line-height: 44px;
+  text-align: center;
+  span {
+    display: block;
+  }
+  &--active {
+    color: @red;
+  }
+  .h-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
