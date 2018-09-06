@@ -1,18 +1,31 @@
 <template>
   <transition name="pop">
-    <div v-show="show" :class="bem(position)"></div>
+    <div v-show="value" :class="bem({ [position]: position })">
+      <slot></slot>
+    </div>
   </transition>
 </template>
 
 <script>
 import create from '../utils/create';
-// import popup from '../utils/mixins/popup';
+import Popup from '../utils/mixins/popup';
 
 export default create({
   name: 'popup',
+  mixins: [Popup],
   props: {
-    show: Boolean,
-    position: String
+    position: {
+      type: String,
+      default: 'center'
+    },
+    overlay: {
+      type: Boolean,
+      default: true
+    },
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: true
+    }
   }
 });
 

@@ -1,11 +1,9 @@
 <template>
   <ul class="index-list">
     <li v-for="(item, index) in list" :key="index" class="h-hairline--top-bottom">
-      <div class="clearfix">
+      <div class="clearfix" @click="handleRoute(item.name)">
         <span class="left">{{ item.name }}</span>
-        <icon name="arrow-left">
-          <router-link :to="item.path"></router-link>
-        </icon>
+        <icon name="arrow-left"></icon>
       </div>
     </li>
   </ul>
@@ -39,8 +37,8 @@ export default {
           path: '/cell'
         },
         {
-          name: 'pop',
-          path: '/pop'
+          name: 'popup',
+          path: '/popup'
         },
         {
           name: 'tab',
@@ -51,6 +49,13 @@ export default {
   },
   components: {
     Icon
+  },
+  methods: {
+    handleRoute(name) {
+      this.$router.push({
+        name: name
+      })
+    }
   }
 }
 </script>
