@@ -11,40 +11,11 @@
 
 <script>
 import Icon from '../../../packages/icon';
-
+import demoList from '../demo.config.js';
 export default {
   data () {
     return {
-      list: [
-        {
-          name: 'button',
-          path: '/button'
-        },
-        {
-          name: 'toast',
-          path: '/toast'
-        },
-        {
-          name: 'loading',
-          path: '/loading'
-        },
-        {
-          name: 'icon',
-          path: '/icon'
-        },
-        {
-          name: 'cell',
-          path: '/cell'
-        },
-        {
-          name: 'popup',
-          path: '/popup'
-        },
-        {
-          name: 'tab',
-          path: '/tab'
-        }
-      ]
+      list: demoList
     }
   },
   components: {
