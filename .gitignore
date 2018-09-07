@@ -1,6 +1,5 @@
 .DS_Store
 node_modules/
-/dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -13,3 +12,26 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+
+
+# gh-pages
+
+build/
+config/
+docs/
+packages/
+static/
+test/
+types/
+.babelrc
+.editorconfig
+.eslint*
+.travis.yml
+.postcss*
+.stylelintrc
+package.json
+package-lock.json
+README.node_modules
+yarn.lock
+./index.html
+
