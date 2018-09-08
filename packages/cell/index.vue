@@ -10,7 +10,9 @@
       </slot>
     </div>
     <div :class="bem('value')">
-      <span v-text="value" />
+      <slot>
+        <span v-text="value" />
+      </slot>
     </div>
     <slot name="right-icon">
       <icon v-if="isLink" :class="bem('right-icon')" name="arrow" />

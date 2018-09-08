@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import toast from './';
+import toast from './toast';
 
 const ToastConstructor = Vue.extend(toast);
 let toastQueue = [];
@@ -59,5 +59,11 @@ let Toast = (options = {}) => {
   });
   return instance;
 }
+
+Toast.install = () => {
+  Vue.use(toast);
+};
+
+Vue.prototype.$toast = Toast;
 
 export default Toast;

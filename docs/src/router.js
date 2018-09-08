@@ -2,6 +2,7 @@
 
 import Vue from 'vue';
 import Router from 'vue-router';
+import Hui from '../../packages';
 import indexList from './views/index';
 
 import actionsheet from './views/actionsheet.vue'
@@ -15,7 +16,7 @@ import popup from './views/popup.vue'
 import tab from './views/tab.vue'
 import toast from './views/toast.vue'
 
-Vue.use(Router);
+Vue.use(Hui).use(Router);
 
 export default new Router({
   mode: 'hash',

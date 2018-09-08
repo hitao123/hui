@@ -34,12 +34,7 @@
 
 <script>
 
-import Button from '../../../packages/button';
-
 export default {
-  components: {
-    hButton: Button
-  },
   methods: {
     handleClick (e) {
 

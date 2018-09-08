@@ -13,12 +13,8 @@
 </template>
 
 <script>
-import Icon from '../../../packages/icon';
 
 export default {
-  components: {
-    [Icon.name]: Icon
-  }
 }
 </script>
 

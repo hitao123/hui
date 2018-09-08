@@ -9,14 +9,8 @@
 </template>
 
 <script>
-import tab from '../../../packages/tab';
-import tabs from '../../../packages/tabs';
 
 export default {
-  components: {
-    [tab.name]: tab,
-    [tabs.name]: tabs
-  },
   data() {
     return {
       active: 1

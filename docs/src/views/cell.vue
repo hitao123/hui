@@ -15,14 +15,8 @@
 </template>
 
 <script>
-import cell from '../../../packages/cell';
-import cellgroup from '../../../packages/cellgroup';
 
 export default {
-  components: {
-    [cell.name]: cell,
-    [cellgroup.name]: cellgroup
-  }
 }
 </script>
 

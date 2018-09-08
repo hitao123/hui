@@ -8,7 +8,7 @@
 import create from '../utils/create';
 
 export default create({
-  name: 'datetimepicker'
+  name: 'swipe'
 })
 </script>
 

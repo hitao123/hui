@@ -7,7 +7,6 @@ import Datetimepicker from './datetimepicker';
 import Dialog from './dialog';
 import Field from './field';
 import Icon from './icon';
-import Less from './less';
 import Loading from './loading';
 import Picker from './picker';
 import Popup from './popup';
@@ -15,7 +14,6 @@ import Swipe from './swipe';
 import Tab from './tab';
 import Tabs from './tabs';
 import Toast from './toast';
-import Utils from './utils';
 
 const components = [
   Actionsheet,
@@ -26,15 +24,13 @@ const components = [
   Dialog,
   Field,
   Icon,
-  Less,
   Loading,
   Picker,
   Popup,
   Swipe,
   Tab,
   Tabs,
-  Toast,
-  Utils
+  Toast
 ];
 
 const install = Vue => {
@@ -43,7 +39,7 @@ const install = Vue => {
   });
 }
 
-if (window !== 'undefined' && window.Vue !== 'undefined') {
+if (window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 
@@ -57,13 +53,15 @@ export {
   Dialog,
   Field,
   Icon,
-  Less,
   Loading,
   Picker,
   Popup,
   Swipe,
   Tab,
   Tabs,
-  Toast,
-  Utils
+  Toast
+};
+
+export default {
+  install
 };

@@ -3,7 +3,7 @@
     <li v-for="(item, index) in list" :key="index" class="h-hairline--top-bottom">
       <div class="clearfix" @click="handleRoute(item.name)">
         <span class="left">{{ item.name }}</span>
-        <icon name="arrow-left"></icon>
+        <icon name="arrow"></icon>
       </div>
     </li>
   </ul>

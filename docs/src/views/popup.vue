@@ -8,14 +8,8 @@
 </template>
 
 <script>
-import Button from '../../../packages/button';
-import Popup from '../../../packages/popup';
 
 export default {
-  components: {
-    [Button.name]: Button,
-    [Popup.name]: Popup
-  },
   data() {
     return {
       show: false

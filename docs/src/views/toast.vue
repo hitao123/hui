@@ -5,16 +5,11 @@
 </template>
 
 <script>
-import Toast from '../../../packages/toast/toast';
-import Button from '../../../packages/button';
 
 export default {
-  components: {
-    [Button.name]: Button
-  },
   methods: {
     handleClick () {
-      Toast({
+      this.$toast({
         message: 'hello'
       })
     }

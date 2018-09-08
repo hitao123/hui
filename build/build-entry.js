@@ -6,19 +6,25 @@ const uppercamelcase = require('uppercamelcase');
 const tips = '// This file is auto gererated by build/bin/build-entry.js';
 
 function buildEntry() {
-  const uninstallList = [
-    'Lazyload'
+  const uninstallComponents = [
+    'less',
+    'utils'
   ];
-  const importList = Components.map(item => `import ${uppercamelcase(item)} from './${item}';`);
-  const exportList = Components.map(item => `${uppercamelcase(item)}`);
-  // const installList = Components.filter(item => { console.log(item, uppercamelcase(item)); uppercamelcase(item) });
+  const importList = Components
+    .filter(item => { return uninstallComponents.indexOf(item) === -1 })
+    .map(item => {
+      return `import ${uppercamelcase(item)} from './${item}';`;
+    })
+  const installList = Components
+    .filter(name => !~uninstallComponents.indexOf(name))
+    .map(name => uppercamelcase(name))
 
 
 const content = `${tips}
 ${importList.join('\n')}
 
 const components = [
-  ${exportList.join(',\n  ')}
+  ${installList.join(',\n  ')}
 ];
 
 const install = Vue => {
@@ -27,13 +33,17 @@ const install = Vue => {
   });
 }
 
-if (window !== 'undefined' && window.Vue !== 'undefined') {
+if (window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 
 export {
   install,
-  ${exportList.join(',\n  ')}
+  ${installList.join(',\n  ')}
+};
+
+export default {
+  install
 };
 `;
 
@@ -72,11 +82,12 @@ function buildRoute() {
 
 import Vue from 'vue';
 import Router from 'vue-router';
+import Hui from '../../packages';
 import indexList from './views/index';
 
 ${demos.join('\n')}
 
-Vue.use(Router);
+Vue.use(Hui).use(Router);
 
 export default new Router({
   mode: 'hash',

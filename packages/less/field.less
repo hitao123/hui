@@ -1,0 +1,58 @@
+@import './common/var.less';
+
+.h-field {
+  .h-cell__title {
+    max-width: 90px;
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+  }
+  &__control {
+    box-sizing: border-box;
+    // display: block;
+    // width: 100%;
+    padding: 0;
+    margin: 0;
+    resize: none;
+    background-color: transparent;
+    border: 0;
+  }
+  &__clear {
+    color: @gray;
+  }
+
+  &__clear,
+  &__icon,
+  &__button {
+    flex-shrink: 0;
+  }
+
+  &__button {
+    padding-left: 10px;
+  }
+
+
+  &__error-message {
+    font-size: 8px;
+    color: @red;
+    text-align: left;
+    &::after {
+      border-color: @red;
+    }
+  }
+
+  &--label {
+    &-center {
+      .h-cell__title {
+        text-align: center;
+      }
+    }
+
+    &-right {
+      .h-cell__title {
+        text-align: right;
+      }
+    }
+  }
+}
