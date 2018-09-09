@@ -8,7 +8,7 @@
     <div class="field-demo">
       <h-cell-group>
         <h-field v-model="value" :label="label" :placeholder="'请输入姓名'" :showClear="true" center>
-          <h-button slot="button" size="small" type="primary">sendSMS</h-button>
+          <h-button slot="button" size="small" type="primary">重新发送</h-button>
         </h-field>
       </h-cell-group>
     </div>

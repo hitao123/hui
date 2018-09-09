@@ -45,6 +45,10 @@ export default create({
       type: Boolean,
       default: true
     },
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: true
+    },
     cancelText: String
   },
   methods: {

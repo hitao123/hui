@@ -20,6 +20,9 @@ export default {
       inited: this.value
     }
   },
+  created() {
+    this._popupId = 'popup-' + context.plusKey('id');
+  },
   mounted() {
     if (this.value) {
       this.open();
@@ -27,17 +30,24 @@ export default {
   },
   methods: {
     open() {
-      if (this.$isServer) {
+      if (this.$isServer || this.opened) {
         return;
       }
       if (this.zIndex !== undefined) {
         context.zIndex = this.zIndex;
       }
-
+      this.opened = true;
       this.renderOverlay();
     },
     close() {
+      console.log(this.opened, '???')
+      if (!this.opened) {
+        return;
+      }
 
+      this.opened = false;
+      manager.close(this._popupId);
+      this.$emit('input', false);
     },
     renderOverlay() {
       if (this.overlay) {
@@ -59,6 +69,9 @@ export default {
     value(val) {
       this.inited = this.inited || this.value;
       this[val ? 'open' : 'close']();
+    },
+    overlay() {
+      this.renderOverlay();
     }
   }
 }

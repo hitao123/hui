@@ -9,8 +9,17 @@ export default {
     context.stack.push({ vm, config, targetNode });
     this.update();
   },
-  close() {
+  close(id) {
+    const { stack } = context;
 
+    if (stack.length) {
+      if (context.top.vm._popupId === id) {
+        stack.pop();
+        this.update();
+      } else {
+        context.stack = stack.filter(item => item.vm._popupId !== id);
+      }
+    }
   },
   update() {
     let { modal } = context;
@@ -18,6 +27,7 @@ export default {
       modal = new (Vue.extend(Modal))({
         el: document.createElement('div')
       });
+      modal.$on('click', this.onClick);
       context.modal = modal;
     }
 
@@ -28,17 +38,17 @@ export default {
     if (context.top) {
       const { targetNode, config } = context.top;
       targetNode.appendChild(modal.$el);
-      console.log(modal, config, typeof modal);
       Object.assign(modal, {
+        config,
         visible: true
       });
-      // Object.assign(modal, {
-      //   ...config,
-      //   visible: true
-      // });
     }
   },
   onClick() {
-
+    if (context.top) {
+      const { vm } = context.top;
+      vm.$emit('click-overlay');
+      vm.closeOnClickOverlay && vm.$emit('input', false);
+    }
   }
 }

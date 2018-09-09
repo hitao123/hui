@@ -8,11 +8,11 @@
     }],
     "stage-2"
   ],
-  "plugins": ["transform-vue-jsx", "transform-runtime"],
+  "plugins": ["transform-vue-jsx", "transform-runtime", "transform-object-rest-spread"],
   "env": {
     "test": {
       "presets": ["env", "stage-2"],
-      "plugins": ["transform-vue-jsx", "syntax-dynamic-import", "transform-object-assign"]
+      "plugins": ["transform-vue-jsx", "syntax-dynamic-import", "transform-object-assign", "transform-object-rest-spread"]
     }
   }
 }

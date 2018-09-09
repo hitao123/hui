@@ -25,5 +25,8 @@ export default {
 <style lang="less">
   .demo-popup {
     text-align: center;
+    .h-popup {
+      padding: 30px 50px;
+    }
   }
 </style>
