@@ -8,12 +8,14 @@ import Dialog from './dialog';
 import Field from './field';
 import Icon from './icon';
 import Loading from './loading';
+import NoticeBar from './notice-bar';
 import Picker from './picker';
 import Popup from './popup';
 import Swipe from './swipe';
 import Tab from './tab';
 import Tabs from './tabs';
 import Toast from './toast';
+import Uploader from './uploader';
 
 const components = [
   Actionsheet,
@@ -25,12 +27,14 @@ const components = [
   Field,
   Icon,
   Loading,
+  NoticeBar,
   Picker,
   Popup,
   Swipe,
   Tab,
   Tabs,
-  Toast
+  Toast,
+  Uploader
 ];
 
 const install = Vue => {
@@ -54,12 +58,14 @@ export {
   Field,
   Icon,
   Loading,
+  NoticeBar,
   Picker,
   Popup,
   Swipe,
   Tab,
   Tabs,
-  Toast
+  Toast,
+  Uploader
 };
 
 export default {

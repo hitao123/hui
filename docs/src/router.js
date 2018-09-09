@@ -10,11 +10,12 @@ import button from './views/button.vue'
 import cell from './views/cell.vue'
 import field from './views/field.vue'
 import icon from './views/icon.vue'
-import index from './views/index.vue'
 import loading from './views/loading.vue'
+import noticebar from './views/noticebar.vue'
 import popup from './views/popup.vue'
 import tab from './views/tab.vue'
 import toast from './views/toast.vue'
+import uploader from './views/uploader.vue'
 
 Vue.use(Hui).use(Router);
 
@@ -47,14 +48,14 @@ export default new Router({
       'component': icon
     },
     {
-      'path': '/index',
-      'name': 'index',
-      'component': index
-    },
-    {
       'path': '/loading',
       'name': 'loading',
       'component': loading
+    },
+    {
+      'path': '/noticebar',
+      'name': 'noticebar',
+      'component': noticebar
     },
     {
       'path': '/popup',
@@ -72,8 +73,13 @@ export default new Router({
       'component': toast
     },
     {
+      'path': '/uploader',
+      'name': 'uploader',
+      'component': uploader
+    },
+    {
       'path': '/',
-      'name': index,
+      'name': 'index',
       'component': indexList
     }
   ]

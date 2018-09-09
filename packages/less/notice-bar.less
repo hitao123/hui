@@ -1,0 +1,52 @@
+@import "./common/var.less";
+
+.h-notice-bar {
+  position: relative;
+  display: flex;
+  padding: 9px 15px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: @orange;
+  background-color: #fff7cc;
+  &__left-icon {
+    box-sizing: border-box;
+    min-width: 20px;
+    height: 18px;
+    padding-top: 1px;
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  // &__right-icon {
+  //   position: absolute;
+  //   top: 10px;
+  //   right: 10px;
+  //   font-size: 15px;
+  //   line-height: 1;
+  // }
+
+  &__wrap {
+    position: relative;
+    flex: 1;
+    height: 18px;
+    overflow: hidden;
+  }
+  &__content {
+    position: absolute;
+    white-space: nowrap;
+  }
+
+  &__play {
+    animation: h-notice-bar-play linear both;
+  }
+
+  &__play--infinite {
+    animation: h-notice-bar-play linear infinite both;
+  }
+}
+
+@keyframes h-notice-bar-play {
+  to { transform: translate3d(-100%, 0, 0); }
+}

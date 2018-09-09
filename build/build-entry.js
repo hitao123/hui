@@ -54,11 +54,13 @@ function buildRoute() {
   const dir = path.join(__dirname, '../docs/src/views');
   const demos = fs.readdirSync(dir)
   .filter(name => ~name.indexOf('.vue'))
+  .filter(name => name.indexOf('index.vue'))
   .map(name => name.replace('.vue', ''))
   .map(name => `import ${name} from './views/${name}.vue'`)
 
   const demosImport = fs.readdirSync(dir)
   .filter(name => ~name.indexOf('.vue'))
+  .filter(name => name.indexOf('index.vue'))
   .map(name => name.replace('.vue', ''))
   .map(name => {
     return `{
@@ -71,7 +73,7 @@ function buildRoute() {
   // 添加首页 index route
   demosImport.push(`{
       'path': '/',
-      'name': index,
+      'name': 'index',
       'component': indexList
     }`);
 
@@ -104,6 +106,7 @@ function buildRouteList() {
   const dir = path.join(__dirname, '../docs/src/views');
   const demoList = fs.readdirSync(dir)
   .filter(name => ~name.indexOf('.vue'))
+  .filter(name => name.indexOf('index.vue'))
   .map(name => name.replace('.vue', ''))
   .map(name => {
     return `{

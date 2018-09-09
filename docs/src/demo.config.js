@@ -21,12 +21,12 @@ export default [
     'name': 'icon'
   },
   {
-    'path': '/index',
-    'name': 'index'
-  },
-  {
     'path': '/loading',
     'name': 'loading'
+  },
+  {
+    'path': '/noticebar',
+    'name': 'noticebar'
   },
   {
     'path': '/popup',
@@ -39,5 +39,9 @@ export default [
   {
     'path': '/toast',
     'name': 'toast'
+  },
+  {
+    'path': '/uploader',
+    'name': 'uploader'
   }
 ];

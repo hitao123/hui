@@ -8,5 +8,8 @@
 - [x] Tab 组件
 - [x] Popup 组件
 - [x] Cell 组件
+- [x] ActionSheet 组件
+- [x] uploader 组件
+- [x] noticebar 组件
 
 inspired by [vant](https://youzan.github.io/vant/#/zh-CN/intro)
