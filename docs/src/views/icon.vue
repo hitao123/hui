@@ -1,25 +1,36 @@
 <template>
   <div class="demo-icon">
-    <h-icon name="add-o" size="32px"></h-icon>
-    <h-icon name="alipay" size="32px"></h-icon>
-    <h-icon name="wechat" size="32px"></h-icon>
-    <h-icon name="add" size="32px"></h-icon>
-    <h-icon name="add2" size="32px"></h-icon>
-    <h-icon name="arrow-left" size="32px"></h-icon>
-    <h-icon name="close" size="32px"></h-icon>
-    <h-icon name="passed" size="32px"></h-icon>
-    <h-icon name="info-o" size="32px" color="#f00"></h-icon>
+    <div class="item-icon" v-for="(item, index) in iconList" :key="index">
+      <h-icon :name="item.name" size="32px"></h-icon>
+      <span>{{ item.name }}</span>
+    </div>
   </div>
 </template>
 
 <script>
+import iconList from '../config/config.icon.js';
 
 export default {
+  data() {
+    return {
+      iconList
+    }
+  }
 }
 </script>
 
 <style lang="less">
   .demo-icon {
     text-align: center;
+    .item-icon {
+      display: inline-block;
+      padding: 10px 20px;
+      span {
+        display: block;
+      }
+    }
+    .h-icon {
+      display: block;
+    }
   }
 </style>

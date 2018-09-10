@@ -13,6 +13,8 @@ import icon from './views/icon.vue'
 import loading from './views/loading.vue'
 import noticebar from './views/noticebar.vue'
 import popup from './views/popup.vue'
+import radio from './views/radio.vue'
+import rate from './views/rate.vue'
 import tab from './views/tab.vue'
 import toast from './views/toast.vue'
 import uploader from './views/uploader.vue'
@@ -61,6 +63,16 @@ export default new Router({
       'path': '/popup',
       'name': 'popup',
       'component': popup
+    },
+    {
+      'path': '/radio',
+      'name': 'radio',
+      'component': radio
+    },
+    {
+      'path': '/rate',
+      'name': 'rate',
+      'component': rate
     },
     {
       'path': '/tab',

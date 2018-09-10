@@ -11,7 +11,7 @@ export default {
     overlay: Boolean,
     // 遮罩样式
     overlayStyle: Object,
-    // 遮罩样式
+    // 遮罩样式名称
     overlayClass: Object,
     zIndex: [String, Number]
   },
@@ -29,6 +29,7 @@ export default {
     }
   },
   methods: {
+    // 打开遮罩层
     open() {
       if (this.$isServer || this.opened) {
         return;
@@ -39,8 +40,8 @@ export default {
       this.opened = true;
       this.renderOverlay();
     },
+    // 关闭遮罩层
     close() {
-      console.log(this.opened, '???')
       if (!this.opened) {
         return;
       }
@@ -66,10 +67,12 @@ export default {
     }
   },
   watch: {
+    // 控制外层显示
     value(val) {
       this.inited = this.inited || this.value;
       this[val ? 'open' : 'close']();
     },
+    // 控制遮罩显示
     overlay() {
       this.renderOverlay();
     }

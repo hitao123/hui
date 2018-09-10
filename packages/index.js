@@ -11,6 +11,12 @@ import Loading from './loading';
 import NoticeBar from './notice-bar';
 import Picker from './picker';
 import Popup from './popup';
+import PullRefresh from './pull-refresh';
+import Radio from './radio';
+import RadioGroup from './radio-group';
+import Rate from './rate';
+import Step from './step';
+import Stepper from './stepper';
 import Swipe from './swipe';
 import Tab from './tab';
 import Tabs from './tabs';
@@ -30,6 +36,12 @@ const components = [
   NoticeBar,
   Picker,
   Popup,
+  PullRefresh,
+  Radio,
+  RadioGroup,
+  Rate,
+  Step,
+  Stepper,
   Swipe,
   Tab,
   Tabs,
@@ -61,6 +73,12 @@ export {
   NoticeBar,
   Picker,
   Popup,
+  PullRefresh,
+  Radio,
+  RadioGroup,
+  Rate,
+  Step,
+  Stepper,
   Swipe,
   Tab,
   Tabs,

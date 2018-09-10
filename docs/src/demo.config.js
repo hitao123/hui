@@ -33,6 +33,14 @@ export default [
     'name': 'popup'
   },
   {
+    'path': '/radio',
+    'name': 'radio'
+  },
+  {
+    'path': '/rate',
+    'name': 'rate'
+  },
+  {
     'path': '/tab',
     'name': 'tab'
   },
