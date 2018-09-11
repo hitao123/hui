@@ -8,13 +8,19 @@ import indexList from './views/index';
 import actionsheet from './views/actionsheet.vue'
 import button from './views/button.vue'
 import cell from './views/cell.vue'
+import dialog from './views/dialog.vue'
 import field from './views/field.vue'
 import icon from './views/icon.vue'
 import loading from './views/loading.vue'
 import noticebar from './views/noticebar.vue'
+import picker from './views/picker.vue'
 import popup from './views/popup.vue'
+import pullrefresh from './views/pullrefresh.vue'
 import radio from './views/radio.vue'
 import rate from './views/rate.vue'
+import step from './views/step.vue'
+import stepper from './views/stepper.vue'
+import swipe from './views/swipe.vue'
 import tab from './views/tab.vue'
 import toast from './views/toast.vue'
 import uploader from './views/uploader.vue'
@@ -40,6 +46,11 @@ export default new Router({
       'component': cell
     },
     {
+      'path': '/dialog',
+      'name': 'dialog',
+      'component': dialog
+    },
+    {
       'path': '/field',
       'name': 'field',
       'component': field
@@ -60,9 +71,19 @@ export default new Router({
       'component': noticebar
     },
     {
+      'path': '/picker',
+      'name': 'picker',
+      'component': picker
+    },
+    {
       'path': '/popup',
       'name': 'popup',
       'component': popup
+    },
+    {
+      'path': '/pullrefresh',
+      'name': 'pullrefresh',
+      'component': pullrefresh
     },
     {
       'path': '/radio',
@@ -73,6 +94,21 @@ export default new Router({
       'path': '/rate',
       'name': 'rate',
       'component': rate
+    },
+    {
+      'path': '/step',
+      'name': 'step',
+      'component': step
+    },
+    {
+      'path': '/stepper',
+      'name': 'stepper',
+      'component': stepper
+    },
+    {
+      'path': '/swipe',
+      'name': 'swipe',
+      'component': swipe
     },
     {
       'path': '/tab',

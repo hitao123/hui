@@ -1,0 +1,24 @@
+@import "./common/var.less";
+
+.h-swipe {
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+
+  &-item {
+    float: left;
+    height: 100%;
+  }
+  &__track {
+    height: 100%;
+
+  }
+  &__indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+  }
+}
+

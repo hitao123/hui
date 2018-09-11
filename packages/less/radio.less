@@ -1,15 +1,21 @@
 @import '../less/common/var.less';
 
-@van-radio-size: 20px;
+@radio-size: 20px;
 
 .h-radio {
   overflow: hidden;
   user-select: none;
 
+  &__input,
+  &__label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
   &__input {
     position: relative;
     height: 1em;
-    font-size: @van-radio-size;
+    font-size: @radio-size;
   }
 
   &__control {
@@ -20,5 +26,30 @@
     height: 100%;
     margin: 0;
     opacity: 0;
+  }
+  &__label {
+    margin-left: 10px;
+    line-height: @radio-size;
+  }
+  .h-icon {
+    width: 1em;
+    font-size: inherit;
+    pointer-events: none;
+  }
+
+  .h-icon-checked {
+    color: @green;
+  }
+
+  .h-icon-check {
+    color: @gray-dark;
+  }
+
+  &--disabled {
+    .h-icon {
+      color: @gray-light;
+      background-color: @background-color;
+      border-radius: 100%;
+    }
   }
 }

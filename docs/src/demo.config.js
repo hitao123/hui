@@ -13,6 +13,10 @@ export default [
     'name': 'cell'
   },
   {
+    'path': '/dialog',
+    'name': 'dialog'
+  },
+  {
     'path': '/field',
     'name': 'field'
   },
@@ -29,8 +33,16 @@ export default [
     'name': 'noticebar'
   },
   {
+    'path': '/picker',
+    'name': 'picker'
+  },
+  {
     'path': '/popup',
     'name': 'popup'
+  },
+  {
+    'path': '/pullrefresh',
+    'name': 'pullrefresh'
   },
   {
     'path': '/radio',
@@ -39,6 +51,18 @@ export default [
   {
     'path': '/rate',
     'name': 'rate'
+  },
+  {
+    'path': '/step',
+    'name': 'step'
+  },
+  {
+    'path': '/stepper',
+    'name': 'stepper'
+  },
+  {
+    'path': '/swipe',
+    'name': 'swipe'
   },
   {
     'path': '/tab',

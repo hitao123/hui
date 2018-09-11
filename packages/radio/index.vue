@@ -1,5 +1,5 @@
 <template>
-  <div :class="bem('')">
+  <div :class="bem({ disabled: isDisabled })" @click="$emit('click')">
     <span :class="bem('input')">
       <input type="radio"
         :value="name"
@@ -23,8 +23,9 @@ export default create({
   name: 'radio',
   mixins: [findParent],
   props: {
-    name: String
-
+    name: String,
+    value: null,
+    disabled: Boolean
   },
   computed: {
     currentValue: {
@@ -47,7 +48,9 @@ export default create({
   },
   methods: {
     onClickLabel() {
-
+      if (!this.isDisabled) {
+        this.currentValue = this.name;
+      }
     }
   }
 });

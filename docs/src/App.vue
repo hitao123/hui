@@ -12,7 +12,7 @@ export default {
 
 <style>
 #app { /* stylelint-disable-line */
-  margin-top: 60px;
+  margin-top: 20px;
   font-family: "PingFang SC", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

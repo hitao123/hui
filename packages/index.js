@@ -18,6 +18,7 @@ import Rate from './rate';
 import Step from './step';
 import Stepper from './stepper';
 import Swipe from './swipe';
+import SwipeItem from './swipe-item';
 import Tab from './tab';
 import Tabs from './tabs';
 import Toast from './toast';
@@ -43,6 +44,7 @@ const components = [
   Step,
   Stepper,
   Swipe,
+  SwipeItem,
   Tab,
   Tabs,
   Toast,
@@ -80,6 +82,7 @@ export {
   Step,
   Stepper,
   Swipe,
+  SwipeItem,
   Tab,
   Tabs,
   Toast,
