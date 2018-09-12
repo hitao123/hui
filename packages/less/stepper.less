@@ -1,0 +1,78 @@
+@import "./common/var.less";
+
+.h-stepper {
+  font-size: 0;
+  &__minus,
+  &__plus {
+    position: relative;
+    box-sizing: border-box;
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+    vertical-align: middle;
+    background-color: @white;
+    border: 1px solid @border-color;
+
+    &::before {
+      width: 9px;
+      height: 1px;
+    }
+
+    &::after {
+      width: 1px;
+      height: 9px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      content: " ";
+      background-color: #6c6c6c;
+    }
+    &--disabled {
+      background-color: @background-color;
+
+      &::before,
+      &::after {
+        background-color: @gray;
+      }
+    }
+  }
+
+  &__input {
+    box-sizing: content-box;
+    width: 33px;
+    height: 26px;
+    padding: 1px;
+    font-size: 14px;
+    color: @gray-darker;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid @border-color;
+    border-width: 1px 0;
+    border-radius: 0;
+    -webkit-appearance: none; /* stylelint-disable-line */
+    &[disabled] {
+      color: @gray;
+      background-color: @background-color;
+    }
+  }
+
+  input[type="number"]::-webkit-outer-spin-button { /* stylelint-disable-line */
+    -webkit-appearance: none; /* stylelint-disable-line */
+    margin: 0;
+  }
+
+  &__minus {
+    // border-radius: 2px 0 0 2px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
