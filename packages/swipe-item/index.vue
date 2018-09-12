@@ -20,7 +20,7 @@ export default create({
 
       return {
         width: `${computedWidth}px`,
-        height: `${vertical} ? ${computedHeight} : 100%`,
+        height: vertical ? computedHeight + 'px' : '100%',
         transform: `translate${vertical ? 'Y' : 'X'}(${this.offset}px)`
       };
     }

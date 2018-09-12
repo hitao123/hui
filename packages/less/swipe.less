@@ -1,5 +1,7 @@
 @import "./common/var.less";
 
+@swipe-indicator: 10px;
+
 .h-swipe {
   position: relative;
   overflow: hidden;
@@ -20,5 +22,17 @@
     display: flex;
     transform: translateX(-50%);
   }
-}
+  &__indicator {
+    width: @swipe-indicator;
+    height: @swipe-indicator;
+    background-color: @gray-dark;
+    border-radius: 100%;
+    &:not(:last-child) {
+      margin-right: @swipe-indicator;
+    }
 
+    &--active {
+      background-color: @orange;
+    }
+  }
+}
