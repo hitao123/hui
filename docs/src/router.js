@@ -18,6 +18,7 @@ import popup from './views/popup.vue'
 import pullrefresh from './views/pullrefresh.vue'
 import radio from './views/radio.vue'
 import rate from './views/rate.vue'
+import smsinput from './views/smsinput.vue'
 import step from './views/step.vue'
 import stepper from './views/stepper.vue'
 import swipe from './views/swipe.vue'
@@ -94,6 +95,11 @@ export default new Router({
       'path': '/rate',
       'name': 'rate',
       'component': rate
+    },
+    {
+      'path': '/smsinput',
+      'name': 'smsinput',
+      'component': smsinput
     },
     {
       'path': '/step',

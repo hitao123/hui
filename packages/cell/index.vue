@@ -9,19 +9,20 @@
         <div v-text="label" :class="bem('label')"></div>
       </slot>
     </div>
-    <div :class="bem('value')">
+    <div :class="bem('value', { alone: !$slots.title && !title })">
       <slot>
         <span v-text="value" />
       </slot>
     </div>
     <slot name="right-icon">
-      <icon v-if="isLink" :class="bem('right-icon')" name="arrow" />
+      <icon v-if="isLink" :class="bem('right-icon', arrowDirection)" name="arrow" />
     </slot>
   </div>
 </template>
 
 <script>
 import create from '../utils/create-basic';
+import Icon from '../icon';
 export default create({
   name: 'cell',
   props: {
@@ -35,7 +36,11 @@ export default create({
     border: {
       type: Boolean,
       default: true
-    }
+    },
+    arrowDirection: String
+  },
+  components: {
+    Icon
   }
 })
 </script>

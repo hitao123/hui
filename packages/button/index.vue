@@ -1,6 +1,7 @@
 <template>
   <button
     :type="nativeType"
+    :disabled="disabled"
     :class="bem([
       type,
       size,
@@ -13,7 +14,7 @@
     ])"
     @click="onClick"
   >
-    <loading v-if="loading" size="20px" />
+    <loading v-if="loading" size="20px" :color="type === 'default' ? 'black' : 'white'" />
     <span :class="bem('text')">
       <slot>{{ text }}</slot>
     </span>
@@ -43,7 +44,9 @@ export default create({
   },
   methods: {
     onClick (event) {
-      this.$emit('click', event)
+      if (!this.disabled && !this.loading) {
+        this.$emit('click', event)
+      }
     }
   }
 })

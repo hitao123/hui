@@ -25,7 +25,7 @@ import create from '../utils/create';
 export default create({
   name: 'stepper',
   props: {
-    value: null,
+    value: null, // null 匹配任何类型
     disableInput: {
       type: Boolean,
       default: false

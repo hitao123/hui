@@ -7,6 +7,7 @@
   width: 100%;
   padding: 10px 15px;
   font-size: 14px;
+  line-height: 24px;
   color: @text-color;
 
   &:not(:last-child)::after {
@@ -23,8 +24,13 @@
   }
 
   &__value {
+    position: relative;
+    overflow: hidden;
     text-align: right;
     vertical-align: middle;
+    &--alone {
+      text-align: left;
+    }
   }
 
   &__label {
@@ -32,6 +38,27 @@
     line-height: 1.2;
     color: @gray-darker;
   }
+
+  &__left-icon {
+    margin-right: 5px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__right-icon {
+    margin-left: 5px;
+    font-size: 12px;
+    line-height: 24px;
+
+    &--up::before {
+      transform: rotate(-90deg);
+    }
+
+    &--down::beofre { /* stylelint-disable */
+      transform: rotate(90deg);
+    }
+  }
+
   &--center {
     align-items: center;
   }

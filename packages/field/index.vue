@@ -2,7 +2,10 @@
   <cell
     :center="center"
     :title="label"
-    :class="bem('')"
+    :class="bem({
+      disabled: $attrs.disabled,
+      'min-height': type === 'textarea' && !autosize
+    })"
   >
     <div :class="bem('body')">
       <textarea v-if="type === 'textarea'"
@@ -74,16 +77,48 @@ export default create({
     },
     errorMessage: {
       type: String
-    }
+    },
+    autosize: Boolean
   },
   data() {
     return {
 
     }
   },
+  watch: {
+    value() {
+      this.$nextTick(this.adjustSize);
+    }
+  },
+  mounted() {
+    this.$nextTick(this.adjustSize);
+  },
   methods: {
     onClickIcon() {
 
+    },
+    adjustSize() {
+      const { input } = this.$refs;
+      if (!(this.type === 'textarea' && this.autosize) || !input) {
+        return;
+      }
+
+      input.style.height = 'auto';
+
+      let height = input.scrollHeight;
+      // if (isObj(this.autosize)) {
+      //   const { maxHeight, minHeight } = this.autosize;
+      //   if (maxHeight) {
+      //     height = Math.min(height, maxHeight);
+      //   }
+      //   if (minHeight) {
+      //     height = Math.max(height, minHeight);
+      //   }
+      // }
+
+      if (height) {
+        input.style.height = height + 'px';
+      }
     }
   }
 });

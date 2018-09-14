@@ -9,13 +9,16 @@ let instance = new DialogConstructor({
 
 const Dialog = options => {
   return new Promise((resolve, reject) => {
+    instance.$on('input', value => {
+      instance.value = value;
+    });
+
     document.body.appendChild(instance.$el);
 
     Object.assign(instance, {
       resolve,
-      reject,
-      ...options
-    });
+      reject
+    }, options);
   })
 }
 
@@ -37,13 +40,16 @@ Dialog.defaultOptions = {
   }
 };
 
-Dialog.alert = options => Dialog({
-  ...options
-});
+Dialog.alert = options => Dialog(
+  Object.assign({}, Dialog.currentOptions, options)
+  // 下面这种方式 即使在 babel 有配置依旧不能使用该操作符，坑了一天依旧没解决
+  // ...Dialog.currentOptions,
+  // ...options
+);
 
-Dialog.confirm = options => Dialog({
-  ...options
-});
+Dialog.confirm = options => Dialog(
+  Object.assign({}, Dialog.currentOptions, options)
+);
 
 Dialog.close = () => {
   if (instance) {
@@ -55,6 +61,11 @@ Dialog.install = () => {
   Vue.use(HDialog);
 }
 
+Dialog.resetDefaultOptions = () => {
+  Dialog.currentOptions = Object.assign({}, Dialog.defaultOptions);
+};
+
 Vue.prototype.$dialog = Dialog;
+Dialog.resetDefaultOptions();
 
 export default Dialog;

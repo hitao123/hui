@@ -15,8 +15,10 @@ import PullRefresh from './pull-refresh';
 import Radio from './radio';
 import RadioGroup from './radio-group';
 import Rate from './rate';
+import SmsInput from './sms-input';
 import Step from './step';
 import Stepper from './stepper';
+import Steps from './steps';
 import Swipe from './swipe';
 import SwipeItem from './swipe-item';
 import Tab from './tab';
@@ -41,8 +43,10 @@ const components = [
   Radio,
   RadioGroup,
   Rate,
+  SmsInput,
   Step,
   Stepper,
+  Steps,
   Swipe,
   SwipeItem,
   Tab,
@@ -79,8 +83,10 @@ export {
   Radio,
   RadioGroup,
   Rate,
+  SmsInput,
   Step,
   Stepper,
+  Steps,
   Swipe,
   SwipeItem,
   Tab,

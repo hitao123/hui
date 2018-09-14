@@ -53,6 +53,10 @@ export default [
     'name': 'rate'
   },
   {
+    'path': '/smsinput',
+    'name': 'smsinput'
+  },
+  {
     'path': '/step',
     'name': 'step'
   },
