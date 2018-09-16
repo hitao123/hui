@@ -54,12 +54,28 @@
       transform: rotate(-90deg);
     }
 
-    &--down::beofre { /* stylelint-disable */
+    &--down::before { /* stylelint-disable */
       transform: rotate(90deg);
     }
   }
 
   &--center {
     align-items: center;
+  }
+
+  &--required {
+    &::before {
+      position: absolute;
+      left: 7px;
+      font-size: 14px;
+      color: @red;
+      content: "*";
+    }
+  }
+
+  &--clickable {
+    &:active {
+      background-color: @active-color;
+    }
   }
 }

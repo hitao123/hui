@@ -8,6 +8,7 @@ import indexList from './views/index';
 import actionsheet from './views/actionsheet.vue'
 import button from './views/button.vue'
 import cell from './views/cell.vue'
+import col from './views/col.vue'
 import dialog from './views/dialog.vue'
 import field from './views/field.vue'
 import icon from './views/icon.vue'
@@ -45,6 +46,11 @@ export default new Router({
       'path': '/cell',
       'name': 'cell',
       'component': cell
+    },
+    {
+      'path': '/col',
+      'name': 'col',
+      'component': col
     },
     {
       'path': '/dialog',

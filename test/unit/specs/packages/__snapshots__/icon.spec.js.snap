@@ -3,7 +3,288 @@
 exports[`Icon component should show Icon 1`] = `<i class="h-icon h-icon-add"></i>`;
 
 exports[`Icon component should show IconDemo 1`] = `
-<div class="demo-icon"><i class="h-icon h-icon-add-o" style="color:undefined;font-size:32px;"></i> <i class="h-icon h-icon-alipay" style="color:undefined;font-size:32px;"></i> <i class="h-icon h-icon-wechat" style="color:undefined;font-size:32px;"></i>
-  <i class="h-icon h-icon-add" style="color:undefined;font-size:32px;"></i> <i class="h-icon h-icon-add2" style="color:undefined;font-size:32px;"></i> <i class="h-icon h-icon-arrow-left" style="color:undefined;font-size:32px;"></i> <i class="h-icon h-icon-close"
-    style="color:undefined;font-size:32px;"></i> <i class="h-icon h-icon-passed" style="color:undefined;font-size:32px;"></i> <i class="h-icon h-icon-info-o" style="color:#f00;font-size:32px;"></i></div>
+<div class="demo-icon">
+  <h-col span="8">
+    <h-icon name="close" size="30px"></h-icon> <span>close</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="upgrade" size="30px"></h-icon> <span>upgrade</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="add-o" size="30px"></h-icon> <span>add-o</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="passed" size="30px"></h-icon> <span>passed</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="chat" size="30px"></h-icon> <span>chat</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="question" size="30px"></h-icon> <span>question</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="clock" size="30px"></h-icon> <span>clock</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="gold-coin" size="30px"></h-icon> <span>gold-coin</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="play" size="30px"></h-icon> <span>play</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="pause" size="30px"></h-icon> <span>pause</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="stop" size="30px"></h-icon> <span>stop</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="more-o" size="30px"></h-icon> <span>more-o</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="info-o" size="30px"></h-icon> <span>info-o</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="share" size="30px"></h-icon> <span>share</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="aim" size="30px"></h-icon> <span>aim</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="like-o" size="30px"></h-icon> <span>like-o</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="logistics" size="30px"></h-icon> <span>logistics</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="edit" size="30px"></h-icon> <span>edit</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="exchange" size="30px"></h-icon> <span>exchange</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="location" size="30px"></h-icon> <span>location</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="cart" size="30px"></h-icon> <span>cart</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="shop" size="30px"></h-icon> <span>shop</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="gift" size="30px"></h-icon> <span>gift</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="contact" size="30px"></h-icon> <span>contact</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="wap-home" size="30px"></h-icon> <span>wap-home</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="points" size="30px"></h-icon> <span>points</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="discount" size="30px"></h-icon> <span>discount</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="point-gift" size="30px"></h-icon> <span>point-gift</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="after-sale" size="30px"></h-icon> <span>after-sale</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="edit-data" size="30px"></h-icon> <span>edit-data</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="delete" size="30px"></h-icon> <span>delete</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="records" size="30px"></h-icon> <span>records</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="completed" size="30px"></h-icon> <span>completed</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="certificate" size="30px"></h-icon> <span>certificate</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="tosend" size="30px"></h-icon> <span>tosend</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="sign" size="30px"></h-icon> <span>sign</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="photo" size="30px"></h-icon> <span>photo</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="idcard" size="30px"></h-icon> <span>idcard</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="home" size="30px"></h-icon> <span>home</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="free-postage" size="30px"></h-icon> <span>free-postage</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="cash-back-record" size="30px"></h-icon> <span>cash-back-record</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="points-mall" size="30px"></h-icon> <span>points-mall</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="exchange-record" size="30px"></h-icon> <span>exchange-record</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="pending-payment" size="30px"></h-icon> <span>pending-payment</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="pending-orders" size="30px"></h-icon> <span>pending-orders</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="pending-deliver" size="30px"></h-icon> <span>pending-deliver</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="pending-evaluate" size="30px"></h-icon> <span>pending-evaluate</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="password-view" size="30px"></h-icon> <span>password-view</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="password-not-view" size="30px"></h-icon> <span>password-not-view</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="check" size="30px"></h-icon> <span>check</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="arrow" size="30px"></h-icon> <span>arrow</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="arrow-left" size="30px"></h-icon> <span>arrow-left</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="search" size="30px"></h-icon> <span>search</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="success" size="30px"></h-icon> <span>success</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="fail" size="30px"></h-icon> <span>fail</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="add" size="30px"></h-icon> <span>add</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="checked" size="30px"></h-icon> <span>checked</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="warn" size="30px"></h-icon> <span>warn</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="clear" size="30px"></h-icon> <span>clear</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="underway" size="30px"></h-icon> <span>underway</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="more" size="30px"></h-icon> <span>more</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="like" size="30px"></h-icon> <span>like</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="photograph" size="30px"></h-icon> <span>photograph</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="qr-invalid" size="30px"></h-icon> <span>qr-invalid</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="qr" size="30px"></h-icon> <span>qr</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="add2" size="30px"></h-icon> <span>add2</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="wechat" size="30px"></h-icon> <span>wechat</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="alipay" size="30px"></h-icon> <span>alipay</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="wap-nav" size="30px"></h-icon> <span>wap-nav</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="ecard-pay" size="30px"></h-icon> <span>ecard-pay</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="balance-pay" size="30px"></h-icon> <span>balance-pay</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="peer-pay" size="30px"></h-icon> <span>peer-pay</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="credit-pay" size="30px"></h-icon> <span>credit-pay</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="debit-pay" size="30px"></h-icon> <span>debit-pay</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="other-pay" size="30px"></h-icon> <span>other-pay</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="shopping-cart" size="30px"></h-icon> <span>shopping-cart</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="browsing-history" size="30px"></h-icon> <span>browsing-history</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="goods-collect" size="30px"></h-icon> <span>goods-collect</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="shop-collect" size="30px"></h-icon> <span>shop-collect</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="receive-gift" size="30px"></h-icon> <span>receive-gift</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="send-gift" size="30px"></h-icon> <span>send-gift</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="setting" size="30px"></h-icon> <span>setting</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="coupon" size="30px"></h-icon> <span>coupon</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="gift-card-pay" size="30px"></h-icon> <span>gift-card-pay</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="cash-on-deliver" size="30px"></h-icon> <span>cash-on-deliver</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="phone" size="30px"></h-icon> <span>phone</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="description" size="30px"></h-icon> <span>description</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="card" size="30px"></h-icon> <span>card</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="value-card" size="30px"></h-icon> <span>value-card</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="gift-card" size="30px"></h-icon> <span>gift-card</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="hot" size="30px"></h-icon> <span>hot</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="new" size="30px"></h-icon> <span>new</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="new-arrival" size="30px"></h-icon> <span>new-arrival</span>
+  </h-col>
+  <h-col span="8">
+    <h-icon name="hot-sale" size="30px"></h-icon> <span>hot-sale</span>
+  </h-col>
+</div>
 `;

@@ -1,9 +1,9 @@
 <template>
   <div class="demo-icon">
-    <div class="item-icon" v-for="(item, index) in iconList" :key="index">
-      <h-icon :name="item.name" size="32px"></h-icon>
+    <h-col span="8" v-for="(item, index) in iconList" :key="index">
+      <h-icon :name="item.name" size="30px"></h-icon>
       <span>{{ item.name }}</span>
-    </div>
+    </h-col>
   </div>
 </template>
 
@@ -22,15 +22,12 @@ export default {
 <style lang="less">
   .demo-icon {
     text-align: center;
-    .item-icon {
-      display: inline-block;
-      padding: 10px 20px;
-      span {
-        display: block;
-      }
-    }
     .h-icon {
       display: block;
+      margin: 15px 0;
+    }
+    .h-col {
+      height: 100px;
     }
   }
 </style>

@@ -3,6 +3,7 @@ import Actionsheet from './actionsheet';
 import Button from './button';
 import Cell from './cell';
 import Cellgroup from './cellgroup';
+import Col from './col';
 import Datetimepicker from './datetimepicker';
 import Dialog from './dialog';
 import Field from './field';
@@ -15,6 +16,7 @@ import PullRefresh from './pull-refresh';
 import Radio from './radio';
 import RadioGroup from './radio-group';
 import Rate from './rate';
+import Row from './row';
 import SmsInput from './sms-input';
 import Step from './step';
 import Stepper from './stepper';
@@ -31,6 +33,7 @@ const components = [
   Button,
   Cell,
   Cellgroup,
+  Col,
   Datetimepicker,
   Dialog,
   Field,
@@ -43,6 +46,7 @@ const components = [
   Radio,
   RadioGroup,
   Rate,
+  Row,
   SmsInput,
   Step,
   Stepper,
@@ -71,6 +75,7 @@ export {
   Button,
   Cell,
   Cellgroup,
+  Col,
   Datetimepicker,
   Dialog,
   Field,
@@ -83,6 +88,7 @@ export {
   Radio,
   RadioGroup,
   Rate,
+  Row,
   SmsInput,
   Step,
   Stepper,

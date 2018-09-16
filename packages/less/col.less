@@ -1,0 +1,14 @@
+@import '../less/common/var.less';
+
+@counter: 24;
+
+.h-col {
+  box-sizing: border-box;
+  float: left;
+}
+
+.loop(@counter) when (@counter > 0) {
+  .h-col--@{counter} { width: calc(@counter * 100% / 24); }
+  .h-col--offset-@{counter} { margin-left: calc(@counter * 100% / 24); }
+  .loop(@counter - 1);
+}

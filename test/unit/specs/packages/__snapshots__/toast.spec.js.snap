@@ -6,6 +6,7 @@ exports[`Toast component should Loading as Circular 1`] = `
 `;
 
 exports[`Toast component should Loading as Spinner 1`] = `
-<div><button class="h-button h-button--default h-button--large">
-    <!----> <span class="h-button__text">click</span></button></div>
+<div class="demo-toast">
+  <h-button text="click"></h-button>
+</div>
 `;

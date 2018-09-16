@@ -8,5 +8,5 @@ export function isDef (value) {
 
 export function isObj (obj) {
   const type = typeof obj;
-  return type === 'function' || type === 'object';
+  return obj !== null && (type === 'function' || type === 'object');
 }

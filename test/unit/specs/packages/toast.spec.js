@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import { renderToString } from '@vue/server-test-utils';
-import Toast from '../../../../packages/toast';
+import Toast from '../../../../packages/toast/toast';
 import ToastDemo from '../../../../docs/src/views/toast';
 
 describe('Toast component', () => {

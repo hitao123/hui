@@ -14,36 +14,31 @@ exports[`Cell component should show Cell 1`] = `
 exports[`Cell component should show CellDemo 1`] = `
 <div>
   <div class="demo-cell">
-    <div class="h-cell-group h-hairline--top-bottom">
-      <div class="h-cell h-hairline">
-        <!---->
-        <div class="h-cell__title"><span>单元格</span>
-          <div class="h-cell__label"></div>
-        </div>
-        <div class="h-cell__value"><span></span></div>
-        <!---->
-      </div>
-      <div class="h-cell h-hairline">
-        <!---->
-        <div class="h-cell__title"><span>单元格</span>
-          <div class="h-cell__label"></div>
-        </div>
-        <div class="h-cell__value"><span>内容</span></div>
-        <!---->
-      </div>
-    </div>
+    <h-cell-group>
+      <h-cell title="单元格"></h-cell>
+      <h-cell title="单元格" value="内容"></h-cell>
+    </h-cell-group>
   </div>
   <div class="demo-cell">
-    <div class="h-cell-group h-hairline--top-bottom">
-      <div class="h-cell h-hairline">
-        <!---->
-        <div class="h-cell__title"><span>单元格</span>
-          <div class="h-cell__label">描述</div>
-        </div>
-        <div class="h-cell__value"><span>内容</span></div>
-        <!---->
-      </div>
-    </div>
+    <h-cell-group>
+      <h-cell title="单元格" value="内容" label="描述"></h-cell>
+    </h-cell-group>
+  </div>
+  <div class="demo-cell">
+    <h-cell-group>
+      <h-cell value="内容" label="描述"></h-cell>
+    </h-cell-group>
+  </div>
+  <div class="demo-cell">
+    <h-cell-group>
+      <h-cell icon="wechat" value="内容" label="描述"></h-cell>
+    </h-cell-group>
+  </div>
+  <div class="demo-cell">
+    <h-cell-group>
+      <h-cell title="单元格" value="内容" isLink=""></h-cell>
+      <h-cell title="单元格" value="内容" isLink="" arrow-direction="down"></h-cell>
+    </h-cell-group>
   </div>
 </div>
 `;

@@ -6,37 +6,35 @@ exports[`Button component should show Button 1`] = `
 `;
 
 exports[`Button component should show Button Demo 1`] = `
-<div class="button-demo">
-  <div>
-    <h3 class="h3">type</h3> <button class="h-button h-button--default h-button--normal">
-      <!----> <span class="h-button__text">Button</span></button> <button class="h-button h-button--primary h-button--normal">
-      <!----> <span class="h-button__text">Button</span></button> <button class="h-button h-button--warning h-button--normal">
-      <!----> <span class="h-button__text">Button</span></button> <button class="h-button h-button--danger h-button--normal">
-      <!----> <span class="h-button__text">Button</span></button>
+<div>
+  <div class="button-demo">
+    <h3 class="h3">type</h3>
+    <h-button text="Button" type="default"></h-button>
+    <h-button text="Button" type="primary"></h-button>
+    <h-button text="Button" type="warning"></h-button>
+    <h-button text="Button" type="danger"></h-button>
   </div>
-  <div>
-    <h3 class="h3">plain</h3> <button class="h-button h-button--default h-button--normal h-button--plain">
-      <!----> <span class="h-button__text">Button</span></button> <button class="h-button h-button--primary h-button--normal h-button--plain">
-      <!----> <span class="h-button__text">Button</span></button> <button class="h-button h-button--warning h-button--normal h-button--plain">
-      <!----> <span class="h-button__text">Button</span></button> <button class="h-button h-button--danger h-button--normal h-button--plain">
-      <!----> <span class="h-button__text">Button</span></button>
+  <div class="button-demo">
+    <h3 class="h3">plain</h3>
+    <h-button text="Button" type="default" plain=""></h-button>
+    <h-button text="Button" type="primary" plain=""></h-button>
+    <h-button text="Button" type="warning" plain=""></h-button>
+    <h-button text="Button" type="danger" plain=""></h-button>
   </div>
-  <div>
-    <h3 class="h3">size</h3> <button class="h-button h-button--default h-button--large">
-      <!----> <span class="h-button__text">Button</span></button> <button class="h-button h-button--primary h-button--normal h-button--plain">
-      <!----> <span class="h-button__text">Button</span></button> <button class="h-button h-button--warning h-button--small">
-      <!----> <span class="h-button__text">Button</span></button> <button class="h-button h-button--danger h-button--mini">
-      <!----> <span class="h-button__text">Button</span></button>
+  <div class="button-demo">
+    <h3 class="h3">size</h3>
+    <h-button text="Button" type="default" size="large"></h-button>
+    <h-button text="Button" type="primary" plain=""></h-button>
+    <h-button text="Button" type="warning" size="small"></h-button>
+    <h-button text="Button" type="danger" size="mini"></h-button>
   </div>
-  <div>
-    <h3 class="h3">disabled</h3> <button class="h-button h-button--default h-button--large h-button--disabled">
-      <!----> <span class="h-button__text">Button</span></button>
+  <div class="button-demo">
+    <h3 class="h3">disabled</h3>
+    <h-button text="Button" type="default" size="large" disabled="disabled"></h-button>
   </div>
-  <div>
-    <h3 class="h3">loading</h3> <button class="h-button h-button--default h-button--normal h-button--loading">
-      <div class="h-loading h-loading--circular h-loading--black" style="width:20px;height:20px;"><span class="h-loading__spinner h-loading__spinner--circular"> <svg viewBox="25 25 50 50" class="h-loading__circular"><circle cx="50" cy="50" r="20" fill="none"></circle></svg></span></div>
-      <span class="h-button__text"></span>
-    </button>
+  <div class="button-demo">
+    <h3 class="h3">loading</h3>
+    <h-button type="default" loading=""></h-button>
   </div>
 </div>
 `;

@@ -13,6 +13,10 @@ export default [
     'name': 'cell'
   },
   {
+    'path': '/col',
+    'name': 'col'
+  },
+  {
     'path': '/dialog',
     'name': 'dialog'
   },

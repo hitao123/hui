@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h-button @click="handleClick" text="click" size="large"></h-button>
+  <div class="demo-toast">
+    <h-button @click="handleClick" text="click"></h-button>
   </div>
 </template>
 
@@ -18,5 +18,7 @@ export default {
 </script>
 
 <style lang="less">
-
+  .demo-toast {
+    text-align: center;
+  }
 </style>

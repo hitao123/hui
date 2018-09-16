@@ -24,7 +24,7 @@
     <div class="demo-cell">
       <h-cell-group>
         <h-cell title="单元格" value="内容" isLink></h-cell>
-        <h-cell title="单元格" value="内容" isLink arrow-direction="down"></h-cell>
+        <h-cell title="单元格" value="内容" isLink arrow-direction="down" @click="handleClick"></h-cell>
       </h-cell-group>
     </div>
   </div>
@@ -33,6 +33,13 @@
 <script>
 
 export default {
+  methods: {
+    handleClick() {
+      this.$dialog.alert({
+        message: 'hello'
+      })
+    }
+  }
 }
 </script>
 

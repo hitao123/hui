@@ -1,5 +1,15 @@
 <template>
-  <div :class="[bem({ center, required }), { 'h-hairline': border }]">
+  <div
+    :class="[
+      bem({
+        center,
+        required,
+        clickable: isLink || clickable
+      }),
+      { 'h-hairline': border }
+    ]"
+    @click="onClick"
+  >
     <slot name="icon">
       <icon v-if="icon" :class="bem('left-icon')" :name="icon" />
     </slot>
@@ -22,9 +32,14 @@
 
 <script>
 import create from '../utils/create-basic';
+import routerLink from '../utils/mixins/routerLink';
 import Icon from '../icon';
 export default create({
   name: 'cell',
+  components: {
+    Icon
+  },
+  mixins: [routerLink],
   props: {
     center: Boolean,
     required: Boolean,
@@ -33,14 +48,18 @@ export default create({
     label: String,
     value: String,
     isLink: Boolean,
+    clickable: Boolean,
     border: {
       type: Boolean,
       default: true
     },
     arrowDirection: String
   },
-  components: {
-    Icon
+  methods: {
+    onClick() {
+      this.$emit('click');
+      this.routerLink();
+    }
   }
 })
 </script>

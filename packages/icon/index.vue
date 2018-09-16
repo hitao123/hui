@@ -1,5 +1,5 @@
 <template>
-  <i :class="[classPrefix, `${classPrefix}-${name}`]" :style="style">
+  <i :class="[classPrefix, `${classPrefix}-${name}`]" :style="style" @click="$emit('click')">
     <slot></slot>
   </i>
 </template>
