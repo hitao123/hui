@@ -10,6 +10,7 @@ import Field from './field';
 import Icon from './icon';
 import Loading from './loading';
 import NoticeBar from './notice-bar';
+import NumberKeyboard from './number-keyboard';
 import Picker from './picker';
 import Popup from './popup';
 import PullRefresh from './pull-refresh';
@@ -40,6 +41,7 @@ const components = [
   Icon,
   Loading,
   NoticeBar,
+  NumberKeyboard,
   Picker,
   Popup,
   PullRefresh,
@@ -82,6 +84,7 @@ export {
   Icon,
   Loading,
   NoticeBar,
+  NumberKeyboard,
   Picker,
   Popup,
   PullRefresh,
