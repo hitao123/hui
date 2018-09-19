@@ -6,7 +6,11 @@
     </div>
     <div class="margin20">
       <h4>多级联动</h4>
-      <h-picker :columns="columns1"></h-picker>
+      <h-picker :columns="columns1" @change="handleChange2"></h-picker>
+    </div>
+    <div class="margin20">
+      <h4>加载状态</h4>
+      <h-picker :columns="columns2" @change="handleChange3" :loading="true"></h-picker>
     </div>
   </div>
 </template>
@@ -20,7 +24,16 @@ const citys = {
 export default {
   data() {
     return {
-      columns: ['北京', '上海', '广州', '深圳', '杭州', '武汉'],
+      columns: [{
+        text: '北京'
+      }, {
+        text: '上海',
+        disabled: true
+      }, {
+        text: '广州'
+      }, {
+        text: '深圳'
+      }],
       columns1: [
         {
           values: Object.keys(citys),
@@ -31,7 +44,8 @@ export default {
           className: 'column2',
           defaultIndex: 2
         }
-      ]
+      ],
+      columns2: ['2018', '2019', '2020', '2021', '2022', '2023']
     }
   },
   created() {
@@ -42,6 +56,12 @@ export default {
   methods: {
     handleChange(picker, value, index) {
       // console.log(picker, value, index);
+    },
+    handleChange2(picker, value, index) {
+      picker.setColumnValues(1, citys[value[0]])
+    },
+    handleChange3() {
+
     }
   }
 }

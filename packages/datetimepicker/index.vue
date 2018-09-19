@@ -11,7 +11,3 @@ export default create({
   name: 'datetimepicker'
 })
 </script>
-
-<style>
-  /* stylelint-disable */
-</style>

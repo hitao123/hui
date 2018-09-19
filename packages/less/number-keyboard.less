@@ -1,1 +1,61 @@
 @import './common/var.less';
+
+.h-number-keyboard {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  user-select: none;
+  background-color: #fff;
+
+  &__title {
+    position: relative;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #666;
+    text-align: center;
+  }
+
+  &__close {
+    position: absolute;
+    right: 0;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #38f;
+  }
+
+  &__body {
+    box-sizing: border-box;
+  }
+}
+
+.h-key {
+  display: inline-block;
+  width: 33.33333%;
+  height: 54px;
+  font-size: 24px;
+  font-style: normal;
+  line-height: 54px;
+  text-align: center;
+  vertical-align: middle;
+
+  &::after {
+    border-width: 1px 1px 0 0;
+  }
+
+  &--gray {
+    background-color: #f3f3f6;
+  }
+
+  &--delete {
+    font-size: 0;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAeCAMAAABg6AyVAAAAbFBMVEUAAAAfHiIdHB4eHR8dHR4eHB4dHB4dHR8gICIdHB4dHB4dHB4dHB8eHh8hISEeHR8fHB8fHR8fHR8fHx8eHiArKyszMzMeHB8eHB8fHR8eHiAeHh4dHB4vLjDY2Nn////b29zKysq9vb28vLzkfBRpAAAAHHRSTlMAK/PW+I/llBv77N1kSCPwWlFAOTMGBb28hHlu08g5sgAAAMlJREFUOMuV1MsWgiAQgGHQyOx+s+sgYO//jnnMGIdDDfwbN99CYEDQFiVEKkolPUG7gl9VTWC31NKuDbVz+Fc1tRJtPDmxS2BS3p5ZC+XXnnbAVoz2WEBCH7uZAalzGoa06whGiznT6sG2xgX4QO2Aej1+KN7XBKL2FvGaMtTWBhbQhtoaYzVQrHKwuGf8hhAPSF5g3xPSt45sCHcouNWx436FGA+RHyQcD35EcUj54U8ff4WYvVi1zLjelUh/OG6XjOeLWv5hfAOI+HLwwOAqhAAAAABJRU5ErkJggg==") no-repeat center center;
+    background-size: auto 15px;
+  }
+
+  &--active {
+    background-color: @active-color;
+  }
+}
+

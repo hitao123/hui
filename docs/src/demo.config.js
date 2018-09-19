@@ -37,6 +37,10 @@ export default [
     'name': 'noticebar'
   },
   {
+    'path': '/numberkeyboard',
+    'name': 'numberkeyboard'
+  },
+  {
     'path': '/picker',
     'name': 'picker'
   },

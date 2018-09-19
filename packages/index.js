@@ -11,6 +11,7 @@ import Icon from './icon';
 import Loading from './loading';
 import NoticeBar from './notice-bar';
 import NumberKeyboard from './number-keyboard';
+import PasswordInput from './password-input';
 import Picker from './picker';
 import Popup from './popup';
 import PullRefresh from './pull-refresh';
@@ -42,6 +43,7 @@ const components = [
   Loading,
   NoticeBar,
   NumberKeyboard,
+  PasswordInput,
   Picker,
   Popup,
   PullRefresh,
@@ -85,6 +87,7 @@ export {
   Loading,
   NoticeBar,
   NumberKeyboard,
+  PasswordInput,
   Picker,
   Popup,
   PullRefresh,

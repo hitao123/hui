@@ -14,6 +14,7 @@
       <picker-column
         v-for="(item, index) in (simple ? [columns] : columns)"
         :key="index"
+        :value-key="valueKey"
         :initial-options="simple ? item : item.values"
         :visibleItemCount="visibleItemCount"
         :itemHeight="itemHeight"
@@ -51,6 +52,10 @@ export default create({
     columns: {
       type: Array,
       default: () => []
+    },
+    valueKey: {
+      type: String,
+      default: 'text'
     }
   },
   data() {
@@ -111,16 +116,26 @@ export default create({
       });
     },
     // 设置列的值
-    setColumnValues() {
-
+    setColumnValues(index, options) {
+      let column = this.children[index];
+      if (column && JSON.stringify(column.options) !== JSON.stringify(options)) {
+        column.options = options;
+        column.setIndex(0);
+      }
     },
     // 获取列的值
-    getColumnValues() {
-
+    getColumnValues(index) {
+      return (this.children[index] || {}).options;
     },
     // 设置索引
-    setIndexes() {
-
+    setIndexes(indexes) {
+      indexes.forEach((columnIndex, optionIndex) => {
+        this.setColumnIndex(columnIndex, optionIndex);
+      })
+    },
+    // 获取索引
+    getIndexes() {
+      return this.children.map((child) => child.currentIndex);
     },
     // 向外层发送当前列信息
     onChange(columnIndex) {

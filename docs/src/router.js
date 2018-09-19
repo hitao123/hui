@@ -14,6 +14,7 @@ import field from './views/field.vue'
 import icon from './views/icon.vue'
 import loading from './views/loading.vue'
 import noticebar from './views/noticebar.vue'
+import numberkeyboard from './views/numberkeyboard.vue'
 import picker from './views/picker.vue'
 import popup from './views/popup.vue'
 import pullrefresh from './views/pullrefresh.vue'
@@ -76,6 +77,11 @@ export default new Router({
       'path': '/noticebar',
       'name': 'noticebar',
       'component': noticebar
+    },
+    {
+      'path': '/numberkeyboard',
+      'name': 'numberkeyboard',
+      'component': numberkeyboard
     },
     {
       'path': '/picker',

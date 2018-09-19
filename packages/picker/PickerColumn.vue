@@ -11,10 +11,11 @@
       <li
         v-for="(option, index) in options"
         :key="index"
-        v-html="option"
+        v-html="getOptionText(option)"
         class="h-ellipsis"
         :class="bem('item', {
-          selected: index === currentIndex
+          selected: index === currentIndex,
+          disabled: isDisabled(option)
         })"
         :style="optionStyle"
         @click="setIndex(index, true)"
@@ -42,7 +43,8 @@ export default create({
     defaultIndex: {
       type: Number,
       default: 0
-    }
+    },
+    valueKey: String
   },
   data() {
     return {
@@ -67,7 +69,6 @@ export default create({
       };
     },
     wrapperStyle() {
-      // console.log(this.offset, this.baseOffset, '🐂🍺');
       return {
         transition: `${this.duration}ms`,
         transform: `translate3d(0, ${this.offset + this.baseOffset}px, 0)`,
@@ -92,13 +93,13 @@ export default create({
     onTouchMove(event) {
       // 两次触点移动距离
       const deltaY = event.touches[0].clientY - this.startY;
-      this.offset = range(deltaY,
+      this.offset = range(
+        this.startOffset + deltaY,
         -(this.count * this.itemHeight),
         this.itemHeight
       );
     },
     onTouchEnd() {
-      // console.log(this.offset, this.startOffset, '🐶')
       if (this.offset !== this.startOffset) {
         this.duration = DEFAULT_DURATION;
         const index = range(
@@ -114,11 +115,9 @@ export default create({
     },
     setIndex(index, useAction) {
       index = this.adjustIndex(index) || 0;
-      // console.log(this.adjustIndex(index), index, '🐎')
       this.offset = -index * this.itemHeight;
       if (index !== this.currentIndex) {
         this.currentIndex = index;
-        // console.log(index, '🐎')
         useAction && this.$emit('change', index);
       }
     },
@@ -134,11 +133,13 @@ export default create({
       return this.options[this.currentIndex];
     },
     getOptionText(option) {
+      if (isObj(option) && this.valueKey in option) {
+        return option[this.valueKey]
+      }
       return option;
     },
     adjustIndex(index) {
       index = range(index, 0, this.count);
-      // console.log(index, this.count, this.options, '===>');
       for (let i = index; i < this.count; i++) {
         if (!this.isDisabled(this.options[i])) return i;
       }
