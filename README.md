@@ -17,5 +17,6 @@
 - [x] stepper 组件
 - [x] dialog 组件
 - [x] swipe 组件
+- [x] picker 组件
 
 inspired by [vant](https://youzan.github.io/vant/#/zh-CN/intro)

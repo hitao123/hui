@@ -27,7 +27,7 @@
     text-align: center;
   }
 
-  &-coloumns {
+  &__columns {
     position: relative;
     display: flex;
   }
@@ -46,7 +46,17 @@
     }
   }
 
-  &-coloumn {
+  &__frame {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+
+  &-column {
     flex: 1;
     overflow: hidden;
     font-size: 16px;
