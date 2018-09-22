@@ -1,9 +1,17 @@
 <template>
-  <transition name="">
-    <div :class="bem('')">
+  <transition :name="transition ? 'h-slide-bottom' : ''">
+    <div
+      :class="bem('')"
+      v-show="show"
+    >
       <div class="h-hairline--top" :class="bem('title')">
         <span></span>
-        <span :class="bem('close')">完成</span>
+        <span
+          v-if="showTitleClose"
+          :class="bem('close')"
+          v-text="closeButtonText"
+          @click="onClose"
+        />
       </div>
       <div :class="bem('body')">
         <key
@@ -30,6 +38,13 @@ export default create({
     Key
   },
   props: {
+    show: Boolean,
+    title: String,
+    closeButtonText: String,
+    transition: {
+      type: Boolean,
+      default: true
+    },
     extraKey: {
       type: String,
       default: '.'
@@ -47,6 +62,16 @@ export default create({
         { text: 'delete', type: ['gray', 'delete'] }
       );
       return keys;
+    },
+    showTitleClose() {
+      return this.title || this.closeButtonText
+    }
+  },
+  watch: {
+    show() {
+      if (!this.transition) {
+        this.$emit(this.show ? 'show' : 'hide');
+      }
     }
   },
   methods: {
@@ -54,9 +79,14 @@ export default create({
       if (text === '') {
         return;
       }
-      if (text) {
+      if (text === 'delete') {
+        this.$emit('delete');
+      } else {
         this.$emit('input', text);
       }
+    },
+    onClose() {
+      this.$emit('close');
     }
   }
 })

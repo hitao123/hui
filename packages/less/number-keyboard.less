@@ -7,6 +7,7 @@
   width: 100%;
   user-select: none;
   background-color: #fff;
+  animation-timing-function: ease-out;
 
   &__title {
     position: relative;
@@ -59,3 +60,24 @@
   }
 }
 
+@keyframes h-slide-bottom-enter {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes h-slide-bottom-leave {
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.h-slide-bottom {
+  &-enter-active {
+    animation: h-slide-bottom-enter .3s both ease;
+  }
+
+  &-leave-active {
+    animation: h-slide-bottom-leave .3s both ease;
+  }
+}

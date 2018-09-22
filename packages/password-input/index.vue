@@ -1,6 +1,6 @@
 <template>
   <div :class="bem()">
-    <ul class="h-hairline--surround" :class="bem('security')">
+    <ul class="h-hairline--surround" :class="bem('security')" @touchstart.stop="$emit('focus')">
       <li v-for="(visible, index) in points" :key="index" class="h-hairline">
         <i :style="`visibility: ${visible}`"></i>
       </li>
