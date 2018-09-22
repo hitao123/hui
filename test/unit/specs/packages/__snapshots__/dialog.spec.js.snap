@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dialog component should show Button Demo 1`] = `
+<div class="demo-dialog">
+  <h-button>点击dialog</h-button>
+  <h-button>点击dialog2</h-button>
+  <h-dialog show-cancel-button="" message="&lt;div style=&quot;font-weight: bold;&quot;&gt;message&lt;/div&gt;" title="title" cancelButtonText="cancel" confirmButtonText="confirm"></h-dialog>
+</div>
+`;
+
+exports[`Dialog component should show Dialog 1`] = `
+<div class="h-dialog" style="display: none;" name="h-dialog-bounce">
+  <div>title</div>
+  <!---->
+  <div class="h-hairline--top h-dialog__footer">
+    <h-button-stub type="default" size="large" class="h-dialog__cancel" style="display: none;">
+      cancel
+    </h-button-stub>
+    <h-button-stub type="default" size="large" class="h-dialog__confirm">
+      confirm
+    </h-button-stub>
+  </div>
+</div>
+`;

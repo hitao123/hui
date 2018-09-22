@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dialog component should show Button Demo 1`] = `
+<div class="demo-number">
+  <h-password-input value=""></h-password-input>
+  <h-number-keyboard closeButtonText="关闭"></h-number-keyboard>
+</div>
+`;
+
+exports[`Dialog component should show Dialog 1`] = `
+<div class="h-number-keyboard" style="display: none;" name="h-slide-bottom">
+  <div class="h-hairline--top h-number-keyboard__title"><span></span> <span class="h-number-keyboard__close">close</span></div>
+  <div class="h-number-keyboard__body">
+    <key-stub text="1" type=""></key-stub>
+    <key-stub text="2" type=""></key-stub>
+    <key-stub text="3" type=""></key-stub>
+    <key-stub text="4" type=""></key-stub>
+    <key-stub text="5" type=""></key-stub>
+    <key-stub text="6" type=""></key-stub>
+    <key-stub text="7" type=""></key-stub>
+    <key-stub text="8" type=""></key-stub>
+    <key-stub text="9" type=""></key-stub>
+    <key-stub text="." type="gray"></key-stub>
+    <key-stub text="0" type=""></key-stub>
+    <key-stub text="delete" type="gray,delete"></key-stub>
+  </div>
+</div>
+`;
