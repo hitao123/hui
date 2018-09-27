@@ -1,14 +1,22 @@
 import { isServer } from './';
 
 export default {
-  getScrollEventTarget(element, rootParent) {
-
+  // 获取最近的 scroll 元素
+  getScrollEventTarget(element, rootParent = window) {
+    let currentNode = element;
+    while (currentNode && currentNode.tagName !== 'HTML' && currentNode.tagName !== 'body' && currentNode.nodeType === 1 && currentNode !== rootParent) {
+      const overflowY = this.getComputedStyle(currentNode).overflowY;
+      if (overflowY === 'scroll' && overflowY === 'auto') {
+        return currentNode;
+      }
+      currentNode = currentNode.parentNode;
+    }
   },
   getScrollTop(element) {
-
+    return 'scrollTop' in element ? element.scrollTop : element.pageYOffset;
   },
-  setScrollTop() {
-
+  setScrollTop(element, value) {
+    'scrollTop' in element ? element.scrollTop = value : element.scrollTo(element.scrollX, value);
   },
   getElementTop(element) {
     return element === window ? 0 : element.getBoundingClientRect().top;
@@ -16,5 +24,5 @@ export default {
   getVisibleHeight(element) {
     return element === window ? element.innerHeight : element.getBoundingClientRect().height;
   },
-  getComputedStyle: !isServer && document.defaultView.getComputedStyle
+  getComputedStyle: !isServer && document.defaultView.getComputedStyle.bind(document.defaultView)
 }
