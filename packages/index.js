@@ -8,6 +8,7 @@ import Datetimepicker from './datetimepicker';
 import Dialog from './dialog';
 import Field from './field';
 import Icon from './icon';
+import List from './list';
 import Loading from './loading';
 import NoticeBar from './notice-bar';
 import NumberKeyboard from './number-keyboard';
@@ -40,6 +41,7 @@ const components = [
   Dialog,
   Field,
   Icon,
+  List,
   Loading,
   NoticeBar,
   NumberKeyboard,
@@ -84,6 +86,7 @@ export {
   Dialog,
   Field,
   Icon,
+  List,
   Loading,
   NoticeBar,
   NumberKeyboard,

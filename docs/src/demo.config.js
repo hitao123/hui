@@ -29,6 +29,10 @@ export default [
     'name': 'icon'
   },
   {
+    'path': '/list',
+    'name': 'list'
+  },
+  {
     'path': '/loading',
     'name': 'loading'
   },

@@ -17,8 +17,10 @@
           <span :class="bem('text')">{{ loosingText || '释放刷新...' }}</span>
         </slot>
         <slot v-if="status === 'loading'" name="loading">
-          <loading />
-          <span :class="bem('text')">{{ loadingText || '加载中' }}</span>
+          <div :class="bem('loading')">
+            <loading />
+            <span :class="bem('text')">{{ loadingText || '加载中' }}</span>
+          </div>
         </slot>
       </div>
     </div>
@@ -61,12 +63,18 @@ export default create({
   computed: {
     style() {
       return {
-        transition: `${this.duration}s`,
+        transition: `${this.duration}ms`,
         transform: `translate3d(0, ${this.height}px, 0)`
       }
     },
     untouchable() {
       return this.status === 'loading' || this.disabled;
+    }
+  },
+  watch: {
+    value(val) {
+      this.duration = this.animationDuration;
+      this.getStatus(val ? this.headHeight : 0, val);
     }
   },
   mounted() {
@@ -90,6 +98,7 @@ export default create({
       if (this.untouchable) {
         return;
       }
+
       this.touchMove(event);
       if (this.ceiling && this.deltaY >= 0) {
         if (this.direction === 'vertical') {
@@ -119,7 +128,7 @@ export default create({
         ? height
         : height < headHeight * 2
           ? Math.round(headHeight + (height - headHeight) / 2)
-          : Math.round(height * 1.5 + (height - headHeight * 2) / 4)
+          : Math.round(headHeight * 1.5 + (height - headHeight * 2) / 4)
     },
     getStatus(height, isLoading) {
       this.height = height;

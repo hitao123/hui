@@ -1,13 +1,13 @@
 export default {
   methods: {
     touchStart(event) {
-      this.startX = event.touchs[0].clientX;
-      this.startY = event.touchs[1].clientY;
+      this.startX = event.touches[0].clientX;
+      this.startY = event.touches[0].clientY;
     },
     touchMove(event) {
-      const touchs = event.touchs[0];
-      this.deltaX = touchs.clientX - this.startX;
-      this.deltaY = touchs.clientY - this.startY;
+      const touches = event.touches[0];
+      this.deltaX = touches.clientX - this.startX;
+      this.deltaY = touches.clientY - this.startY;
       this.offsetX = Math.abs(this.deltaX);
       this.offsetY = Math.abs(this.deltaY);
       this.direction = this.offsetX > this.offsetY ? 'horizontal' : (this.offsetX < this.offsetY ? 'vertical' : '');

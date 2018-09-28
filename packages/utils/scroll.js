@@ -11,6 +11,7 @@ export default {
       }
       currentNode = currentNode.parentNode;
     }
+    return rootParent;
   },
   getScrollTop(element) {
     return 'scrollTop' in element ? element.scrollTop : element.pageYOffset;
@@ -19,7 +20,7 @@ export default {
     'scrollTop' in element ? element.scrollTop = value : element.scrollTo(element.scrollX, value);
   },
   getElementTop(element) {
-    return element === window ? 0 : element.getBoundingClientRect().top;
+    return (element === window ? 0 : element.getBoundingClientRect().top) + this.getScrollTop(window);
   },
   getVisibleHeight(element) {
     return element === window ? element.innerHeight : element.getBoundingClientRect().height;

@@ -12,6 +12,7 @@ import col from './views/col.vue'
 import dialog from './views/dialog.vue'
 import field from './views/field.vue'
 import icon from './views/icon.vue'
+import list from './views/list.vue'
 import loading from './views/loading.vue'
 import noticebar from './views/noticebar.vue'
 import numberkeyboard from './views/numberkeyboard.vue'
@@ -67,6 +68,11 @@ export default new Router({
       'path': '/icon',
       'name': 'icon',
       'component': icon
+    },
+    {
+      'path': '/list',
+      'name': 'list',
+      'component': list
     },
     {
       'path': '/loading',

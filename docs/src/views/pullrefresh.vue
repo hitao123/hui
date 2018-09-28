@@ -15,7 +15,7 @@ export default {
     handleRefresh() {
       setTimeout(() => {
         this.isLoading = false
-      }, 500);
+      }, 2000);
     }
   }
 }
