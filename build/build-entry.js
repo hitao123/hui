@@ -123,6 +123,17 @@ export default [
   fs.writeFileSync(path.join(dir, '../demo.config.js'), content);
 }
 
+// function mkdirReadme() {
+//   fs.readdirSync(path.resolve(__dirname, '../packages')).forEach((item, index) => {
+//     if (item.indexOf('.DS_Store') < 0 && item.indexOf('less') < 0 && item.indexOf('index.js') < 0) {
+
+//       let a = path.join(__dirname, '../packages/', item, 'README.md');
+//       fs.writeFileSync(a, `# ${item}`)
+//     }
+//   })
+// }
+
 buildEntry()
 buildRoute()
 buildRouteList()
+// mkdirReadme()

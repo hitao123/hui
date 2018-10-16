@@ -48,6 +48,9 @@ export default create({
       this.$nextTick(this.check);
     }
   },
+  destroyed() {
+    this.handler(false);
+  },
   methods: {
     check() {
       if (this.loading || this.finished) {
