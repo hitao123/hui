@@ -28,6 +28,7 @@ import Swipe from './swipe';
 import SwipeItem from './swipe-item';
 import Tab from './tab';
 import Tabs from './tabs';
+import Test from './test';
 import Toast from './toast';
 import Uploader from './uploader';
 
@@ -61,6 +62,7 @@ const components = [
   SwipeItem,
   Tab,
   Tabs,
+  Test,
   Toast,
   Uploader
 ];
@@ -106,6 +108,7 @@ export {
   SwipeItem,
   Tab,
   Tabs,
+  Test,
   Toast,
   Uploader
 };
