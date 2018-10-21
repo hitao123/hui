@@ -5,7 +5,7 @@
   "author": "hitao1234@gmail.com",
   "private": true,
   "scripts": {
-    "dev": "node build/build-entry && webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "node build/build-entry && webpack-dev-server --inline --progress --config build/webpack.dev.js",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "test": "npm run unit -- -u",
@@ -17,8 +17,11 @@
     "entry": "node build/build-entry"
   },
   "dependencies": {
+    "fast-vue-md-loader": "^1.0.3",
     "lodash": "^4.17.10",
     "nprogress": "^0.2.0",
+    "progress-bar-webpack-plugin": "^1.11.0",
+    "vant-doc": "^1.0.18",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vue-server-renderer": "^2.5.17"

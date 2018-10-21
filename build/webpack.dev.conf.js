@@ -53,8 +53,15 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new webpack.NoEmitOnErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
+      chunks: ['vant-docs'],
+      template: 'docs/src/index.html',
       filename: 'index.html',
-      template: 'index.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['vant-mobile'],
+      template: 'docs/src/index.html',
+      filename: 'mobile.html',
       inject: true
     }),
     // copy custom static assets

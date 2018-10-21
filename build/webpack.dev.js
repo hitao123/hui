@@ -1,9 +1,24 @@
-const path = require('path');
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const { VueLoaderPlugin } = require('vue-loader');
+
+function resolve (dir) {
+  return path.join(__dirname, '..', dir)
+}
+
+const createLintingRule = () => ({
+  test: /\.(js|vue)$/,
+  loader: 'eslint-loader',
+  enforce: 'pre',
+  include: [resolve('docs'), resolve('test'), resolve('packages')],
+  options: {
+    formatter: require('eslint-friendly-formatter'),
+    emitWarning: true
+  }
+})
 
 module.exports = {
+  context: path.resolve(__dirname, '../'),
   entry: {
     'vant-docs': './docs/src/index.js',
     'vant-mobile': './docs/src/mobile.js'
@@ -11,55 +26,46 @@ module.exports = {
   output: {
     path: path.join(__dirname, '../docs/dist'),
     publicPath: '/',
+    filename: '[name].js',
     chunkFilename: 'async_[name].js'
   },
-  stats: {
-    modules: false,
-    children: false
-  },
-  serve: {
-    open: true,
-    host: '0.0.0.0',
-    devMiddleware: {
-      logLevel: 'warn'
-    },
-    hotClient: {
-      logLevel: 'warn',
-      allEntries: true
-    }
-  },
   resolve: {
-    extensions: ['.js', '.vue', '.css'],
+    extensions: ['.js', '.vue', '.json'],
     alias: {
-      packages: path.join(__dirname, '../packages')
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': resolve('src'),
     }
   },
   module: {
     rules: [
+      ...[createLintingRule()],
       {
         test: /\.vue$/,
-        use: [
-          {
-            loader: 'vue-loader',
-            options: {
-              compilerOptions: {
-                preserveWhitespace: false
-              }
-            }
+        loader: 'vue-loader',
+        options: {
+          compilerOptions: {
+            preserveWhitespace: false
           }
-        ]
+        }
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        use: 'babel-loader'
+        loader: 'babel-loader',
+        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
-        test: /\.(css|postcss)$/,
+        test: /\.css$/,
         use: [
           'style-loader',
           'css-loader',
-          'postcss-loader'
+        ]
+      },
+      {
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'less-loader'
         ]
       },
       {
@@ -70,25 +76,56 @@ module.exports = {
         ]
       },
       {
-        test: /\.(ttf|svg)$/,
-        loader: 'url-loader'
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: 'images/[name].[hash:7].[ext]'
+        }
+      },
+      {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: 'media/[name].[hash:7].[ext]'
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: 'fonts/[name].[hash:7].[ext]'
+        }
       }
     ]
   },
   plugins: [
-    new VueLoaderPlugin(),
     new ProgressBarPlugin(),
     new HtmlWebpackPlugin({
       chunks: ['vant-docs'],
-      template: 'docs/src/index.tpl',
+      template: 'docs/src/index.html',
       filename: 'index.html',
       inject: true
     }),
     new HtmlWebpackPlugin({
       chunks: ['vant-mobile'],
-      template: 'docs/src/index.tpl',
+      template: 'docs/src/index.html',
       filename: 'mobile.html',
       inject: true
     })
-  ]
-};
+  ],
+  node: {
+    // prevent webpack from injecting useless setImmediate polyfill because Vue
+    // source contains it (although only uses it if it's native).
+    setImmediate: false,
+    // prevent webpack from injecting mocks to Node native modules
+    // that does not make sense for the client
+    dgram: 'empty',
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty',
+    child_process: 'empty'
+  }
+}

@@ -22,14 +22,13 @@ const createLintingRule = () => ({
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './docs/src/index.js'
+    'vant-docs': './docs/src/index.js',
+    'vant-mobile': './docs/src/mobile.js'
   },
   output: {
-    path: config.build.assetsRoot,
-    filename: '[name].js',
-    publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+    path: path.join(__dirname, '../docs/dist'),
+    publicPath: '/',
+    chunkFilename: 'async_[name].js'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -50,6 +49,13 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+      },
+      {
+        test: /\.md$/,
+        use: [
+          'vue-loader',
+          'fast-vue-md-loader'
+        ]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
