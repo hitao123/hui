@@ -8,8 +8,11 @@ import Datetimepicker from './datetimepicker';
 import Dialog from './dialog';
 import Field from './field';
 import Icon from './icon';
+import List from './list';
 import Loading from './loading';
 import NoticeBar from './notice-bar';
+import NumberKeyboard from './number-keyboard';
+import PasswordInput from './password-input';
 import Picker from './picker';
 import Popup from './popup';
 import PullRefresh from './pull-refresh';
@@ -25,6 +28,7 @@ import Swipe from './swipe';
 import SwipeItem from './swipe-item';
 import Tab from './tab';
 import Tabs from './tabs';
+import Test from './test';
 import Toast from './toast';
 import Uploader from './uploader';
 
@@ -38,8 +42,11 @@ const components = [
   Dialog,
   Field,
   Icon,
+  List,
   Loading,
   NoticeBar,
+  NumberKeyboard,
+  PasswordInput,
   Picker,
   Popup,
   PullRefresh,
@@ -55,6 +62,7 @@ const components = [
   SwipeItem,
   Tab,
   Tabs,
+  Test,
   Toast,
   Uploader
 ];
@@ -80,8 +88,11 @@ export {
   Dialog,
   Field,
   Icon,
+  List,
   Loading,
   NoticeBar,
+  NumberKeyboard,
+  PasswordInput,
   Picker,
   Popup,
   PullRefresh,
@@ -97,6 +108,7 @@ export {
   SwipeItem,
   Tab,
   Tabs,
+  Test,
   Toast,
   Uploader
 };

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field component should show Field 1`] = `
+<cell-stub title="姓名" border="true" class="h-field" placeholder="请输入姓名">
+  <div class="h-field__body"><input type="input" placeholder="请输入姓名" class="h-field__control">
+    <!---->
+    <!---->
+    <!---->
+  </div>
+  <!---->
+</cell-stub>
+`;
+
+exports[`Field component should show Field Demo 1`] = `
+<div>
+  <div class="field-demo">
+    <h-cell-group>
+      <h-field placeholder="请输入姓名" clearable=""></h-field>
+    </h-cell-group>
+  </div>
+  <div class="field-demo">
+    <h-cell-group>
+      <h-field label="姓名" placeholder="请输入姓名" clearable="" required="required"></h-field>
+      <h-field type="password" label="密码" placeholder="请输入密码" maxlength="6" autocomplete="off" clearable="" required="required"></h-field>
+    </h-cell-group>
+  </div>
+  <div class="field-demo">
+    <h-cell-group>
+      <h-field label="姓名" placeholder="请输入姓名" clearable="" center="">
+        <h-button slot="button" size="small" type="primary">重新发送</h-button>
+      </h-field>
+    </h-cell-group>
+  </div>
+  <div class="field-demo">
+    <h-cell-group>
+      <h-field label="姓名" placeholder="请输入姓名" errorMessage="您填写的姓名有误"></h-field>
+    </h-cell-group>
+  </div>
+  <div class="field-demo">
+    <h-cell-group>
+      <h-field label="姓名" placeholder="输入框已经被禁用" disabled="disabled"></h-field>
+    </h-cell-group>
+  </div>
+  <div class="field-demo">
+    <h-cell-group>
+      <h-field label="姓名" placeholder="请输入姓名" icon="question" onIconClick="function () { [native code] }"></h-field>
+      <h-field type="textarea" label="textarea" placeholder="请输入" autosize="" rows="1"></h-field>
+    </h-cell-group>
+  </div>
+</div>
+`;

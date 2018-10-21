@@ -15,6 +15,11 @@ export default create({
     direction: {
       type: String,
       default: 'horizontal'
+    },
+    active: Number,
+    activeColor: {
+      type: String,
+      default: '#06bf04'
     }
   },
   data() {

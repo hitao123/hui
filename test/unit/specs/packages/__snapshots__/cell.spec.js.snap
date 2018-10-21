@@ -6,7 +6,7 @@ exports[`Cell component should show Cell 1`] = `
   <div class="h-cell__title"><span>Cell</span>
     <div class="h-cell__label"></div>
   </div>
-  <div class="h-cell__value"><span></span></div>
+  <!---->
   <!---->
 </div>
 `;

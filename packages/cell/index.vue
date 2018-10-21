@@ -19,7 +19,9 @@
         <div v-text="label" :class="bem('label')"></div>
       </slot>
     </div>
-    <div :class="bem('value', { alone: !$slots.title && !title })">
+    <div
+      v-if="isDef(value) || $slots.default"
+      :class="bem('value', { alone: !$slots.title && !title })">
       <slot>
         <span v-text="value" />
       </slot>

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Actionsheet component should show Actionsheet 1`] = `
+<div class="h-actionsheet h-actionsheet--withtitle" style="display: none;" name="slide-bottom">
+  <div class="h-hairline--top-bottom h-actionsheet__header">
+    <div>actionsheet</div>
+    <icon-stub name="close" classprefix="h-icon"></icon-stub>
+  </div>
+  <div class="h-actionsheet__content"></div>
+</div>
+`;
+
+exports[`Actionsheet component should show Actionsheet Demo 1`] = `
+<div>
+  <div class="actionsheet-demo">
+    <h-button>action title</h-button>
+  </div>
+  <div class="actionsheet-demo">
+    <h-button>action 列表</h-button>
+  </div>
+  <div class="actionsheet-demo">
+    <h-button>action 取消</h-button>
+  </div>
+  <h-actionsheet title="title">
+    内容
+  </h-actionsheet>
+  <h-actionsheet actions="[object Object],[object Object],[object Object]"></h-actionsheet>
+  <h-actionsheet title="title" cancelText="取消"></h-actionsheet>
+</div>
+`;

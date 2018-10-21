@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dialog component should show Button Demo 1`] = `
+<div class="tab-demo">
+  <h-tabs>
+    <h-tab title="title1">
+      内容1
+    </h-tab>
+    <h-tab title="title2">
+      内容2
+    </h-tab>
+    <h-tab title="title3">
+      内容3
+    </h-tab>
+    <h-tab title="title4">
+      内容4
+    </h-tab>
+  </h-tabs>
+</div>
+`;
