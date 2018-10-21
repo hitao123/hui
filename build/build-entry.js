@@ -2,7 +2,9 @@ const Components = require('./get-components')();
 const path = require('path');
 const fs = require('fs');
 const uppercamelcase = require('uppercamelcase');
-
+const glob = require('fast-glob');
+const root = path.join(__dirname, '../');
+const join = dir => path.join(root, dir);
 const tips = '// This file is auto gererated by build/bin/build-entry.js';
 
 function buildEntry() {
@@ -125,7 +127,26 @@ export default [
 
 // 生成 docs 入口文档
 function buildDocsEntry() {
+  const output = join('docs/src/docs-entry.js');
+  const getName = fullPath => fullPath.replace(/\/(README)/, '.$1').split('/').pop().replace('.md', '');
+  // glob模块允许你使用 *等符号, 来写一个glob规则获取匹配对应规则的文件
+  const docs = glob.sync([
+    join('docs/**/*.md'),
+    join('packages/**/*.md'),
+    join('!**/node_modules/**')
+  ]).map((fullPath) => {
+    const name = getName(fullPath);
+    return `'${name}': () => import('${path.relative(join('docs/src'), fullPath)}')`
+  })
 
+  const content = `${tips}
+
+export default {
+  ${docs.join(',\n  ')}
+};
+`;
+
+  fs.writeFileSync(output, content);
 }
 
 
