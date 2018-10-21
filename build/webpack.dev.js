@@ -127,5 +127,29 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  }
+  },
+  // devServer: {
+  //   clientLogLevel: 'warning',
+  //   historyApiFallback: {
+  //     rewrites: [
+  //       { from: /.*/, to: path.posix.join(__dirname, 'docs/dist/', 'index.html') },
+  //     ],
+  //   },
+  //   hot: true,
+  //   contentBase: path.join(__dirname, '../static'),
+  //   compress: true,
+  //   host: 'localhost',
+  //   port: 8080,
+  //   open: true,
+  //   overlay:
+  //   {
+  //     warnings: false,
+  //     errors: true
+  //   },
+  //   publicPath: '/docs/dist',
+  //   quiet: true, // necessary for FriendlyErrorsPlugin
+  //   watchOptions: {
+  //     poll: false
+  //   }
+  // },
 }

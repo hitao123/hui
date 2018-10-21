@@ -1,11 +1,11 @@
 // This file is auto gererated by build/bin/build-entry.js
 
 export default {
-  'contribution': () => import('../markdown/contribution.md'),
-  'intro': () => import('../markdown/intro.md'),
-  'quickstart': () => import('../markdown/quickstart.md'),
-  'style-guide': () => import('../markdown/style-guide.md'),
-  'theme': () => import('../markdown/theme.md'),
+  'contribution.README': () => import('../markdown/contribution.README.md'),
+  'intro.README': () => import('../markdown/intro.README.md'),
+  'quickstart.README': () => import('../markdown/quickstart.README.md'),
+  'style-guide.README': () => import('../markdown/style-guide.README.md'),
+  'theme.README': () => import('../markdown/theme.README.md'),
   'actionsheet.README': () => import('../../packages/actionsheet/README.md'),
   'button.README': () => import('../../packages/button/README.md'),
   'cell.README': () => import('../../packages/cell/README.md'),

@@ -24,22 +24,30 @@ const registerRoute = (isDemo) => {
   function addRoute(page) {
     let { path } = page;
     if (path) {
+      path = path.replace('/', '');
+      // console.log(path, '🐶')
       let component
       // if (path === 'demo') {
       //   component = DemosPage;
       // } else {
       //   component = componentDemos[path]
       // }
-      component = isDemo ? componentDemos[path] : componentDocs[path]
-
+      component = isDemo ? componentDemos[path] : componentDocs[`${path}.README`]
+      console.log(component, '🐎🐎')
+      if (!component) {
+        return;
+      }
+      if (route.name === path) {
+        return;
+      }
       route.push({
         name: path,
         component,
-        path: `${path}`
+        path: `/${path}`
       })
     }
   }
-
+  console.log(route);
   return route;
 }
 
