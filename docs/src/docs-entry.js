@@ -9,7 +9,6 @@ export default {
   'actionsheet.README': () => import('../../packages/actionsheet/README.md'),
   'button.README': () => import('../../packages/button/README.md'),
   'cell.README': () => import('../../packages/cell/README.md'),
-  'cellgroup.README': () => import('../../packages/cellgroup/README.md'),
   'col.README': () => import('../../packages/col/README.md'),
   'datetimepicker.README': () => import('../../packages/datetimepicker/README.md'),
   'dialog.README': () => import('../../packages/dialog/README.md'),

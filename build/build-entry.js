@@ -52,77 +52,31 @@ export default {
   fs.writeFileSync(path.join(__dirname, '../packages/index.js'), content);
 }
 
-function buildRoute() {
-  const dir = path.join(__dirname, '../docs/src/views');
-  const demos = fs.readdirSync(dir)
-  .filter(name => ~name.indexOf('.vue'))
-  .filter(name => name.indexOf('index.vue'))
-  .map(name => name.replace('.vue', ''))
-  .map(name => `import ${name} from './views/${name}.vue'`)
 
-  const demosImport = fs.readdirSync(dir)
-  .filter(name => ~name.indexOf('.vue'))
-  .filter(name => name.indexOf('index.vue'))
+function buildDemoEntry() {
+  const output = join('docs/src/demo-entry.js');
+  const demoList = fs.readdirSync(join('packages'))
+  .filter(name => fs.existsSync(path.join(join('packages'), `${name}/demo/index.vue`)))
   .map(name => name.replace('.vue', ''))
   .map(name => {
-    return `{
-      'path': '/${name}',
-      'name': '${name}',
-      'component': ${name}
-    }`
+    return `'${name}': () => wrapper(import('../../packages/${name}/demo'), '${name}')`
   })
-
-  // 添加首页 index route
-  demosImport.push(`{
-      'path': '/',
-      'name': 'index',
-      'component': indexList
-    }`);
-
-
-
 
   const content = `${tips}
 
-import Vue from 'vue';
-import Router from 'vue-router';
-import Hui from '../../packages';
-import indexList from './views/index';
-
-${demos.join('\n')}
-
-Vue.use(Hui).use(Router);
-
-export default new Router({
-  mode: 'hash',
-  routes: [
-    ${demosImport.join(',\n    ')}
-  ]
-});
-`
-  fs.writeFileSync(path.join(dir, '../router.js'), content);
+function wrapper(promise, name) {
+  return promise.then(component => {
+    component = component.default;
+    component.name = 'demo-' + name;
+    return component;
+  });
 }
 
-
-function buildRouteList() {
-  const dir = path.join(__dirname, '../docs/src/views');
-  const demoList = fs.readdirSync(dir)
-  .filter(name => ~name.indexOf('.vue'))
-  .filter(name => name.indexOf('index.vue'))
-  .map(name => name.replace('.vue', ''))
-  .map(name => {
-    return `{
-    'path': '/${name}',
-    'name': '${name}'
-  }`
-  })
-
-content = `
-export default [
+export default {
   ${demoList.join(',\n  ')}
-];
-`
-  fs.writeFileSync(path.join(dir, '../demo.config.js'), content);
+};
+`;
+  fs.writeFileSync(output, content);
 }
 
 // 生成 docs 入口文档
@@ -150,7 +104,8 @@ export default {
 }
 
 
-buildEntry()
-buildRoute()
-buildRouteList()
+
+// buildEntry()
+// buildRoute()
+buildDemoEntry()
 buildDocsEntry()
