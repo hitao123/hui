@@ -35,10 +35,6 @@ module.exports = {
               title: '更新日志'
             },
             {
-              path: '/vant-css',
-              title: '内置样式'
-            },
-            {
               path: '/theme',
               title: '定制主题'
             },
@@ -53,10 +49,6 @@ module.exports = {
             {
               path: '/demo',
               title: '示例页面'
-            },
-            {
-              path: '/locale',
-              title: '国际化'
             }
           ]
         }

@@ -1,6 +1,7 @@
 import docConfig from './doc.config'
 import componentDocs from './docs-entry'
 import componentDemos from './demo-entry'
+import DemoList from './components/DemoList'
 
 const registerRoute = (isDemo) => {
   const route = [{
@@ -9,13 +10,27 @@ const registerRoute = (isDemo) => {
   }];
 
   Object.keys(docConfig).forEach((item) => {
+    if (isDemo) {
+      route.push({
+        path: `/`,
+        component: DemoList
+      });
+    } else {
+      route.push({
+        path: `/`,
+        redirect: `/intro`
+      });
+    }
+
     const navs = docConfig.nav || [];
     navs.forEach(nav => {
       if (nav.groups) {
         nav.groups.forEach(group => {
+          console.log(group, '=====group')
           group.list.forEach(page => addRoute(page))
         })
       } else {
+        console.log(nav, 'nav===>')
         addRoute(nav)
       }
     });
