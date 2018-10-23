@@ -1,6 +1,7 @@
 // This file is auto gererated by build/bin/build-entry.js
 
 export default {
+  'changelog.README': () => import('../markdown/changelog.README.md'),
   'contribution.README': () => import('../markdown/contribution.README.md'),
   'intro.README': () => import('../markdown/intro.README.md'),
   'quickstart.README': () => import('../markdown/quickstart.README.md'),

@@ -1,19 +1,12 @@
 module.exports = {
   header: {
     logo: {
-      image: 'https://img.yzcdn.cn/public_files/2017/12/18/fd78cf6bb5d12e2a119d0576bedfd230.png',
-      title: 'Vant',
+      title: 'Hui',
       href: '#/'
     },
     nav: {
-      'Vue 组件': 'https://youzan.github.io/vant/',
-      '小程序组件': 'https://youzan.github.io/vant-weapp/',
-      lang: {
-        text: 'En',
-        from: 'zh-CN',
-        to: 'en-US'
-      },
-      github: 'https://github.com/youzan/vant'
+      'Vue 组件': 'https://hitao123.github.io/hui/',
+      github: 'https://github.com/hitao123/hui'
     }
   },
   nav: [
