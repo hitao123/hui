@@ -1,8 +1,8 @@
 ## 开发指南
 
-首先感谢你使用 Vant。
+首先感谢你使用 Hui。
 
-以下是关于向 Vant 提交代码的指南。在向 Vant 提交 Issue 或者 PR 之前，请先花几分钟时间阅读以下文字。
+以下是关于向 Hui 提交代码的指南。在向 Hui 提交 Issue 或者 PR 之前，请先花几分钟时间阅读以下文字。
 
 ### Issue 规范
 
@@ -18,9 +18,9 @@
 ### 初始化项目
 
 ```bash
-git clone git@github.com:youzan/vant.git
+git clone https://github.com/hitao123/hui.git
 
-cd vant
+cd hui
 
 # 安装依赖
 npm run bootstrap
@@ -34,13 +34,13 @@ npm run dev
 ### 目录结构
 
 - 仓库的组件代码位于 packages 下，每个组件一个文件夹
-- 组件样式代码位于 packages/vant-css/src 下，vant-css 也会在发布时单独发包
+- 组件样式代码位于 packages/less/index.less 下
 - docs 目录下是文档网站的代码，本地开发时可以在目录下运行 npm run dev 开启文档网站
 
 项目目录大致如下：
 
 ```
-vant
+Hui
 ├─ build            # 构建脚本
 ├─ docs             # 文档网站
 ├─ packages         # 组件文件
@@ -57,10 +57,8 @@ packages
 |- button
 |  ├─ demo        # 示例代码
 |  ├─ test        # 单元测试
-|  ├─ zh-CN.md    # 中文文档
-|  ├─ en-US.md    # 英文文档
 |  └─ index.vue   # 组件入口
-└─ vant-css
+└─ less
    ├─ index.css   # 样式入口
    └─ button.css  # 组件样式
 ```
@@ -86,9 +84,9 @@ packages
 书写代码演示时，建议从简单用法开始介绍，不要上来就同时使用一大堆 API，会让人觉得难以上手。并且一个示例只演示一个 API 的使用方法，如无特殊需求不要在一个示例中同时演示多个 API 混合使用。
 
 ```html
-<van-button :size="size">
+<h-button :size="size">
   Large
-</van-button>
+</h-button>
 ```
 
 ```javascript
@@ -129,7 +127,7 @@ import Button from '../button';
 
 #### 组件创建
 
-Vant 中的组件会通过 `create` 方法统一创建，`create` 方法会在选项文件中注入基本的依赖和方法。
+Hui 中的组件会通过 `create` 方法统一创建，`create` 方法会在选项文件中注入基本的依赖和方法。
 
 ```js
 import create from '../utils/create';
@@ -141,4 +139,4 @@ export default create({
 
 #### 样式
 
-组件样式使用 `precss 3.0` 作为预处理器，具体语法请参考 [precss 文档](https://github.com/jonathantneal/precss).
+组件样式使用 `less` 作为预处理器，具体语法请参考 [less 文档](https://github.com/less/less.js).

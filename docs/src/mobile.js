@@ -1,11 +1,14 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './WapApp';
+import Hui from '../../packages';
 import routes from './router';
 import NProgress from 'NProgress';
 
 import '../../packages/less/index.less';
 import '../../packages/less/common/normalize.less';
+
+Vue.use(VueRouter).use(Hui);
 
 const router = new VueRouter({
   mode: 'hash',

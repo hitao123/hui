@@ -2,10 +2,10 @@
 
 ### 脚手架
 
-我们提供了开箱即用的开发脚手架，通过 [vue-cli](https://github.com/vuejs/vue-cli) 即可快速创建一个基于 `Vant` 的项目。
+我们提供了开箱即用的开发脚手架，通过 [vue-cli](https://github.com/vuejs/vue-cli) 即可快速创建一个基于 `hui` 的项目。
 
 ```shell
-vue init youzan/vue-cli-template-vant my-project
+vue init youzan/vue-cli-template-hui my-project
 ```
 
 ### 安装
@@ -13,13 +13,13 @@ vue init youzan/vue-cli-template-vant my-project
 #### NPM
 
 ```shell
-npm i vant -S
+npm i hui -S
 ```
 
 #### YARN
 
 ```shell
-yarn add vant
+yarn add hui
 ```
 
 #### CDN
@@ -60,10 +60,10 @@ npm i babel-plugin-import -D
 }
 ```
 
-接着你可以在代码中直接引入 Vant 组件，插件会自动将代码转化为方式二中的按需引入形式
+接着你可以在代码中直接引入 hui 组件，插件会自动将代码转化为方式二中的按需引入形式
 
 ```js
-import { Button, Cell } from 'vant';
+import { Button, Cell } from 'hui';
 ```
 
 > 如果你在使用 TypeScript，可以使用 [ts-import-plugin](https://github.com/Brooooooklyn/ts-import-plugin) 实现按需引入

@@ -1,28 +1,27 @@
 <template>
   <div class="side-nav">
     <h1 class="zanui-title">
-      <img src="https://img.yzcdn.cn/public_files/2017/12/18/fd78cf6bb5d12e2a119d0576bedfd230.png" >
-      <span>Vant</span>
+      <span>Hui</span>
     </h1>
-    <div class="mobile-switch-lang">
+    <!-- <div class="mobile-switch-lang">
       <span :class="{ active: $vantLang === 'en-US' }" @click="switchLang('en-US')">EN</span>
       <span :class="{ active: $vantLang === 'zh-CN' }" @click="switchLang('zh-CN')">中文</span>
-    </div>
+    </div> -->
     <h2 class="zanui-desc">{{ description }}</h2>
     <template v-for="item in navList" v-if="item.showInMobile">
-      <!-- <mobile-nav
+      <mobile-nav
         v-for="(group, index) in item.groups"
         :group="group"
-        :base="$vantLang"
+        base=""
         :key="index"
-      /> -->
+      />
     </template>
   </div>
 </template>
 
 <script>
 import docConfig from '../doc.config';
-// import MobileNav from './MobileNav';
+import MobileNav from './MobileNav';
 // import { setLang } from '../utils/lang';
 
 export default {
@@ -33,16 +32,16 @@ export default {
   },
 
   components: {
-    // MobileNav
+    MobileNav
   },
 
   computed: {
     navList() {
-      return this.docConfig[this.$vantLang].nav || [];
+      return this.docConfig.nav || [];
     },
 
     description() {
-      return this.$vantLang === 'zh-CN' ? '轻量、可靠的移动端 Vue 组件库' : 'Lightweight Mobile UI Components built on Vue';
+      return '轻量、可靠的移动端 Vue 组件库';
     }
   },
 
@@ -61,14 +60,14 @@ export default {
 @import '../../../packages/less/common/var.less';
 
 .side-nav {
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
   padding: 60px 15px 20px;
 
   .zanui-title,
   .zanui-desc {
+    font-weight: 600;
     text-align: center;
-    font-weight: normal;
     user-select: none;
   }
 
@@ -86,16 +85,16 @@ export default {
     }
 
     span {
-      font-size: 40px;
       margin-left: 15px;
-      font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+      font-family: Dosis, "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+      font-size: 40px;
     }
   }
 
   .zanui-desc {
+    margin: 0 0 60px;
     font-size: 14px;
     color: #455a64;
-    margin: 0 0 60px;
   }
 }
 
@@ -104,20 +103,20 @@ export default {
   top: 15px;
   right: 15px;
   font-size: 11px;
-  border: 1px solid $blue;
-  border-radius: 3px;
-  color: $blue;
+  color: @blue;
   cursor: pointer;
+  border: 1px solid @blue;
+  border-radius: 3px;
 
   span {
+    display: inline-block;
     width: 32px;
     line-height: 22px;
     text-align: center;
-    display: inline-block;
 
     &.active {
       color: #fff;
-      background-color: $blue;
+      background-color: @blue;
     }
   }
 }

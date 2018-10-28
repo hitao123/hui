@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <van-doc
+    <h-doc
       :base="base"
       :config="config"
       active="Vue 组件"
@@ -8,7 +8,7 @@
       :current-simulator="currentSimulator"
     >
       <router-view @changeDemoURL="onChangeDemoURL" />
-    </van-doc>
+    </h-doc>
   </div>
 </template>
 
@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     base() {
-      return `/${this.$vantLang}`;
+      return '';
     },
     config() {
       return docConfig;
