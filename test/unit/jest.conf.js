@@ -20,6 +20,8 @@ module.exports = {
   collectCoverageFrom: [
     'packages/**/*.{js,vue}',
     '!packages/index.js',
+    '!**/less/**',
+    '!**/demo/**',
     '!**/node_modules/**'
   ],
   collectCoverage: true

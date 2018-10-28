@@ -21,7 +21,7 @@ exports[`NoticeBar component should show NoticeBar 1`] = `
 <div class="h-notice-bar">
   <!---->
   <div class="h-notice-bar__wrap">
-    <div class="h-notice-bar__content" style="padding-left: 0px;">title is long</div>
+    <div class="h-notice-bar__content" style="padding-left: 0;">title is long</div>
   </div>
   <!---->
 </div>
