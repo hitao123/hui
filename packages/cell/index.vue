@@ -34,14 +34,14 @@
 
 <script>
 import create from '../utils/create-basic';
-import routerLink from '../utils/mixins/routerLink';
+import RouterLink from '../utils/mixins/routerLink';
 import Icon from '../icon';
 export default create({
   name: 'cell',
   components: {
     Icon
   },
-  mixins: [routerLink],
+  mixins: [RouterLink],
   props: {
     center: Boolean,
     required: Boolean,
