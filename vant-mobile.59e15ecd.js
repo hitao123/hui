@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "async_" + ({}[chunkId]||chunkId) + "." + {"0":"3a813c71","1":"d607812e","2":"b2caf623","3":"18be39a8","4":"5a6d7aac","5":"ec9cb15e","6":"ee51c5c3","7":"510ac6e7","8":"3abe45b7","9":"acc506d5","10":"80e09e4f","11":"6db11ac7","12":"96f9fd64","13":"4e0dce66","14":"07c6fdbc","15":"904dfc77","16":"389ca482","17":"be280d6f","18":"5b364805","19":"14daddf9","20":"d37a6259","21":"0d0af3bb","22":"c78f5977","23":"663e480f","24":"0c698f6f","25":"5b096f2b","26":"81b15491","27":"4ef35af8","28":"2ff20a0a","29":"fdfa1f15","30":"db476e86","31":"279d5f92","32":"e3b281c5","33":"b421372b","34":"05aca90b","35":"b13d559b","36":"8c86ffe8","37":"d55c6890","38":"33b57cc1","39":"1d40f8bc","40":"71816c9c","41":"32249f85","42":"cbc5a76c","43":"06c12942","44":"acf73b7f","45":"fbb19520","46":"0fdc88b3","47":"41762454","48":"bc3655be","49":"23101d7f","50":"3c86e584","51":"404f26df","52":"4e8ece5b","53":"ca0bfb80","54":"da1295be","55":"6858c6b0","56":"df99f0f3","57":"c6aa189e","58":"a5f99caf","59":"c869bd02","60":"4aa88b57","61":"51d2fe18","62":"977279c1","63":"f47c5b5b","64":"191f8a65","65":"e7d5c595"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "async_" + ({}[chunkId]||chunkId) + "." + {"0":"3a813c71","1":"d607812e","2":"b2caf623","3":"18be39a8","4":"5a6d7aac","5":"ec9cb15e","6":"ee51c5c3","7":"510ac6e7","8":"3abe45b7","9":"acc506d5","10":"80e09e4f","11":"6db11ac7","12":"96f9fd64","13":"4e0dce66","14":"07c6fdbc","15":"904dfc77","16":"389ca482","17":"be280d6f","18":"5b364805","19":"14daddf9","20":"d37a6259","21":"0d0af3bb","22":"c78f5977","23":"663e480f","24":"0c698f6f","25":"5b096f2b","26":"81b15491","27":"4ef35af8","28":"2ff20a0a","29":"fdfa1f15","30":"db476e86","31":"279d5f92","32":"e3b281c5","33":"b421372b","34":"05aca90b","35":"b13d559b","36":"8c86ffe8","37":"d55c6890","38":"33b57cc1","39":"1d40f8bc","40":"71816c9c","41":"32249f85","42":"cbc5a76c","43":"06c12942","44":"acf73b7f","45":"fbb19520","46":"0fdc88b3","47":"41762454","48":"bc3655be","49":"23101d7f","50":"3c86e584","51":"404f26df","52":"4e8ece5b","53":"40e49f4e","54":"aa18baf1","55":"c93e56af","56":"df3ae908","57":"ccee65d3","58":"a5f99caf","59":"c869bd02","60":"4aa88b57","61":"51d2fe18","62":"977279c1","63":"f47c5b5b","64":"191f8a65","65":"e7d5c595"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -11818,10 +11818,6 @@ module.exports = {
             {
               path: '/style-guide',
               title: '风格指南'
-            },
-            {
-              path: '/demo',
-              title: '示例页面'
             }
           ]
         }
@@ -11839,20 +11835,12 @@ module.exports = {
               title: 'Layout 布局'
             },
             {
-              path: '/badge',
-              title: 'Badge 徽章'
-            },
-            {
               path: '/button',
               title: 'Button 按钮'
             },
             {
               path: '/cell',
               title: 'Cell 单元格'
-            },
-            {
-              path: '/circle',
-              title: 'Circle 环形进度条'
             },
             {
               path: '/collapse',
@@ -12020,47 +12008,6 @@ module.exports = {
             {
               path: '/tree-select',
               title: 'TreeSelect 分类选择'
-            }
-          ]
-        },
-        {
-          groupName: '业务组件',
-          list: [
-            {
-              path: '/address-edit',
-              title: 'AddressEdit 地址编辑'
-            },
-            {
-              path: '/address-list',
-              title: 'AddressList 地址列表'
-            },
-            {
-              path: '/area',
-              title: 'Area 省市区选择'
-            },
-            {
-              path: '/card',
-              title: 'Card 卡片'
-            },
-            {
-              path: '/contact-card',
-              title: 'Contact 联系人'
-            },
-            {
-              path: '/coupon-list',
-              title: 'Coupon 优惠券'
-            },
-            {
-              path: '/goods-action',
-              title: 'GoodsAction 商品页行动点'
-            },
-            {
-              path: '/submit-bar',
-              title: 'SubmitBar 提交订单栏'
-            },
-            {
-              path: '/sku',
-              title: 'Sku 商品规格弹层'
             }
           ]
         }
