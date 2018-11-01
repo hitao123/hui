@@ -38,10 +38,6 @@ module.exports = {
             {
               path: '/style-guide',
               title: '风格指南'
-            },
-            {
-              path: '/demo',
-              title: '示例页面'
             }
           ]
         }
@@ -59,20 +55,12 @@ module.exports = {
               title: 'Layout 布局'
             },
             {
-              path: '/badge',
-              title: 'Badge 徽章'
-            },
-            {
               path: '/button',
               title: 'Button 按钮'
             },
             {
               path: '/cell',
               title: 'Cell 单元格'
-            },
-            {
-              path: '/circle',
-              title: 'Circle 环形进度条'
             },
             {
               path: '/collapse',
@@ -240,47 +228,6 @@ module.exports = {
             {
               path: '/tree-select',
               title: 'TreeSelect 分类选择'
-            }
-          ]
-        },
-        {
-          groupName: '业务组件',
-          list: [
-            {
-              path: '/address-edit',
-              title: 'AddressEdit 地址编辑'
-            },
-            {
-              path: '/address-list',
-              title: 'AddressList 地址列表'
-            },
-            {
-              path: '/area',
-              title: 'Area 省市区选择'
-            },
-            {
-              path: '/card',
-              title: 'Card 卡片'
-            },
-            {
-              path: '/contact-card',
-              title: 'Contact 联系人'
-            },
-            {
-              path: '/coupon-list',
-              title: 'Coupon 优惠券'
-            },
-            {
-              path: '/goods-action',
-              title: 'GoodsAction 商品页行动点'
-            },
-            {
-              path: '/submit-bar',
-              title: 'SubmitBar 提交订单栏'
-            },
-            {
-              path: '/sku',
-              title: 'Sku 商品规格弹层'
             }
           ]
         }

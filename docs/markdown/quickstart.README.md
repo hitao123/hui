@@ -5,7 +5,7 @@
 我们提供了开箱即用的开发脚手架，通过 [vue-cli](https://github.com/vuejs/vue-cli) 即可快速创建一个基于 `hui` 的项目。
 
 ```shell
-vue init youzan/vue-cli-template-hui my-project
+vue init rvs-template/vue-cli-template-hui my-project
 ```
 
 ### 安装
@@ -27,12 +27,7 @@ yarn add hui
 访问下面的文件 URL，会自动重定向至最新版本的 CDN 链接，建议使用固定版本的 CDN 链接，避免升级时受到非兼容性更新的影响。
 
 ```html
-<!-- 引入样式 -->
-<link rel="stylesheet" href="https://unpkg.com/vant/lib/vant-css/index.css">
 
-<!-- 引入组件 -->
-<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
-<script src="https://unpkg.com/vant/lib/vant.min.js"></script>
 ```
 
 ### 引入组件
@@ -52,7 +47,7 @@ npm i babel-plugin-import -D
 {
   "plugins": [
     ["import", {
-      "libraryName": "vant",
+      "libraryName": "hui",
       "libraryDirectory": "es",
       "style": true
     }]
@@ -73,45 +68,17 @@ import { Button, Cell } from 'hui';
 在不使用插件的情况下，可以手动引入需要的组件
 
 ```js
-import Button from 'vant/lib/button';
-import 'vant/lib/vant-css/base.css';
-import 'vant/lib/vant-css/button.css';
+import Button from 'hui/lib/button';
 ```
 
 #### 方式三. 导入所有组件
 
 ```js
 import Vue from 'vue';
-import Vant from 'vant';
-import 'vant/lib/vant-css/index.css';
+import Hui from 'hui';
 
-Vue.use(Vant);
+Vue.use(Hui);
 ```
 
 > 注意：配置 babel-plugin-import 插件后将不允许导入所有组件
 
-
-### Rem 适配
-
-Vant 中的样式默认使用`px`作为单位，如果需要使用`rem`单位，推荐使用以下两个工具
-
-- [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) 是一款 postcss 插件，用于将单位转化为 rem
-- [lib-flexible](https://github.com/amfe/lib-flexible) 用于设置 rem 基准值
-
-下面提供了一份基本的 postcss 配置，可以在此配置的基础上根据项目需求进行修改
-
-```js
-module.exports = {
-  plugins: {
-    'autoprefixer': {
-      browsers: ['Android >= 4.0', 'iOS >= 7']
-    }
-    'postcss-pxtorem': {
-      rootValue: 37.5,
-      propList: ['*']
-    }
-  }
-}
-```
-
-> 注意：在配置 postcss-loader 时，应避免 ignore node_modules 目录，这会导致 Vant 的样式无法被编译

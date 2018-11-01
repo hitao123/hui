@@ -23,7 +23,7 @@ git clone https://github.com/hitao123/hui.git
 cd hui
 
 # 安装依赖
-npm run bootstrap
+npm i
 
 # 本地开发模式
 npm run dev
@@ -39,7 +39,7 @@ npm run dev
 
 项目目录大致如下：
 
-```
+```js
 Hui
 ├─ build            # 构建脚本
 ├─ docs             # 文档网站
@@ -52,7 +52,7 @@ Hui
 
 添加新组件时，请按照下面的目录结构组织文件，并在 `docs/src/doc.config.js` 中配置组件名称
 
-```
+```js
 packages
 |- button
 |  ├─ demo        # 示例代码

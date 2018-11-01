@@ -9,12 +9,11 @@
 * 单元测试覆盖率超过 90%
 * 完善的文档和示例
 * 支持 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import)
-* 支持 TypeScript
 * 支持 SSR
 
 ### 快速上手
 
-请参考 [快速上手](#/zh-CN/quickstart)
+请参考 [快速上手](#/quickstart)
 
 ### 贡献代码
 
