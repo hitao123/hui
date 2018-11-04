@@ -1,13 +1,13 @@
 <template>
   <div class="side-nav">
-    <h1 class="zanui-title">
+    <h1 class="hui-title">
       <span>Hui</span>
     </h1>
     <!-- <div class="mobile-switch-lang">
       <span :class="{ active: $vantLang === 'en-US' }" @click="switchLang('en-US')">EN</span>
       <span :class="{ active: $vantLang === 'zh-CN' }" @click="switchLang('zh-CN')">中文</span>
     </div> -->
-    <h2 class="zanui-desc">{{ description }}</h2>
+    <h2 class="hui-desc">{{ description }}</h2>
     <template v-for="item in navList" v-if="item.showInMobile">
       <mobile-nav
         v-for="(group, index) in item.groups"
@@ -57,21 +57,21 @@ export default {
 
 <style lang="less">
 
-@import '../../../packages/less/common/var.less';
+@import "../../../packages/less/common/var.less";
 
 .side-nav {
   box-sizing: border-box;
   width: 100%;
   padding: 60px 15px 20px;
 
-  .zanui-title,
-  .zanui-desc {
+  .hui-title,
+  .hui-desc {
     font-weight: 600;
     text-align: center;
     user-select: none;
   }
 
-  .zanui-title {
+  .hui-title {
     margin: 0 0 15px;
 
     img,
@@ -91,7 +91,7 @@ export default {
     }
   }
 
-  .zanui-desc {
+  .hui-desc {
     margin: 0 0 60px;
     font-size: 14px;
     color: #455a64;

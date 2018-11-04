@@ -5,7 +5,7 @@
         v-if="!navItem.disabled"
         v-for="(navItem, index) in group.list"
         :key="index"
-        :to="'/' + base + navItem.path"
+        :to="base + navItem.path"
         :title="navItem.title"
         is-link
       />
@@ -33,11 +33,11 @@ export default {
       display: none;
     }
 
-    .van-collapse-item__content {
+    .h-collapse-item__content {
       padding: 0;
     }
 
-    .van-collapse-item__title {
+    .h-collapse-item__title {
       align-items: center;
       font-size: 16px;
       line-height: 36px;

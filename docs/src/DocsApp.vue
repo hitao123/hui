@@ -4,6 +4,7 @@
       :base="base"
       :config="config"
       active="Vue 组件"
+      simulator="mobile.html"
       :simulators="simulators"
       :current-simulator="currentSimulator"
     >
@@ -44,7 +45,7 @@ export default {
 </script>
 
 <style lang="less">
-.van-doc-intro {
+.h-doc-intro {
   font-family: Dosis, "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   text-align: center;
 

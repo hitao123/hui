@@ -16,7 +16,7 @@
     <div v-if="title || $slots.title" :class="bem('title')">
       <slot name="title">
         <span v-text="title"></span>
-        <div v-text="label" :class="bem('label')"></div>
+        <div v-if="label" v-text="label" :class="bem('label')"></div>
       </slot>
     </div>
     <div

@@ -1,35 +1,38 @@
 <template>
-  <div>
-    <div class="button-demo">
-      <h3 class="h3">type</h3>
-      <h-button @click="handleClick" text="Button" type="default"></h-button>
-      <h-button @click="handleClick" text="Button" type="primary"></h-button>
-      <h-button @click="handleClick" text="Button" type="warning"></h-button>
-      <h-button @click="handleClick" text="Button" type="danger"></h-button>
-    </div>
-    <div class="button-demo">
-      <h3 class="h3">plain</h3>
-      <h-button @click="handleClick" text="Button" type="default" plain></h-button>
-      <h-button @click="handleClick" text="Button" type="primary" plain></h-button>
-      <h-button @click="handleClick" text="Button" type="warning" plain></h-button>
-      <h-button @click="handleClick" text="Button" type="danger" plain></h-button>
-    </div>
-    <div class="button-demo">
-      <h3 class="h3">size</h3>
-      <h-button @click="handleClick" text="Button" type="default" size="large"></h-button>
-      <h-button @click="handleClick" text="Button" type="primary" plain></h-button>
-      <h-button @click="handleClick" text="Button" type="warning" size="small"></h-button>
-      <h-button @click="handleClick" text="Button" type="danger" size="mini"></h-button>
-    </div>
-    <div class="button-demo">
-      <h3 class="h3">disabled</h3>
-      <h-button @click="handleClick" text="Button" type="default" size="large" disabled></h-button>
-    </div>
-    <div class="button-demo">
-      <h3 class="h3">loading</h3>
-      <h-button @click="handleClick" type="default" loading></h-button>
-    </div>
-  </div>
+  <demo-section>
+    <demo-block title="按钮类型">
+      <div class="demo-button-row">
+        <h-button type="default">默认按钮</h-button>
+        <h-button type="primary">主要按钮</h-button>
+      </div>
+      <h-button type="warning">警告按钮</h-button>
+      <h-button type="danger">危险按钮</h-button>
+    </demo-block>
+    <demo-block title="简单按钮">
+      <div class="demo-button-row">
+        <h-button type="default" plain>默认按钮</h-button>
+        <h-button type="primary" plain>主要按钮</h-button>
+      </div>
+      <h-button type="warning" plain>警告按钮</h-button>
+      <h-button type="danger" plain>危险按钮</h-button>
+    </demo-block>
+    <demo-block title="按钮大小">
+      <div class="demo-button-row">
+        <h-button size="large">大号按钮</h-button>
+      </div>
+      <h-button size="normal">普通按钮</h-button>
+      <h-button size="small">小型按钮</h-button>
+      <h-button size="mini">迷你按钮</h-button>
+    </demo-block>
+    <demo-block title="禁用状态">
+      <h-button @click="handleClick" type="primary" disabled>禁用状态</h-button>
+      <h-button @click="handleClick" type="danger" disabled>禁用状态</h-button>
+    </demo-block>
+    <demo-block title="加载状态">
+      <h-button @click="handleClick" type="primary" loading>loading</h-button>
+      <h-button @click="handleClick" type="danger" loading>loading</h-button>
+    </demo-block>
+  </demo-section>
 </template>
 
 <script>
@@ -44,10 +47,9 @@ export default {
 </script>
 
 <style lang="less">
-  .button-demo {
-    text-align: center;
-    .h3 {
-      padding: 0 30px;
+  .demo-button {
+    &-row {
+      margin-bottom: 10px;
     }
   }
 </style>

@@ -1,4 +1,4 @@
-@import './common/var.less';
+@import "./common/var.less";
 
 .h-button {
   position: relative;
@@ -49,10 +49,31 @@
     border: 1px solid @button-primary-border-color;
   }
 
+  &--warning {
+    color: @button-warning-color;
+    background-color: @button-warning-background-color;
+    border: 1px solid @button-warning-border-color;
+  }
+
   &--danger {
     color: @button-danger-color;
     background-color: @button-danger-background-color;
     border: 1px solid @button-danger-border-color;
+  }
+
+  &--plain {
+    background-color: @button-default-background-color;
+    &.h-button--primary {
+      color: @button-primary-background-color;
+    }
+
+    &.h-button--danger {
+      color: @button-danger-background-color;
+    }
+
+    &.h-button--warning {
+      color: @button-warning-background-color;
+    }
   }
 
   &--large {
@@ -118,8 +139,10 @@
   }
 
   &--disabled {
-    color: @button-disabled-color;
-    background-color: @button-disabled-background-color;
-    border: 1px solid @button-disabled-border-color;
+    opacity: .5;
+  }
+
+  &--square {
+    border-radius: 0;
   }
 }

@@ -1,11 +1,11 @@
-<div class="van-doc-intro">
+<div class="h-doc-intro">
   <h2>Hui</h2>
   <p>轻量、可靠的移动端 Vue 组件库</p>
 </div>
 
 ### 特性
 
-* 50+组件
+* 40+组件
 * 单元测试覆盖率超过 90%
 * 完善的文档和示例
 * 支持 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import)

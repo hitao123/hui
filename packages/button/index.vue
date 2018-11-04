@@ -1,5 +1,6 @@
 <template>
-  <button
+  <component
+    :is="tag"
     :type="nativeType"
     :disabled="disabled"
     :class="bem([
@@ -9,7 +10,8 @@
         block,
         plain,
         loading,
-        disabled
+        disabled,
+        square
       }
     ])"
     @click="onClick"
@@ -18,7 +20,7 @@
     <span :class="bem('text')">
       <slot>{{ text }}</slot>
     </span>
-  </button>
+  </component>
 </template>
 
 <script>
@@ -27,8 +29,13 @@ import create from '../utils/create';
 export default create({
   name: 'button',
   props: {
+    tag: {
+      type: String,
+      default: 'button'
+    },
     text: String,
     block: Boolean,
+    square: Boolean,
     plain: Boolean,
     loading: Boolean,
     type: {

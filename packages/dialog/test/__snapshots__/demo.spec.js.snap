@@ -13,10 +13,10 @@ exports[`Dialog component should show Dialog 1`] = `
   <div>title</div>
   <!---->
   <div class="h-hairline--top h-dialog__footer">
-    <h-button-stub type="default" size="large" class="h-dialog__cancel" style="display: none;">
+    <h-button-stub tag="button" type="default" size="large" class="h-dialog__cancel" style="display: none;">
       cancel
     </h-button-stub>
-    <h-button-stub type="default" size="large" class="h-dialog__confirm">
+    <h-button-stub tag="button" type="default" size="large" class="h-dialog__confirm">
       confirm
     </h-button-stub>
   </div>

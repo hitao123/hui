@@ -4,11 +4,13 @@ import App from './WapApp';
 import Hui from '../../packages';
 import routes from './router';
 import NProgress from 'NProgress';
-
+import { DemoBlock, DemoSection } from 'hui-doc';
 import '../../packages/less/index.less';
 import '../../packages/less/common/normalize.less';
 
 Vue.use(VueRouter).use(Hui);
+Vue.component('demo-block', DemoBlock);
+Vue.component('demo-section', DemoSection);
 
 const router = new VueRouter({
   mode: 'hash',
