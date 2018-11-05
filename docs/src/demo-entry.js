@@ -13,6 +13,7 @@ export default {
   'button': () => wrapper(import('../../packages/button/demo'), 'button'),
   'cell': () => wrapper(import('../../packages/cell/demo'), 'cell'),
   'col': () => wrapper(import('../../packages/col/demo'), 'col'),
+  'collapse': () => wrapper(import('../../packages/collapse/demo'), 'collapse'),
   'datetimepicker': () => wrapper(import('../../packages/datetimepicker/demo'), 'datetimepicker'),
   'dialog': () => wrapper(import('../../packages/dialog/demo'), 'dialog'),
   'field': () => wrapper(import('../../packages/field/demo'), 'field'),

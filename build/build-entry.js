@@ -105,7 +105,6 @@ export default {
 
 
 
-// buildEntry()
-// buildRoute()
+buildEntry()
 buildDemoEntry()
 buildDocsEntry()

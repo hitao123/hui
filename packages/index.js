@@ -4,6 +4,8 @@ import Button from './button';
 import Cell from './cell';
 import Cellgroup from './cellgroup';
 import Col from './col';
+import Collapse from './collapse';
+import CollapseItem from './collapse-item';
 import Datetimepicker from './datetimepicker';
 import Dialog from './dialog';
 import Field from './field';
@@ -37,6 +39,8 @@ const components = [
   Cell,
   Cellgroup,
   Col,
+  Collapse,
+  CollapseItem,
   Datetimepicker,
   Dialog,
   Field,
@@ -82,6 +86,8 @@ export {
   Cell,
   Cellgroup,
   Col,
+  Collapse,
+  CollapseItem,
   Datetimepicker,
   Dialog,
   Field,
