@@ -11,6 +11,7 @@ export default {
   'button.README': () => import('../../packages/button/README.md'),
   'cell.README': () => import('../../packages/cell/README.md'),
   'col.README': () => import('../../packages/col/README.md'),
+  'collapse.README': () => import('../../packages/collapse/README.md'),
   'datetimepicker.README': () => import('../../packages/datetimepicker/README.md'),
   'dialog.README': () => import('../../packages/dialog/README.md'),
   'field.README': () => import('../../packages/field/README.md'),

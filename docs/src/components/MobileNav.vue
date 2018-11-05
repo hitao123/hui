@@ -1,6 +1,6 @@
 <template>
-  <div class="mobile-nav">
-    <template :title="group.groupName" :name="group.groupName" class="mobile-nav__item">
+  <h-collapse class="mobile-nav" v-model="active">
+    <h-collapse-item :title="group.groupName" :name="group.groupName" class="mobile-nav__item">
       <h-cell
         v-if="!navItem.disabled"
         v-for="(navItem, index) in group.list"
@@ -9,8 +9,8 @@
         :title="navItem.title"
         is-link
       />
-    </template>
-  </div>
+    </h-collapse-item>
+  </h-collapse>
 </template>
 
 <script>
@@ -19,6 +19,11 @@ export default {
   props: {
     group: Object,
     base: String
+  },
+  data() {
+    return {
+      active: []
+    }
   }
 }
 </script>
