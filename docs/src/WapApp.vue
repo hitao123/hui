@@ -1,12 +1,33 @@
 <template>
-  <div>
+  <div class="iframe">
+    <h-nav-bar
+      v-show="title"
+      class="h-doc-nav-bar"
+      :title="title"
+      left-arrow
+      @click-left="onBack"
+    >
+      <a slot="right" :href="demoLink" target="_blank">
+        <h-icon name="edit" />
+      </a>
+    </h-nav-bar>
     <router-view />
   </div>
 </template>
 
 <script>
 export default {
-
+  data() {
+    return {
+      title: 'test',
+      demoLink: ''
+    }
+  },
+  methods: {
+    onBack() {
+      history.back();
+    }
+  }
 }
 </script>
 
@@ -17,5 +38,8 @@ body {
   color: #333;
   background-color: #fafafa;
   -webkit-font-smoothing: antialiased;
+}
+.iframe {
+  width: 360px;
 }
 </style>

@@ -12,6 +12,7 @@ import Field from './field';
 import Icon from './icon';
 import List from './list';
 import Loading from './loading';
+import NavBar from './nav-bar';
 import NoticeBar from './notice-bar';
 import NumberKeyboard from './number-keyboard';
 import PasswordInput from './password-input';
@@ -47,6 +48,7 @@ const components = [
   Icon,
   List,
   Loading,
+  NavBar,
   NoticeBar,
   NumberKeyboard,
   PasswordInput,
@@ -94,6 +96,7 @@ export {
   Icon,
   List,
   Loading,
+  NavBar,
   NoticeBar,
   NumberKeyboard,
   PasswordInput,
