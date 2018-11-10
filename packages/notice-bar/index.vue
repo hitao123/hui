@@ -103,7 +103,6 @@ export default create({
     },
     onClickIcon() {
       this.showNoticeBar = this.mode !== 'close';
-      console.log(this.mode !== 'close', this.mode);
     }
   }
 })

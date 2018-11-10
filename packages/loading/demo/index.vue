@@ -1,16 +1,14 @@
 <template>
-  <div>
-    <div class="demo-loading">
-      <h3>circle</h3>
-      <h-loading color="black"></h-loading>
+  <demo-section>
+    <demo-block title="circle">
+      <h-loading></h-loading>
       <h-loading color="white"></h-loading>
-    </div>
-    <div class="demo-loading">
-      <h3>spinning</h3>
-      <h-loading type="spinner" color="black"></h-loading>
+    </demo-block>
+    <demo-block title="spinning">
+      <h-loading type="spinner"></h-loading>
       <h-loading type="spinner" color="white"></h-loading>
-    </div>
-  </div>
+    </demo-block>
+  </demo-section>
 </template>
 
 <script>
@@ -21,7 +19,6 @@ export default {
 
 <style lang="less">
 .demo-loading {
-  text-align: center;
   .h-loading {
     display: inline-block;
   }

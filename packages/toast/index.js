@@ -1,8 +1,11 @@
 import Vue from 'vue';
 import toast from './toast';
+import { isObj } from '../utils';
 
 const ToastConstructor = Vue.extend(toast);
 let toastQueue = [];
+let singleton = true;
+const parseOptions = message => isObj(message) ? message : { message };
 
 // 获取一个 toast 实例
 let getAnInstance = () => {
@@ -62,6 +65,29 @@ let Toast = (options = {}) => {
 
 Toast.install = () => {
   Vue.use(toast);
+};
+
+const createMethod = type => options => Toast({
+  type, options: Object.assign({}, parseOptions(options))
+});
+
+['loading', 'success', 'fail'].forEach(method => {
+  Toast[method] = createMethod(method);
+});
+
+Toast.clear = all => {
+  if (toastQueue.length) {
+    if (all) {
+      toastQueue.forEach(toast => {
+        toast.clear();
+      });
+      toastQueue = [];
+    } else if (singleton) {
+      toastQueue[0].clear();
+    } else {
+      toastQueue.shift().clear();
+    }
+  }
 };
 
 Vue.prototype.$toast = Toast;

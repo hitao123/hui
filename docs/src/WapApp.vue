@@ -17,10 +17,13 @@
 
 <script>
 export default {
-  data() {
-    return {
-      title: 'test',
-      demoLink: ''
+  computed: {
+    title() {
+      const { name } = this.$route.meta;
+      return name
+    },
+    demoLink() {
+      return `https://github.com/hitao123/hui/blob/master/packages/${this.$route.meta.path}/demo/index.vue`
     }
   },
   methods: {
@@ -41,5 +44,17 @@ body {
 }
 .iframe {
   width: 360px;
+}
+.h-doc-nav-bar {
+  .h-nav-bar__left {
+    cursor: pointer;
+  }
+  .h-nav-bar__right {
+    cursor: pointer;
+  }
+  .h-nav-bar__title {
+    font-size: 15px;
+    text-transform: capitalize;
+  }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <demo-section>
     <demo-block title="基本用法">
-      <h-collapse v-model="active1">
+      <h-collapse v-model="activeNames">
         <h-collapse-item title="测试一" name="1">手风琴一手风琴一手风琴一手风琴一手风琴一手风琴一手风琴一手风琴一手风琴一</h-collapse-item>
         <h-collapse-item title="测试二" name="2">测试三测试三测试三测试三测试三测试三测试三测试三测试三测试三测试三测试三测试三测试三测试三测试三</h-collapse-item>
         <h-collapse-item title="测试三" name="3">基本用法基本用法基本用法基本用法基本用法基本用法基本用法基本用法基本用法基本用法</h-collapse-item>
@@ -15,17 +15,17 @@
       </h-collapse>
     </demo-block>
 
-    <!-- <demo-block title="高级">
+    <demo-block title="自定义标题内容">
       <h-collapse v-model="active3">
         <h-collapse-item>
-          <div slot="title">{{ $t('title1') }}<h-icon name="question" /></div>
-          {{ $t('content1') }}
-        </h-collapse-item>
-        <h-collapse-item :title="$t('title2')" :value="$t('content')" icon="shop">
-          {{ $t('content2') }}
+          <div slot="title">自定义标题<h-icon name="question" /></div>
+          自定义标题内容自定义标题内容自定义标题内容自定义标题内容自定义标题内容
+        </h-collapse-item >
+        <h-collapse-item title="自定义二" value="内容" icon="shop">
+          手风琴一手风琴一手风琴一手风琴一手风琴一手风琴一手风琴一手风琴一手风琴一
         </h-collapse-item>
       </h-collapse>
-    </demo-block> -->
+    </demo-block>
   </demo-section>
 </template>
 
@@ -33,9 +33,9 @@
 export default {
   data() {
     return {
-      active1: ['1'],
+      activeNames: ['1'],
       active2: '',
-      active3: ''
+      active3: []
     }
   }
 }

@@ -26,11 +26,11 @@ const registerRoute = (isDemo) => {
     navs.forEach(nav => {
       if (nav.groups) {
         nav.groups.forEach(group => {
-          console.log(group, '=====group')
+          // console.log(group, '=====group')
           group.list.forEach(page => addRoute(page))
         })
       } else {
-        console.log(nav, 'nav===>')
+        // console.log(nav, 'nav===>')
         addRoute(nav)
       }
     });
@@ -48,7 +48,7 @@ const registerRoute = (isDemo) => {
       //   component = componentDemos[path]
       // }
       component = isDemo ? componentDemos[path] : componentDocs[`${path}.README`]
-      console.log(component, '🐎🐎')
+      // console.log(component, '🐎🐎')
       if (!component) {
         return;
       }
@@ -58,7 +58,11 @@ const registerRoute = (isDemo) => {
       route.push({
         name: path,
         component,
-        path: `/${path}`
+        path: `/${path}`,
+        meta: {
+          path,
+          name: page.title
+        }
       })
     }
   }

@@ -40,7 +40,6 @@ export default {
       this.simulators = [this.simulators[0], url];
     }
   }
-
 };
 </script>
 

@@ -1,12 +1,18 @@
 <template>
-  <div :class="bem('')" class="h-hairline--bottom">
-    <div :class="bem('left')">
-      <h-icon name="arrow" v-if="leftArrow" :class="bem('arrow')" @click="$emit('click-left')"></h-icon>
-      <div v-if="leftText" :class="bem('text')">{{ leftText }}</div>
+  <div :class="bem({ fixed })" class="h-hairline--bottom" :style="style">
+    <div :class="bem('left')" @click="$emit('click-left')">
+      <slot name="left">
+        <h-icon v-if="leftArrow" name="arrow"  :class="bem('arrow')" ></h-icon>
+        <div v-if="leftText" :class="bem('text')">{{ leftText }}</div>
+      </slot>
     </div>
-    <div v-if="title" :class="bem('title')">{{ title }}</div>
-    <div :class="bem('right')">
-      <div v-if="rightText" :class="bem('text')">{{ rightText }}</div>
+    <div v-if="title" :class="bem('title')">
+      <slot name="title">{{ title }}</slot>
+    </div>
+    <div :class="bem('right')" @click="$emit('click-right')">
+      <slot name="right">
+        <span v-if="rightText" v-text="rightText" :class="bem('text')" />
+      </slot>
     </div>
   </div>
 </template>
@@ -24,6 +30,13 @@ export default create({
     zIndex: {
       type: Number,
       default: 1
+    }
+  },
+  computed: {
+    style() {
+      return {
+        zIndex: this.zIndex
+      }
     }
   }
 })

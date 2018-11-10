@@ -1,26 +1,33 @@
 <template>
-  <div class="demo-col">
+<demo-section>
+  <demo-block title="基础用法">
     <h-row>
-      <h-col span="8">span 8</h-col>
-      <h-col span="8">span 8</h-col>
-      <h-col span="8">span 8</h-col>
+      <h-col span="8">span: 8</h-col>
+      <h-col span="8">span: 8</h-col>
+      <h-col span="8">span: 8</h-col>
     </h-row>
     <h-row>
-      <h-col span="4">span 4</h-col>
-      <h-col span="10" offset="4">offset 4, span 10</h-col>
+      <h-col span="4">span: 4</h-col>
+      <h-col span="10" offset="4">offset: 4, span: 10</h-col>
     </h-row>
+    <h-row>
+      <h-col offset="12" span="12">offset: 12, span: 12</h-col>
+    </h-row>
+  </demo-block>
+  <demo-block title="设置列元素间距">
     <h-row gutter="20">
       <h-col span="8">span 8</h-col>
       <h-col span="8">span 8</h-col>
       <h-col span="8">span 8</h-col>
     </h-row>
+  </demo-block>
+  <demo-block title="Flex 布局">
     <!-- 左对齐 -->
     <h-row type="flex">
       <h-col span="6">span: 6</h-col>
       <h-col span="6">span: 6</h-col>
       <h-col span="6">span: 6</h-col>
     </h-row>
-
     <!-- 居中 -->
     <h-row type="flex" justify="center">
       <h-col span="6">span: 6</h-col>
@@ -48,7 +55,8 @@
       <h-col span="6">span: 6</h-col>
       <h-col span="6">span: 6</h-col>
     </h-row>
-  </div>
+  </demo-block>
+</demo-section>
 </template>
 
 <script>

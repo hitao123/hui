@@ -63,7 +63,6 @@ export default create({
         return null;
       }
       const { value, accordion } = this.parent;
-      console.log(value, '🐂🐂')
       return accordion
         ? value === this.currentName
         : value.some(name => name === this.currentName);
@@ -76,7 +75,6 @@ export default create({
   },
   watch: {
     expanded(newVal, oldVal) {
-      console.log(newVal, oldVal, '???', this.index)
       if (newVal === null) {
         return;
       }
@@ -110,7 +108,6 @@ export default create({
       const { parent } = this;
       const name = parent.accordion && this.currentName === parent.value ? '' : this.currentName;
       const expanded = !this.expanded;
-      console.log(name, expanded, '==>', this.index)
       parent.switch(name, expanded);
     }
   }
