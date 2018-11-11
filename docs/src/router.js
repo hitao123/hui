@@ -2,6 +2,7 @@ import docConfig from './doc.config'
 import componentDocs from './docs-entry'
 import componentDemos from './demo-entry'
 import DemoList from './components/DemoList'
+import './utils/iframe-router';
 
 const registerRoute = (isDemo) => {
   const route = [{

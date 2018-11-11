@@ -1,18 +1,22 @@
 <a name="1.0.0"></a>
-# 1.0.0 (2018-10-28)
+# 1.0.0 (2018-11-11)
 
 
 ### Bug Fixes
 
 * fix npm run test error ([4aa6a59](https://github.com/hitao123/hui/commit/4aa6a59))
 * **build:** fix build bug ([bc1dd72](https://github.com/hitao123/hui/commit/bc1dd72))
+* **cell:** click bug ([06887af](https://github.com/hitao123/hui/commit/06887af))
 * **gh-pages:** fix gh-pages public path ([8aecd13](https://github.com/hitao123/hui/commit/8aecd13))
+* **mobile:** mobile not show ([1ac0150](https://github.com/hitao123/hui/commit/1ac0150))
 
 
 ### Features
 
 * **build:** build ([23018e3](https://github.com/hitao123/hui/commit/23018e3))
 * **build:** static file ([7b4e83a](https://github.com/hitao123/hui/commit/7b4e83a))
+* **collapse:** add collapse componnet ([c64a30e](https://github.com/hitao123/hui/commit/c64a30e))
+* **collapse:** add collapse componnet ([8172dbe](https://github.com/hitao123/hui/commit/8172dbe))
 * **component:** add cell tab popup ([500c614](https://github.com/hitao123/hui/commit/500c614))
 * **component:** add cell toast component ([3221024](https://github.com/hitao123/hui/commit/3221024))
 * **component:** compelete popup component ([d80dc24](https://github.com/hitao123/hui/commit/d80dc24))
@@ -33,6 +37,7 @@
 * **docs:** 调整部分demo交互 ([562b3e4](https://github.com/hitao123/hui/commit/562b3e4))
 * **gh-pages:** add gh-pages branch ([d384015](https://github.com/hitao123/hui/commit/d384015))
 * **list:** add list ([bebfe18](https://github.com/hitao123/hui/commit/bebfe18))
+* **nav-bar:** add nav-bar componnet ([ec70f53](https://github.com/hitao123/hui/commit/ec70f53))
 * **packages:** 添加基础组件 icon button loading ([5960d5a](https://github.com/hitao123/hui/commit/5960d5a))
 * **proj:** add vantdoc ([113a286](https://github.com/hitao123/hui/commit/113a286))
 * **pullrefresh:** add pullrefresh ([3ccf4eb](https://github.com/hitao123/hui/commit/3ccf4eb))
@@ -41,6 +46,3 @@
 * **structure:** add route and build script ([f76333d](https://github.com/hitao123/hui/commit/f76333d))
 * **structure:** change docs markdown ([5bb4ee2](https://github.com/hitao123/hui/commit/5bb4ee2))
 * **structure:** change structure and add docs for every componnet ([8a9d7c2](https://github.com/hitao123/hui/commit/8a9d7c2))
-
-
-

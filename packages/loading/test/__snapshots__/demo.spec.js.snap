@@ -1,17 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Loading component should Loading as Circular 1`] = `<div class="h-loading h-loading--spinner h-loading--white"><span class="h-loading__spinner h-loading__spinner--spinner"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <!----></span></div>`;
-
-exports[`Loading component should Loading as Spinner 1`] = `
+exports[`renders demo correctly 1`] = `
 <div>
-  <div class="demo-loading">
-    <h3>circle</h3>
-    <h-loading color="black"></h-loading>
+  <div>
+    <h-loading></h-loading>
     <h-loading color="white"></h-loading>
   </div>
-  <div class="demo-loading">
-    <h3>spinning</h3>
-    <h-loading type="spinner" color="black"></h-loading>
+  <div>
+    <h-loading type="spinner"></h-loading>
     <h-loading type="spinner" color="white"></h-loading>
   </div>
 </div>

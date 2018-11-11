@@ -8,7 +8,7 @@
       :simulators="simulators"
       :current-simulator="currentSimulator"
     >
-      <router-view @changeDemoURL="onChangeDemoURL" />
+      <router-view />
     </h-doc>
   </div>
 </template>
@@ -33,11 +33,6 @@ export default {
     currentSimulator() {
       const { name } = this.$route;
       return name && name.indexOf('demo') !== -1 ? 1 : 0;
-    }
-  },
-  methods: {
-    onChangeDemoURL(url) {
-      this.simulators = [this.simulators[0], url];
     }
   }
 };

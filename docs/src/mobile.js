@@ -3,8 +3,7 @@ import VueRouter from 'vue-router';
 import App from './WapApp';
 import Hui from '../../packages';
 import routes from './router';
-import NProgress from 'NProgress';
-import { DemoBlock, DemoSection } from 'hui-doc';
+import { DemoBlock, DemoSection, progress } from 'hui-doc';
 import '../../packages/less/index.less';
 import '../../packages/less/common/normalize.less';
 
@@ -21,15 +20,15 @@ const router = new VueRouter({
 });
 
 router.beforeEach((route, redirect, next) => {
-  NProgress.start();
+  progress.start();
   next();
 });
 
 router.afterEach(() => {
-  NProgress.done();
-  // if (!router.currentRoute.redirectedFrom) {
-  //   Vue.nextTick(() => window.syncPath());
-  // }
+  progress.done();
+  if (!router.currentRoute.redirectedFrom) {
+    Vue.nextTick(() => window.syncPath());
+  }
 });
 
 window.vueRouter = router;

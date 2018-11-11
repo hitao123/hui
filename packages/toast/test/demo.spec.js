@@ -1,20 +1,4 @@
-import { shallowMount } from '@vue/test-utils';
-import { renderToString } from '@vue/server-test-utils';
-import Toast from '../toast.vue';
-import ToastDemo from '../demo/index.vue';
+import Demo from '../demo';
+import demoTest from '../../../test/unit/demo-test';
 
-describe('Toast component', () => {
-  it('should Loading as Circular', () => {
-    const warpper = shallowMount(Toast, {
-      propsData: {
-        message: 'Toast',
-        icon: 'wechat'
-      }
-    });
-    expect(warpper.html()).toMatchSnapshot();
-  });
-
-  it('should Loading as Spinner', () => {
-    expect(renderToString(ToastDemo)).toMatchSnapshot();
-  });
-});
+demoTest(Demo);

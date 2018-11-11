@@ -1,12 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Toast component should Loading as Circular 1`] = `
-<div class="h-toast" style="display: none;" name="toast" icon="wechat">
-  <!----> <span class="h-toast__text">Toast</span></div>
-`;
-
-exports[`Toast component should Loading as Spinner 1`] = `
-<div class="demo-toast">
-  <h-button text="click"></h-button>
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <h-button text="click">文字提示</h-button>
+  </div>
+  <div>
+    <h-button text="click">加载提示</h-button>
+  </div>
+  <div>
+    <h-button text="click">成功提示</h-button>
+    <h-button text="click">失败提示</h-button>
+  </div>
+  <div>
+    <h-button text="click">高级用法</h-button>
+  </div>
 </div>
 `;
