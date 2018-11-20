@@ -7,11 +7,11 @@ delete config.serve;
 module.exports = Object.assign(config, {
   mode: 'production',
   entry: {
-    'vant': './es/index.js'
+    'hui': './es/index.js'
   },
   output: {
     path: path.join(__dirname, '../lib'),
-    library: 'vant',
+    library: 'hui',
     libraryTarget: 'umd',
     filename: isMinify ? '[name].min.js' : '[name].js',
     umdNamedDefine: true,

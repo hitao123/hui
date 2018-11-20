@@ -20,8 +20,8 @@ const createLintingRule = () => ({
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    'vant-docs': './docs/src/index.js',
-    'vant-mobile': './docs/src/mobile.js'
+    'hui-docs': './docs/src/index.js',
+    'hui-mobile': './docs/src/mobile.js'
   },
   output: {
     path: path.join(__dirname, '../docs/dist'),
@@ -104,13 +104,13 @@ module.exports = {
   plugins: [
     new ProgressBarPlugin(),
     new HtmlWebpackPlugin({
-      chunks: ['vant-docs'],
+      chunks: ['hui-docs'],
       template: 'docs/src/index.html',
       filename: 'index.html',
       inject: true
     }),
     new HtmlWebpackPlugin({
-      chunks: ['vant-mobile'],
+      chunks: ['hui-mobile'],
       template: 'docs/src/index.html',
       filename: 'mobile.html',
       inject: true

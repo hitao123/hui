@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "A Vue.js ui tiny mobile framework",
   "author": "hitao1234@gmail.com",
-  "private": true,
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "packages",
+    "types"
+  ],
   "scripts": {
     "dev": "node build/build-entry && webpack-dev-server --inline --progress --config build/webpack.dev.js",
     "build:site": "rimraf docs/dist && cross-env NODE_ENV=production webpack --config build/webpack.doc.js  && gh-pages -d docs/dist",
