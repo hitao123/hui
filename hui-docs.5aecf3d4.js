@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "async_" + ({}[chunkId]||chunkId) + "." + {"0":"204c0063","1":"90d7afe9","2":"67a1191b","3":"9a2e3794","4":"3e6d7104","5":"fde62437","6":"05cb39ab","7":"b5d32305","8":"e5132afb","9":"4fb30d87","10":"bb9f2ad6","11":"f19ac372","12":"362b5d2e","13":"3230e941","14":"61862556","15":"7bd12bf9","16":"7445ab70","17":"62502186","18":"ade00d7d","19":"502958a7","20":"22f0fad2","21":"686063c4","22":"b39e1cb4","23":"0f157b7c","24":"d157055d","25":"3394c96b","26":"1c3dba44","27":"bded7bd0","28":"01219670","29":"9c10f825","30":"c6f9c30f","31":"d25d254c","32":"868b5ca3","33":"9c4260f8","34":"4d1c9bb2","35":"17669f6b","36":"acfdd9cf","37":"f7bf5152","38":"220a6c17","39":"ff368000","40":"3f962e00","41":"22035c5a","42":"6ec56b70","43":"dcbb610e","44":"a3f111fb","45":"373488fa","46":"b54c2ad9","47":"d4804feb","48":"30897170","49":"20e69c8e","50":"7200d33e","51":"1b0140d6","52":"b3272d47","53":"044ba0b0","54":"66b49a8f","55":"acc0c1ce","56":"464709bf","57":"fd8bf74b","58":"c6030e9a","59":"b960fd6c","60":"368956f5","61":"b93767f6"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "async_" + ({}[chunkId]||chunkId) + "." + {"0":"10c0e3c7","1":"4b04a5f7","2":"f6aa1b2c","3":"93d87637","4":"ca038401","5":"b07d05cc","6":"9f1cd811","7":"87607c59","8":"38eb498c","9":"0f009bfe","10":"efc68f2b","11":"fd8d5661","12":"d9a9e771","13":"433296ce","14":"8d2147be","15":"72c63c8f","16":"d63b6e2d","17":"083991ae","18":"d2c09a78","19":"1d7b406d","20":"0353a834","21":"2c74c7d1","22":"ee5816b1","23":"0f157b7c","24":"d157055d","25":"3394c96b","26":"1c3dba44","27":"bded7bd0","28":"01219670","29":"9c10f825","30":"c6f9c30f","31":"d25d254c","32":"868b5ca3","33":"9c4260f8","34":"4d1c9bb2","35":"17669f6b","36":"acfdd9cf","37":"f7bf5152","38":"220a6c17","39":"ff368000","40":"3f962e00","41":"22035c5a","42":"6ec56b70","43":"dcbb610e","44":"a3f111fb","45":"373488fa","46":"b54c2ad9","47":"d4804feb","48":"30897170","49":"20e69c8e","50":"7200d33e","51":"1b0140d6","52":"b3272d47","53":"044ba0b0","54":"66b49a8f","55":"acc0c1ce","56":"464709bf","57":"fd8bf74b","58":"c6030e9a","59":"b960fd6c","60":"368956f5","61":"b93767f6"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -284,7 +284,6 @@ module.exports = function normalizeComponent (
 
 
 
-// import { setLang } from '../utils/lang';
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
@@ -304,14 +303,6 @@ module.exports = function normalizeComponent (
     },
     description: function description() {
       return '轻量、可靠的移动端 Vue 组件库';
-    }
-  },
-
-  methods: {
-    switchLang: function switchLang(lang) {
-      var from = lang === 'zh-CN' ? 'en-US' : 'zh-CN';
-      this.$router.push(this.$route.path.replace(from, lang));
-      // setLang(lang);
     }
   }
 });
@@ -812,10 +803,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hui_doc___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hui_doc__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__DocsApp_vue__ = __webpack_require__(181);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__router__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__packages_less_common_normalize_less__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__packages_less_common_normalize_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__packages_less_common_normalize_less__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__packages_less_index_less__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__packages_less_index_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__packages_less_index_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__packages_less_src_common_normalize_less__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__packages_less_src_common_normalize_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__packages_less_src_common_normalize_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__packages_less_src_index_less__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__packages_less_src_index_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__packages_less_src_index_less__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils__ = __webpack_require__(15);
 
 
@@ -913,7 +904,7 @@ var content = __webpack_require__(183);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("79557eb7", content, true, {});
+var update = __webpack_require__(3)("8513b8de", content, true, {});
 
 /***/ }),
 
@@ -1030,9 +1021,9 @@ function toComment(sourceMap) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
-  * vue-router v3.0.1
-  * (c) 2017 Evan You
+/* WEBPACK VAR INJECTION */(function(process) {/*!
+  * vue-router v3.0.2
+  * (c) 2018 Evan You
   * @license MIT
   */
 /*  */
@@ -1053,8 +1044,15 @@ function isError (err) {
   return Object.prototype.toString.call(err).indexOf('Error') > -1
 }
 
+function extend (a, b) {
+  for (var key in b) {
+    a[key] = b[key];
+  }
+  return a
+}
+
 var View = {
-  name: 'router-view',
+  name: 'RouterView',
   functional: true,
   props: {
     name: {
@@ -1068,6 +1066,7 @@ var View = {
     var parent = ref.parent;
     var data = ref.data;
 
+    // used by devtools to display a router-view badge
     data.routerView = true;
 
     // directly use parent context's createElement() function
@@ -1142,7 +1141,7 @@ var View = {
 
     return h(component, data, children)
   }
-};
+}
 
 function resolveProps (route, config) {
   switch (typeof config) {
@@ -1163,13 +1162,6 @@ function resolveProps (route, config) {
         );
       }
   }
-}
-
-function extend (to, from) {
-  for (var key in from) {
-    to[key] = from[key];
-  }
-  return to
 }
 
 /*  */
@@ -1269,7 +1261,6 @@ function stringifyQuery (obj) {
 }
 
 /*  */
-
 
 var trailingSlashRE = /\/?$/;
 
@@ -1413,7 +1404,7 @@ var toTypes = [String, Object];
 var eventTypes = [String, Array];
 
 var Link = {
-  name: 'router-link',
+  name: 'RouterLink',
   props: {
     to: {
       type: toTypes,
@@ -1448,17 +1439,17 @@ var Link = {
     var globalExactActiveClass = router.options.linkExactActiveClass;
     // Support global empty active class
     var activeClassFallback = globalActiveClass == null
-            ? 'router-link-active'
-            : globalActiveClass;
+      ? 'router-link-active'
+      : globalActiveClass;
     var exactActiveClassFallback = globalExactActiveClass == null
-            ? 'router-link-exact-active'
-            : globalExactActiveClass;
+      ? 'router-link-exact-active'
+      : globalExactActiveClass;
     var activeClass = this.activeClass == null
-            ? activeClassFallback
-            : this.activeClass;
+      ? activeClassFallback
+      : this.activeClass;
     var exactActiveClass = this.exactActiveClass == null
-            ? exactActiveClassFallback
-            : this.exactActiveClass;
+      ? exactActiveClassFallback
+      : this.exactActiveClass;
     var compareTarget = location.path
       ? createRoute(null, location, null, router)
       : route;
@@ -1498,7 +1489,6 @@ var Link = {
       if (a) {
         // in case the <a> is a static node
         a.isStatic = false;
-        var extend = _Vue.util.extend;
         var aData = a.data = extend({}, a.data);
         aData.on = on;
         var aAttrs = a.data.attrs = extend({}, a.data.attrs);
@@ -1511,7 +1501,7 @@ var Link = {
 
     return h(this.tag, data, this.$slots.default)
   }
-};
+}
 
 function guardEvent (e) {
   // don't redirect with control keys
@@ -1589,8 +1579,8 @@ function install (Vue) {
     get: function get () { return this._routerRoot._route }
   });
 
-  Vue.component('router-view', View);
-  Vue.component('router-link', Link);
+  Vue.component('RouterView', View);
+  Vue.component('RouterLink', Link);
 
   var strats = Vue.config.optionMergeStrategies;
   // use the same hook merging strategy for route hooks
@@ -2100,7 +2090,6 @@ function pathToRegexp (path, keys, options) {
 
   return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
 }
-
 pathToRegexp_1.parse = parse_1;
 pathToRegexp_1.compile = compile_1;
 pathToRegexp_1.tokensToFunction = tokensToFunction_1;
@@ -2296,7 +2285,6 @@ function normalizePath (path, parent, strict) {
 
 /*  */
 
-
 function normalizeLocation (
   raw,
   current,
@@ -2311,9 +2299,9 @@ function normalizeLocation (
 
   // relative params
   if (!next.path && next.params && current) {
-    next = assign({}, next);
+    next = extend({}, next);
     next._normalized = true;
-    var params = assign(assign({}, current.params), next.params);
+    var params = extend(extend({}, current.params), next.params);
     if (current.name) {
       next.name = current.name;
       next.params = params;
@@ -2351,14 +2339,8 @@ function normalizeLocation (
   }
 }
 
-function assign (a, b) {
-  for (var key in b) {
-    a[key] = b[key];
-  }
-  return a
-}
-
 /*  */
+
 
 
 function createMatcher (
@@ -2428,8 +2410,8 @@ function createMatcher (
   ) {
     var originalRedirect = record.redirect;
     var redirect = typeof originalRedirect === 'function'
-        ? originalRedirect(createRoute(record, location, null, router))
-        : originalRedirect;
+      ? originalRedirect(createRoute(record, location, null, router))
+      : originalRedirect;
 
     if (typeof redirect === 'string') {
       redirect = { path: redirect };
@@ -2543,7 +2525,8 @@ function matchRoute (
     var key = regex.keys[i - 1];
     var val = typeof m[i] === 'string' ? decodeURIComponent(m[i]) : m[i];
     if (key) {
-      params[key.name] = val;
+      // Fix #1994: using * with props: true generates a param named 0
+      params[key.name || 'pathMatch'] = val;
     }
   }
 
@@ -2556,12 +2539,12 @@ function resolveRecordPath (path, record) {
 
 /*  */
 
-
 var positionStore = Object.create(null);
 
 function setupScroll () {
   // Fix for #1585 for Firefox
-  window.history.replaceState({ key: getStateKey() }, '');
+  // Fix for #2195 Add optional third attribute to workaround a bug in safari https://bugs.webkit.org/show_bug.cgi?id=182678
+  window.history.replaceState({ key: getStateKey() }, '', window.location.href.replace(window.location.origin, ''));
   window.addEventListener('popstate', function (e) {
     saveScrollPosition();
     if (e.state && e.state.key) {
@@ -2592,7 +2575,7 @@ function handleScroll (
   // wait until re-render finishes before scrolling
   router.app.$nextTick(function () {
     var position = getScrollPosition();
-    var shouldScroll = behavior(to, from, isPop ? position : null);
+    var shouldScroll = behavior.call(router, to, from, isPop ? position : null);
 
     if (!shouldScroll) {
       return
@@ -3154,7 +3137,10 @@ function poll (
   key,
   isValid
 ) {
-  if (instances[key]) {
+  if (
+    instances[key] &&
+    !instances[key]._isBeingDestroyed // do not reuse being destroyed instance
+  ) {
     cb(instances[key]);
   } else if (isValid()) {
     setTimeout(function () {
@@ -3165,7 +3151,6 @@ function poll (
 
 /*  */
 
-
 var HTML5History = (function (History$$1) {
   function HTML5History (router, base) {
     var this$1 = this;
@@ -3173,8 +3158,9 @@ var HTML5History = (function (History$$1) {
     History$$1.call(this, router, base);
 
     var expectScroll = router.options.scrollBehavior;
+    var supportsScroll = supportsPushState && expectScroll;
 
-    if (expectScroll) {
+    if (supportsScroll) {
       setupScroll();
     }
 
@@ -3190,7 +3176,7 @@ var HTML5History = (function (History$$1) {
       }
 
       this$1.transitionTo(location, function (route) {
-        if (expectScroll) {
+        if (supportsScroll) {
           handleScroll(router, route, current, true);
         }
       });
@@ -3244,7 +3230,7 @@ var HTML5History = (function (History$$1) {
 }(History));
 
 function getLocation (base) {
-  var path = window.location.pathname;
+  var path = decodeURI(window.location.pathname);
   if (base && path.indexOf(base) === 0) {
     path = path.slice(base.length);
   }
@@ -3252,7 +3238,6 @@ function getLocation (base) {
 }
 
 /*  */
-
 
 var HashHistory = (function (History$$1) {
   function HashHistory (router, base, fallback) {
@@ -3363,7 +3348,7 @@ function getHash () {
   // consistent across browsers - Firefox will pre-decode it!
   var href = window.location.href;
   var index = href.indexOf('#');
-  return index === -1 ? '' : href.slice(index + 1)
+  return index === -1 ? '' : decodeURI(href.slice(index + 1))
 }
 
 function getUrl (path) {
@@ -3390,7 +3375,6 @@ function replaceHash (path) {
 }
 
 /*  */
-
 
 var AbstractHistory = (function (History$$1) {
   function AbstractHistory (router, base) {
@@ -3449,6 +3433,8 @@ var AbstractHistory = (function (History$$1) {
 }(History));
 
 /*  */
+
+
 
 var VueRouter = function VueRouter (options) {
   if ( options === void 0 ) options = {};
@@ -3646,7 +3632,7 @@ function createHref (base, fullPath, mode) {
 }
 
 VueRouter.install = install;
-VueRouter.version = '3.0.1';
+VueRouter.version = '3.0.2';
 
 if (inBrowser && window.Vue) {
   window.Vue.use(VueRouter);
@@ -6685,7 +6671,7 @@ function wrapper(promise, name) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_DemoList_vue__ = __webpack_require__(10);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_89b10fd4_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_DemoList_vue__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_d33e9268_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_DemoList_vue__ = __webpack_require__(33);
 function injectStyle (ssrContext) {
   __webpack_require__(27)
 }
@@ -6705,7 +6691,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_DemoList_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_89b10fd4_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_DemoList_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_d33e9268_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_DemoList_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -6727,7 +6713,7 @@ var content = __webpack_require__(28);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("47d17a64", content, true, {});
+var update = __webpack_require__(3)("3c0f2a58", content, true, {});
 
 /***/ }),
 
@@ -7023,7 +7009,7 @@ var content = __webpack_require__(31);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("6f526a4f", content, true, {});
+var update = __webpack_require__(3)("dd17fdae", content, true, {});
 
 /***/ }),
 
@@ -7118,8 +7104,8 @@ var update = __webpack_require__(12)(content, options);
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/less-loader/dist/index.js!./normalize.less", function() {
-		var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/less-loader/dist/index.js!./normalize.less");
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/less-loader/dist/cjs.js!./normalize.less", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/less-loader/dist/cjs.js!./normalize.less");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -7280,8 +7266,8 @@ var update = __webpack_require__(12)(content, options);
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/less-loader/dist/index.js!./index.less", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/less-loader/dist/index.js!./index.less");
+	module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/less-loader/dist/cjs.js!./index.less", function() {
+		var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/less-loader/dist/cjs.js!./index.less");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 

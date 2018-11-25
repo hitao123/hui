@@ -1,15 +1,15 @@
-webpackJsonp([13],{
+webpackJsonp([8],{
 
-/***/ 164:
+/***/ 171:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(342);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3bb6d6af_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(417);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_453d097a_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(439);
 function injectStyle (ssrContext) {
-  __webpack_require__(415)
+  __webpack_require__(437)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -27,7 +27,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3bb6d6af_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_453d097a_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -39,19 +39,10 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 336:
+/***/ 342:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -64,28 +55,35 @@ var Component = normalizeComponent(
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
-      text: '足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。'
+      value1: 2,
+      value2: 1
     };
+  },
+
+  methods: {
+    handleChange: function handleChange(index) {
+      console.log(index);
+    }
   }
 });
 
 /***/ }),
 
-/***/ 415:
+/***/ 437:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(416);
+var content = __webpack_require__(438);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("158b7361", content, true, {});
+var update = __webpack_require__(3)("3e88abd0", content, true, {});
 
 /***/ }),
 
-/***/ 416:
+/***/ 438:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -93,18 +91,18 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".demo-notice{margin:20px auto}", ""]);
+exports.push([module.i, ".rate-demo{margin:20px 30px}", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 417:
+/***/ 439:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('demo-section',[_c('demo-block',{attrs:{"title":"基础用法"}},[_c('h-notice-bar',{attrs:{"text":_vm.text,"left-icon":"//img.yzcdn.cn/public_files/2017/8/10/6af5b7168eed548100d9041f07b7c616.png"}})],1),_vm._v(" "),_c('demo-block',{attrs:{"title":"禁用滚动"}},[_c('h-notice-bar',{attrs:{"text":_vm.text,"scrollable":false}})],1),_vm._v(" "),_c('demo-block',[_c('h-notice-bar',{attrs:{"text":_vm.text,"mode":"close","left-icon":"//img.yzcdn.cn/public_files/2017/8/10/6af5b7168eed548100d9041f07b7c616.png"}})],1),_vm._v(" "),_c('demo-block',{attrs:{"title":"通告栏模式"}},[_c('h-notice-bar',{attrs:{"text":_vm.text,"mode":"link"}})],1)],1)}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"rate-demo"},[_c('h-rate',{attrs:{"count":5},on:{"change":_vm.handleChange},model:{value:(_vm.value1),callback:function ($$v) {_vm.value1=$$v},expression:"value1"}}),_vm._v(" "),_c('h-rate',{attrs:{"count":3,"color":"#2ba"},model:{value:(_vm.value2),callback:function ($$v) {_vm.value2=$$v},expression:"value2"}}),_vm._v(" "),_c('h-rate',{attrs:{"count":3,"disabled":true}})],1)}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

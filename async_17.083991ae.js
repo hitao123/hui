@@ -120,7 +120,7 @@ var content = __webpack_require__(400);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("237e5e2d", content, true, {});
+var update = __webpack_require__(3)("50349e72", content, true, {});
 
 /***/ }),
 
