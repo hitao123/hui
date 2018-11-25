@@ -2,11 +2,11 @@
 import Actionsheet from './actionsheet';
 import Button from './button';
 import Cell from './cell';
-import Cellgroup from './cellgroup';
+import CellGroup from './cell-group';
 import Col from './col';
 import Collapse from './collapse';
 import CollapseItem from './collapse-item';
-import Datetimepicker from './datetimepicker';
+import DatetimePicker from './datetime-picker';
 import Dialog from './dialog';
 import Field from './field';
 import Icon from './icon';
@@ -38,11 +38,11 @@ const components = [
   Actionsheet,
   Button,
   Cell,
-  Cellgroup,
+  CellGroup,
   Col,
   Collapse,
   CollapseItem,
-  Datetimepicker,
+  DatetimePicker,
   Dialog,
   Field,
   Icon,
@@ -86,11 +86,11 @@ export {
   Actionsheet,
   Button,
   Cell,
-  Cellgroup,
+  CellGroup,
   Col,
   Collapse,
   CollapseItem,
-  Datetimepicker,
+  DatetimePicker,
   Dialog,
   Field,
   Icon,

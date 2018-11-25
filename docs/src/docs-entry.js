@@ -12,7 +12,7 @@ export default {
   'cell.README': () => import('../../packages/cell/README.md'),
   'col.README': () => import('../../packages/col/README.md'),
   'collapse.README': () => import('../../packages/collapse/README.md'),
-  'datetimepicker.README': () => import('../../packages/datetimepicker/README.md'),
+  'datetime-picker.README': () => import('../../packages/datetime-picker/README.md'),
   'dialog.README': () => import('../../packages/dialog/README.md'),
   'field.README': () => import('../../packages/field/README.md'),
   'icon.README': () => import('../../packages/icon/README.md'),

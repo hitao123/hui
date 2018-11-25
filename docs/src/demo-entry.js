@@ -14,7 +14,7 @@ export default {
   'cell': () => wrapper(import('../../packages/cell/demo'), 'cell'),
   'col': () => wrapper(import('../../packages/col/demo'), 'col'),
   'collapse': () => wrapper(import('../../packages/collapse/demo'), 'collapse'),
-  'datetimepicker': () => wrapper(import('../../packages/datetimepicker/demo'), 'datetimepicker'),
+  'datetime-picker': () => wrapper(import('../../packages/datetime-picker/demo'), 'datetime-picker'),
   'dialog': () => wrapper(import('../../packages/dialog/demo'), 'dialog'),
   'field': () => wrapper(import('../../packages/field/demo'), 'field'),
   'icon': () => wrapper(import('../../packages/icon/demo'), 'icon'),
