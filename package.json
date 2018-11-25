@@ -1,5 +1,5 @@
 {
-  "name": "hui",
+  "name": "tui-ui",
   "version": "1.0.0",
   "description": "A Vue.js ui tiny mobile framework",
   "author": "hitao1234@gmail.com",
@@ -34,8 +34,7 @@
     "lodash": "^4.17.10",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
-    "vue-server-renderer": "^2.5.17",
-    "vue-sfc-compiler2": "1.0.1"
+    "vue-server-renderer": "^2.5.17"
   },
   "devDependencies": {
     "@vue/server-test-utils": "^1.0.0-beta.24",
@@ -112,6 +111,7 @@
     "validate-commit-msg": "^2.14.0",
     "vue-jest": "^2.6.0",
     "vue-loader": "^13.3.0",
+    "vue-sfc-compiler2": "1.0.1",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^3.6.0",
