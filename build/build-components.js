@@ -38,8 +38,11 @@ function compile(dir) {
       const source = fs.readFileSync(absolutePath, 'utf-8');
       fs.removeSync(absolutePath);
 
+      const outputVuePath = absolutePath + '.js';
       const outputJsPath = absolutePath.replace('.vue', '.js');
-      fs.outputFileSync(outputJsPath, compiler(source, compilerOption).js);
+      const output = fs.existsSync(outputJsPath) ? outputVuePath : outputJsPath;
+
+      fs.outputFileSync(output, compiler(source, compilerOption).js);
     } else if (/\.js$/.test(file)) {
       const { code } = babel.transformFileSync(absolutePath, compilerOption.babel);
       fs.outputFileSync(absolutePath, code);

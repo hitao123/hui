@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import HDialog from './dialog.vue';
+import HDialog from './dialog';
 
 const DialogConstructor = Vue.extend(HDialog);
 
