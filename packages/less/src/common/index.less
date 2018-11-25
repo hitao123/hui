@@ -1,0 +1,71 @@
+// 清除浮动
+.clearfix {
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+// 多行省略
+.multi-ellipsis {
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2; /* stylelint-disable-line */
+}
+// 单行省略
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hairline(@border-color: #e5e5e5) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  content: "";
+  border: 0 solid @border-color;
+  transform: scale(.5);
+  transform-origin: 0 0;
+}
+
+
+[class*="h-hairline"] {
+  position: relative;
+  &::after {
+    .hairline();
+  }
+}
+
+.h-hairline {
+  &--top::after {
+    border-top-width: 1px;
+  }
+
+  &--left::after {
+    border-left-width: 1px;
+  }
+
+  &--right::after {
+    border-right-width: 1px;
+  }
+
+  &--bottom::after {
+    border-bottom-width: 1px;
+  }
+
+  &--top-bottom::after {
+    border-width: 1px 0;
+  }
+
+  &--surround::after {
+    border-width: 1px;
+  }
+}

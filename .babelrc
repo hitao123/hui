@@ -10,6 +10,17 @@
   ],
   "plugins": ["transform-vue-jsx", "transform-runtime", "transform-object-rest-spread", "transform-object-assign"],
   "env": {
+    "commonjs": {
+      "presets": [
+        "stage-2",
+        [
+          "env",
+          {
+            "modules": "commonjs"
+          }
+        ]
+      ]
+    },
     "test": {
       "presets": ["env", "stage-2"],
       "plugins": ["transform-vue-jsx", "syntax-dynamic-import", "transform-object-assign", "transform-object-rest-spread"]

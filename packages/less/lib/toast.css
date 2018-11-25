@@ -1,0 +1,1 @@
+.h-toast{position:fixed;top:50%;left:50%;z-index:1000;max-width:80%;color:#fff;text-align:center;background-color:rgba(0,0,0,.5);border-radius:8px;transition:opacity .3s linear;transform:translate(-50%,-50%)}.h-toast__icon{display:block;font-size:50px}.h-toast__text{display:block;padding:10px 30px}.toast-enter,.toast-leave-active{opacity:0}

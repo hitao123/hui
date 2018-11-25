@@ -1,0 +1,54 @@
+@import "./common/var.less";
+
+.h-sms-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__input-code {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  &__block {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, .6);
+    &--active {
+      position: relative;
+      &::after {
+        position: absolute;
+        bottom: 5px;
+        // 伪类实现光标效果
+        display: inline-block;
+        width: 2px;
+        height: 70%;
+        content: " ";
+        background: #313131;
+        animation: .8s animate infinite;
+      }
+    }
+    &--square {
+      border: 1px solid #ddd;
+    }
+  }
+  &__item-inner {
+    font-style: normal;
+  }
+}
+
+@keyframes animate {
+  100% {
+    opacity: 0;
+  }
+}

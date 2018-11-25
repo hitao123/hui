@@ -1,13 +1,14 @@
 const path = require('path');
+const webpack = require('webpack');
 const config = require('./webpack.dev.js');
 const isMinify = process.argv.indexOf('-p') !== -1;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 delete config.serve;
 
 module.exports = Object.assign(config, {
-  mode: 'production',
   entry: {
-    'hui': './es/index.js'
+    'hui': './packages/index.js'
   },
   output: {
     path: path.join(__dirname, '../lib'),
@@ -15,7 +16,6 @@ module.exports = Object.assign(config, {
     libraryTarget: 'umd',
     filename: isMinify ? '[name].min.js' : '[name].js',
     umdNamedDefine: true,
-    globalObject: 'this'
   },
   externals: {
     vue: {
@@ -25,8 +25,20 @@ module.exports = Object.assign(config, {
       amd: 'vue'
     }
   },
-  performance: false,
-  optimization: {
-    minimize: isMinify
-  }
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"production"'
+    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false,
+      options: {
+        vue: {
+          autoprefixer: false,
+          preserveWhitespace: false
+        }
+      }
+    }),
+    new webpack.optimize.ModuleConcatenationPlugin()
+  ]
 });

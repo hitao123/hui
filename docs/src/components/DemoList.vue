@@ -18,7 +18,6 @@
 <script>
 import docConfig from '../doc.config';
 import MobileNav from './MobileNav';
-// import { setLang } from '../utils/lang';
 
 export default {
   data() {
@@ -39,21 +38,13 @@ export default {
     description() {
       return '轻量、可靠的移动端 Vue 组件库';
     }
-  },
-
-  methods: {
-    switchLang(lang) {
-      const from = lang === 'zh-CN' ? 'en-US' : 'zh-CN';
-      this.$router.push(this.$route.path.replace(from, lang));
-      // setLang(lang);
-    }
   }
 };
 </script>
 
 <style lang="less">
 
-@import "../../../packages/less/common/var.less";
+@import "../../../packages/less/src/common/var.less";
 
 .side-nav {
   box-sizing: border-box;

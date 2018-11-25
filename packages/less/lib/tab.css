@@ -1,0 +1,1 @@
+.h-tabs__nav{display:flex;user-select:none}.h-tabs__line{position:absolute;bottom:0;left:0;height:2px;background-color:#f44}.h-tab{box-sizing:border-box;flex:1;min-width:0;padding:0 5px;line-height:44px;text-align:center}.h-tab span{display:block}.h-tab--active{color:#f44}.h-tab .h-ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

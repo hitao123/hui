@@ -3,8 +3,8 @@ import VueRouter from 'vue-router';
 import HDoc, { progress } from 'hui-doc';
 import App from './DocsApp.vue';
 import routes from './router';
-import '../../packages/less/common/normalize.less';
-import '../../packages/less/index.less';
+import '../../packages/less/src/common/normalize.less';
+import '../../packages/less/src/index.less';
 import { isMobile } from './utils';
 
 Vue.use(VueRouter).use(HDoc);

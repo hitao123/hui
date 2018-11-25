@@ -1,43 +1,25 @@
 /**
- * build lib
+ * build hui npm es lib module
  */
 
-const fs = require('fs-extra');
-const path = require('path');
-const compiler = require('./compiler');
+const shell = require('shelljs');
+const signale = require('signale');
+const { Signale } = signale;
 
-const esDir = path.join(__dirname, '../es');
-const libDir = path.join(__dirname, '../lib');
-const srcDir = path.join(__dirname, '../packages');
+const tasks = [
+  'bootstrap',
+  'lint',
+  'build:entry',
+  'build:components',
+  'build:style',
+  'build:style-entry'
+]
 
-const whiteList = /(demo|test|less|\.md)$/;
+tasks.forEach((task) => {
+  signale.start(task);
+  const interactive = new Signale({ interactive: true });
+  interactive.pending(task);
+  shell.exec(`npm run ${task} --silent`);
+  interactive.success(task);
+})
 
-fs.emptyDirSync(libDir);
-fs.emptyDirSync(esDir);
-
-function compile(dir) {
-  const files = fs.readdirSync(dir);
-  files.forEach(file => {
-    const absolutePath = path.join(dir, file);
-    if (whiteList.test(file)) {
-      fs.removeSync(absolutePath);
-    } else if (isDir(absolutePath)) {
-      return compile(absolutePath);
-    } else if (/.vue$/.test(file)) {
-      const source = fs.readFileSync(absolutePath, 'utf-8');
-      fs.removeSync(absolutePath);
-
-      const outputJsPath = absolutePath.replace('.vue', '.js');
-      fs.outputFileSync(outputJsPath, compiler(source).js);
-    } else if (/.js$/.test(file)) {
-    }
-  })
-}
-
-
-function isDir(dir) {
-  return fs.lstatSync(dir).isDirectory();
-}
-
-fs.copySync(srcDir, libDir);
-compile(libDir);
