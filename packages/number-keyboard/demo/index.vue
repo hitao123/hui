@@ -1,37 +1,33 @@
 <template>
-  <div class="demo-number">
-    <h-password-input
-      :value="value"
-      @focus="showKeyboard = true"
-    />
-    <h-number-keyboard
-      @input="handleInput"
-      @delete="handleDelete"
-      @close="handleClose"
-      :show="showKeyboard"
-      closeButtonText="关闭"
-    />
-  </div>
+  <demo-section>
+    <demo-block title="基本用法">
+      <h-button @touchstart.native.stop="keyboard = 'default'">默认键盘</h-button>
+      <h-number-keyboard
+        @input="handleInput"
+        @delete="handleDelete"
+        @close="handleClose"
+        :show="keyboard === 'default'"
+        closeButtonText="关闭"
+      />
+    </demo-block>
+    <demo-block title="高级用法">
+      <h-button @touchstart.native.stop="keyboard = 'custom'">自定义键盘</h-button>
+      <h-number-keyboard
+        @input="handleInput"
+        @delete="handleDelete"
+        @close="handleClose"
+        :show="keyboard === 'custom'"
+        closeButtonText="关闭"
+      />
+    </demo-block>
+  </demo-section>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      value: '',
-      showKeyboard: false
-    }
-  },
-  methods: {
-    handleInput(key) {
-      if (this.value.length === 6) return
-      this.value = (this.value + key).slice(0, 6);
-    },
-    handleDelete() {
-      this.value = this.value.slice(0, -1);
-    },
-    handleClose() {
-      this.showKeyboard = false;
+      value: ''
     }
   }
 }

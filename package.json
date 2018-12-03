@@ -30,9 +30,14 @@
     "commit": "git-cz",
     "changelog": "conventional-changelog -p angular -i ./docs/markdown/changelog.README.md -s"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hitao123/hui.git"
+  },
   "dependencies": {
     "lodash": "^4.17.10",
     "vue": "^2.5.17",
+    "vue-lazyload": "1.2.6",
     "vue-router": "^3.0.1",
     "vue-server-renderer": "^2.5.17"
   },

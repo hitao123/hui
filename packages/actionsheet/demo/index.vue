@@ -1,20 +1,22 @@
 <template>
-  <div>
-    <div class="actionsheet-demo">
+  <demo-section>
+    <demo-block title="基本用法">
       <h-button @click="handleClick">action title</h-button>
-    </div>
-    <div class="actionsheet-demo">
+    </demo-block>
+    <demo-block title="待取消的 ActionSheet">
       <h-button @click="handleClick1">action 列表</h-button>
-    </div>
-    <div class="actionsheet-demo">
+    </demo-block>
+    <demo-block title="带title的 ActionSheet">
       <h-button @click="handleClick2">action 取消</h-button>
-    </div>
+    </demo-block>
     <h-actionsheet v-model="visible" title="title">
-      内容
+      <p>内容</p>
     </h-actionsheet>
     <h-actionsheet v-model="visible1" :actions="actions"></h-actionsheet>
-    <h-actionsheet v-model="visible2" title="title" cancelText="取消"></h-actionsheet>
-  </div>
+    <h-actionsheet v-model="visible2" title="title" cancelText="取消">
+
+    </h-actionsheet>
+  </demo-section>
 </template>
 
 <script>
@@ -43,18 +45,19 @@ export default {
       this.visible = true;
     },
     handleClick1() {
-      this.visible1 = true;
+      this.visible2 = true;
     },
     handleClick2() {
-      this.visible2 = true;
+      this.visible1 = true;
     }
   }
 }
 </script>
 
 <style lang="less">
-  .actionsheet-demo {
-    margin: 20px auto;
-    text-align: center;
+  .demo-actionsheet {
+    p {
+      padding: 20px;
+    }
   }
 </style>

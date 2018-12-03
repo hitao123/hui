@@ -1,10 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dialog component should show Button Demo 1`] = `
-<div class="demo-number">
-  <h-password-input value=""></h-password-input>
-  <h-number-keyboard closeButtonText="关闭"></h-number-keyboard>
-</div>
+<demo-section>
+  <demo-block title="基本用法">
+    <h-button>默认键盘</h-button>
+    <h-number-keyboard closeButtonText="关闭"></h-number-keyboard>
+  </demo-block>
+  <demo-block title="高级用法">
+    <h-button>自定义键盘</h-button>
+    <h-number-keyboard closeButtonText="关闭"></h-number-keyboard>
+  </demo-block>
+</demo-section>
 `;
 
 exports[`Dialog component should show Dialog 1`] = `
