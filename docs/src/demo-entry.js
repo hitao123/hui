@@ -18,6 +18,7 @@ export default {
   'dialog': () => wrapper(import('../../packages/dialog/demo'), 'dialog'),
   'field': () => wrapper(import('../../packages/field/demo'), 'field'),
   'icon': () => wrapper(import('../../packages/icon/demo'), 'icon'),
+  'lazyload': () => wrapper(import('../../packages/lazyload/demo'), 'lazyload'),
   'list': () => wrapper(import('../../packages/list/demo'), 'list'),
   'loading': () => wrapper(import('../../packages/loading/demo'), 'loading'),
   'nav-bar': () => wrapper(import('../../packages/nav-bar/demo'), 'nav-bar'),

@@ -1,18 +1,15 @@
 <template>
-  <div class="demo-picker">
-    <div class="margin20">
-      <h4>基础用法</h4>
+  <demo-section>
+    <demo-block title="基础用法">
       <h-picker showToolbar :columns="columns" title="title" ref="picker" @change="handleChange"></h-picker>
-    </div>
-    <div class="margin20">
-      <h4>多级联动</h4>
+    </demo-block>
+    <demo-block title="多级联动">
       <h-picker :columns="columns1" @change="handleChange2"></h-picker>
-    </div>
-    <div class="margin20">
-      <h4>加载状态</h4>
+    </demo-block>
+    <demo-block title="加载状态">
       <h-picker :columns="columns2" @change="handleChange3" :loading="true"></h-picker>
-    </div>
-  </div>
+    </demo-block>
+  </demo-section>
 </template>
 
 <script>
@@ -55,23 +52,23 @@ export default {
   },
   methods: {
     handleChange(picker, value, index) {
-      // console.log(picker, value, index);
+      console.log(picker, value, index);
     },
     handleChange2(picker, value, index) {
       picker.setColumnValues(1, citys[value[0]])
     },
     handleChange3() {
-
+      //
     }
   }
 }
 </script>
 
-<style lang="less">
-  body {
-    background-color: #f3f3f3;
-  }
+<style lang="css" scoped>
   .demo-picker {
-    text-align: center;
+    text-align: left;
+  }
+  .demo-block {
+    padding: 0;
   }
 </style>

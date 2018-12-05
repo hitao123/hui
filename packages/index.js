@@ -10,6 +10,7 @@ import DatetimePicker from './datetime-picker';
 import Dialog from './dialog';
 import Field from './field';
 import Icon from './icon';
+import Lazyload from './lazyload';
 import List from './list';
 import Loading from './loading';
 import NavBar from './nav-bar';
@@ -46,6 +47,7 @@ const components = [
   Dialog,
   Field,
   Icon,
+  Lazyload,
   List,
   Loading,
   NavBar,
@@ -94,6 +96,7 @@ export {
   Dialog,
   Field,
   Icon,
+  Lazyload,
   List,
   Loading,
   NavBar,

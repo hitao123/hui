@@ -16,6 +16,7 @@ export default {
   'dialog.README': () => import('../../packages/dialog/README.md'),
   'field.README': () => import('../../packages/field/README.md'),
   'icon.README': () => import('../../packages/icon/README.md'),
+  'lazyload.README': () => import('../../packages/lazyload/README.md'),
   'list.README': () => import('../../packages/list/README.md'),
   'loading.README': () => import('../../packages/loading/README.md'),
   'nav-bar.README': () => import('../../packages/nav-bar/README.md'),
