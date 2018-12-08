@@ -1,0 +1,66 @@
+@import "./common/var.less";
+
+@h-checkbox-size: 20px;
+
+.h-checkbox {
+  overflow: hidden;
+  user-select: none;
+
+  &__icon,
+  &__label {
+    display: inline-block;
+    line-height: @h-checkbox-size;
+    vertical-align: middle;
+  }
+
+  &__icon {
+    .h-icon {
+      box-sizing: border-box;
+      width: @h-checkbox-size;
+      height: @h-checkbox-size;
+      font-size: 12px;
+      line-height: inherit;
+      color: transparent;
+      text-align: center;
+      border: 1px solid #aaa;
+    }
+
+    &--round {
+      .h-icon {
+        border-radius: 100%;
+      }
+    }
+
+    &--checked {
+      .h-icon {
+        color: #fff;
+        background-color: @green;
+        border-color: @green;
+      }
+    }
+
+    &--disabled {
+      .h-icon {
+        color: @background-color;
+        background-color: currentColor;
+        border-color: @border-color;
+      }
+    }
+
+    &--disabled&--checked {
+      .h-icon {
+        background-color: @border-color;
+        border-color: @border-color;
+      }
+    }
+  }
+
+  &__label {
+    margin-left: 10px;
+
+    &--left {
+      float: left;
+      margin: 0 10px 0 0;
+    }
+  }
+}

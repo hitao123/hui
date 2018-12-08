@@ -28,16 +28,8 @@ module.exports = {
               title: '更新日志'
             },
             {
-              path: '/theme',
-              title: '定制主题'
-            },
-            {
               path: '/contribution',
               title: '开发指南'
-            },
-            {
-              path: '/style-guide',
-              title: '风格指南'
             }
           ]
         }
@@ -91,16 +83,8 @@ module.exports = {
               title: 'NoticeBar 通告栏'
             },
             {
-              path: '/panel',
-              title: 'Panel 面板'
-            },
-            {
               path: '/popup',
               title: 'Popup 弹出层'
-            },
-            {
-              path: '/progress',
-              title: 'Progress 进度条'
             },
             {
               path: '/steps',
@@ -113,18 +97,6 @@ module.exports = {
             {
               path: '/tab',
               title: 'Tab 标签页'
-            },
-            {
-              path: '/tabbar',
-              title: 'Tabbar 标签栏'
-            },
-            {
-              path: '/tag',
-              title: 'Tag 标记'
-            },
-            {
-              path: '/waterfall',
-              title: 'Waterfall 瀑布流'
             }
           ]
         },
@@ -158,10 +130,6 @@ module.exports = {
             {
               path: '/search',
               title: 'Search 搜索'
-            },
-            {
-              path: '/slider',
-              title: 'Slider 滑块'
             },
             {
               path: '/stepper',
@@ -205,28 +173,28 @@ module.exports = {
               title: 'Toast 轻提示'
             }
           ]
-        },
-        {
-          groupName: '高阶组件',
-          list: [
-            {
-              path: '/image-preview',
-              title: 'ImagePreview 图片预览'
-            },
-            {
-              path: '/swipe-cell',
-              title: 'SwipeCell 滑动单元格'
-            },
-            {
-              path: '/switch-cell',
-              title: 'SwitchCell 开关单元格'
-            },
-            {
-              path: '/tree-select',
-              title: 'TreeSelect 分类选择'
-            }
-          ]
         }
+        // {
+        //   groupName: '高阶组件',
+        //   list: [
+        //     {
+        //       path: '/image-preview',
+        //       title: 'ImagePreview 图片预览'
+        //     },
+        //     {
+        //       path: '/swipe-cell',
+        //       title: 'SwipeCell 滑动单元格'
+        //     },
+        //     {
+        //       path: '/switch-cell',
+        //       title: 'SwitchCell 开关单元格'
+        //     },
+        //     {
+        //       path: '/tree-select',
+        //       title: 'TreeSelect 分类选择'
+        //     }
+        //   ]
+        // }
       ]
     }
   ]

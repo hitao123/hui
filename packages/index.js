@@ -3,6 +3,8 @@ import Actionsheet from './actionsheet';
 import Button from './button';
 import Cell from './cell';
 import CellGroup from './cell-group';
+import Checkbox from './checkbox';
+import CheckboxGroup from './checkbox-group';
 import Col from './col';
 import Collapse from './collapse';
 import CollapseItem from './collapse-item';
@@ -24,6 +26,7 @@ import Radio from './radio';
 import RadioGroup from './radio-group';
 import Rate from './rate';
 import Row from './row';
+import Search from './search';
 import SmsInput from './sms-input';
 import Step from './step';
 import Stepper from './stepper';
@@ -40,6 +43,8 @@ const components = [
   Button,
   Cell,
   CellGroup,
+  Checkbox,
+  CheckboxGroup,
   Col,
   Collapse,
   CollapseItem,
@@ -61,6 +66,7 @@ const components = [
   RadioGroup,
   Rate,
   Row,
+  Search,
   SmsInput,
   Step,
   Stepper,
@@ -89,6 +95,8 @@ export {
   Button,
   Cell,
   CellGroup,
+  Checkbox,
+  CheckboxGroup,
   Col,
   Collapse,
   CollapseItem,
@@ -110,6 +118,7 @@ export {
   RadioGroup,
   Rate,
   Row,
+  Search,
   SmsInput,
   Step,
   Stepper,

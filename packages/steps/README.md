@@ -13,10 +13,9 @@ Vue.use(Step).use(Steps);
 
 ```html
 <h-steps :active="active">
-  <h-step>买家下单</h-step>
-  <h-step>商家接单</h-step>
-  <h-step>买家提货</h-step>
-  <h-step>交易完成</h-step>
+  <h-step>第一步</h-step>
+  <h-step>第二步</h-step>
+  <h-step>完成</h-step>
 </h-steps>
 ```
 
@@ -41,14 +40,14 @@ export default {
   title="标题"
   description="描述信息"
 >
-  <h-step>买家下单</h-step>
-  <h-step>商家接单</h-step>
-  <h-step>买家提货</h-step>
-  <h-step>交易完成</h-step>
+  <h-step>第一步</h-step>
+  <h-step>第二步</h-step>
+  <h-step>完成</h-step>
 </h-steps>
 ```
 
 #### 竖向步骤条
+
 可以通过设置`direction`属性来改变步骤条的显示方式
 
 ```html

@@ -12,6 +12,7 @@ export default {
   'actionsheet': () => wrapper(import('../../packages/actionsheet/demo'), 'actionsheet'),
   'button': () => wrapper(import('../../packages/button/demo'), 'button'),
   'cell': () => wrapper(import('../../packages/cell/demo'), 'cell'),
+  'checkbox': () => wrapper(import('../../packages/checkbox/demo'), 'checkbox'),
   'col': () => wrapper(import('../../packages/col/demo'), 'col'),
   'collapse': () => wrapper(import('../../packages/collapse/demo'), 'collapse'),
   'datetime-picker': () => wrapper(import('../../packages/datetime-picker/demo'), 'datetime-picker'),
@@ -34,7 +35,6 @@ export default {
   'stepper': () => wrapper(import('../../packages/stepper/demo'), 'stepper'),
   'steps': () => wrapper(import('../../packages/steps/demo'), 'steps'),
   'swipe': () => wrapper(import('../../packages/swipe/demo'), 'swipe'),
-  'swipe-item': () => wrapper(import('../../packages/swipe-item/demo'), 'swipe-item'),
   'tab': () => wrapper(import('../../packages/tab/demo'), 'tab'),
   'toast': () => wrapper(import('../../packages/toast/demo'), 'toast'),
   'uploader': () => wrapper(import('../../packages/uploader/demo'), 'uploader')
