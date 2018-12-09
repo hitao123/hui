@@ -34,6 +34,8 @@ export default {
   'stepper.README': () => import('../../packages/stepper/README.md'),
   'steps.README': () => import('../../packages/steps/README.md'),
   'swipe.README': () => import('../../packages/swipe/README.md'),
+  'switch.README': () => import('../../packages/switch/README.md'),
+  'switch-cell.README': () => import('../../packages/switch-cell/README.md'),
   'tab.README': () => import('../../packages/tab/README.md'),
   'toast.README': () => import('../../packages/toast/README.md'),
   'uploader.README': () => import('../../packages/uploader/README.md')

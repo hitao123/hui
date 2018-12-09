@@ -36,6 +36,8 @@ export default {
   'stepper': () => wrapper(import('../../packages/stepper/demo'), 'stepper'),
   'steps': () => wrapper(import('../../packages/steps/demo'), 'steps'),
   'swipe': () => wrapper(import('../../packages/swipe/demo'), 'swipe'),
+  'switch': () => wrapper(import('../../packages/switch/demo'), 'switch'),
+  'switch-cell': () => wrapper(import('../../packages/switch-cell/demo'), 'switch-cell'),
   'tab': () => wrapper(import('../../packages/tab/demo'), 'tab'),
   'toast': () => wrapper(import('../../packages/toast/demo'), 'toast'),
   'uploader': () => wrapper(import('../../packages/uploader/demo'), 'uploader')

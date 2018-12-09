@@ -1,7 +1,7 @@
 <template>
   <transition name="h-dialog-bounce">
     <div v-show="value" :class="[bem(''), className]">
-      <div v-if="title" v-text="title"></div>
+      <div v-if="title" v-text="title" :class="bem('header')"></div>
       <div :class="bem('content')" v-if="message || $slots.default">
         <slot>
           <div v-if="message" v-html="message" :class="bem('message')"></div>

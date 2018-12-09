@@ -48,7 +48,7 @@ Dialog.alert = options => Dialog(
 );
 
 Dialog.confirm = options => Dialog(
-  Object.assign({}, Dialog.currentOptions, options)
+  Object.assign({}, Dialog.currentOptions, { showCancelButton: true }, options)
 );
 
 Dialog.close = () => {

@@ -33,6 +33,8 @@ import Stepper from './stepper';
 import Steps from './steps';
 import Swipe from './swipe';
 import SwipeItem from './swipe-item';
+import Switch from './switch';
+import SwitchCell from './switch-cell';
 import Tab from './tab';
 import Tabs from './tabs';
 import Toast from './toast';
@@ -73,6 +75,8 @@ const components = [
   Steps,
   Swipe,
   SwipeItem,
+  Switch,
+  SwitchCell,
   Tab,
   Tabs,
   Toast,
@@ -125,6 +129,8 @@ export {
   Steps,
   Swipe,
   SwipeItem,
+  Switch,
+  SwitchCell,
   Tab,
   Tabs,
   Toast,

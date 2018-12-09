@@ -173,28 +173,20 @@ module.exports = {
               title: 'Toast 轻提示'
             }
           ]
+        },
+        {
+          groupName: '高阶组件',
+          list: [
+            {
+              path: '/image-preview',
+              title: 'ImagePreview 图片预览'
+            },
+            {
+              path: '/switch-cell',
+              title: 'SwitchCell 开关单元格'
+            }
+          ]
         }
-        // {
-        //   groupName: '高阶组件',
-        //   list: [
-        //     {
-        //       path: '/image-preview',
-        //       title: 'ImagePreview 图片预览'
-        //     },
-        //     {
-        //       path: '/swipe-cell',
-        //       title: 'SwipeCell 滑动单元格'
-        //     },
-        //     {
-        //       path: '/switch-cell',
-        //       title: 'SwitchCell 开关单元格'
-        //     },
-        //     {
-        //       path: '/tree-select',
-        //       title: 'TreeSelect 分类选择'
-        //     }
-        //   ]
-        // }
       ]
     }
   ]
