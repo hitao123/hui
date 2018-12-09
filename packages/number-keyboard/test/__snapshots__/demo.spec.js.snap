@@ -4,11 +4,7 @@ exports[`Dialog component should show Button Demo 1`] = `
 <demo-section>
   <demo-block title="基本用法">
     <h-button>默认键盘</h-button>
-    <h-number-keyboard closeButtonText="关闭"></h-number-keyboard>
-  </demo-block>
-  <demo-block title="高级用法">
-    <h-button>自定义键盘</h-button>
-    <h-number-keyboard closeButtonText="关闭"></h-number-keyboard>
+    <h-number-keyboard show="true" close-button-text="关闭" extra-key="."></h-number-keyboard>
   </demo-block>
 </demo-section>
 `;
@@ -26,7 +22,7 @@ exports[`Dialog component should show Dialog 1`] = `
     <key-stub text="7" type=""></key-stub>
     <key-stub text="8" type=""></key-stub>
     <key-stub text="9" type=""></key-stub>
-    <key-stub text="." type="gray"></key-stub>
+    <key-stub text="" type="gray"></key-stub>
     <key-stub text="0" type=""></key-stub>
     <key-stub text="delete" type="gray,delete"></key-stub>
   </div>

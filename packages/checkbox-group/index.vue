@@ -11,7 +11,11 @@ export default create({
   name: 'checkbox-group',
   props: {
     value: null,
-    disabled: Boolean
+    disabled: Boolean,
+    max: {
+      default: 0,
+      type: Number
+    }
   },
   watch: {
     value(value) {

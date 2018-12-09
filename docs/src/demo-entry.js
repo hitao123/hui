@@ -31,6 +31,7 @@ export default {
   'pull-refresh': () => wrapper(import('../../packages/pull-refresh/demo'), 'pull-refresh'),
   'radio': () => wrapper(import('../../packages/radio/demo'), 'radio'),
   'rate': () => wrapper(import('../../packages/rate/demo'), 'rate'),
+  'search': () => wrapper(import('../../packages/search/demo'), 'search'),
   'sms-input': () => wrapper(import('../../packages/sms-input/demo'), 'sms-input'),
   'stepper': () => wrapper(import('../../packages/stepper/demo'), 'stepper'),
   'steps': () => wrapper(import('../../packages/steps/demo'), 'steps'),

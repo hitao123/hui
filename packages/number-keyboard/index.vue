@@ -3,9 +3,12 @@
     <div
       :class="bem('')"
       v-show="show"
+      @touchstart.stop
+      @animationend="onAnimationEnd"
+      @webkitAnimationEnd="onAnimationEnd"
     >
-      <div class="h-hairline--top" :class="bem('title')">
-        <span></span>
+      <div class="h-hairline--top" :class="bem('title')" v-if="title || showTitleClose">
+        <span v-text="title"/>
         <span
           v-if="showTitleClose"
           :class="bem('close')"
@@ -20,7 +23,6 @@
           :text="key.text"
           :type="key.type"
           @press="onPressKey"
-
         >
         </key>
       </div>
@@ -47,7 +49,7 @@ export default create({
     },
     extraKey: {
       type: String,
-      default: '.'
+      default: ''
     }
   },
   computed: {
@@ -87,6 +89,9 @@ export default create({
     },
     onClose() {
       this.$emit('close');
+    },
+    onAnimationEnd() {
+      this.$emit(this.show ? 'show' : 'hide');
     }
   }
 })

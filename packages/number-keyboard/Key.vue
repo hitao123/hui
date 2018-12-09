@@ -1,11 +1,11 @@
 <template>
   <i
     v-text="text"
-    class="h-hairline"
     @touchstart.stop.prevent="onFocus"
     @touchmove="onBlur"
     @touchend="onBlur"
     @touchcancel="onBlur"
+    class="h-hairline"
     :class="[bem(), className]"
   >
   </i>

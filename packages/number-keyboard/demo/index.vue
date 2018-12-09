@@ -6,18 +6,10 @@
         @input="handleInput"
         @delete="handleDelete"
         @close="handleClose"
+        @blur="keyboard = ''"
         :show="keyboard === 'default'"
-        closeButtonText="关闭"
-      />
-    </demo-block>
-    <demo-block title="高级用法">
-      <h-button @touchstart.native.stop="keyboard = 'custom'">自定义键盘</h-button>
-      <h-number-keyboard
-        @input="handleInput"
-        @delete="handleDelete"
-        @close="handleClose"
-        :show="keyboard === 'custom'"
-        closeButtonText="关闭"
+        close-button-text="关闭"
+        extra-key="."
       />
     </demo-block>
   </demo-section>
@@ -27,7 +19,18 @@
 export default {
   data() {
     return {
-      value: ''
+      keyboard: 'default'
+    }
+  },
+  methods: {
+    handleClose() {
+      this.keyboard = ''
+    },
+    handleDelete() {
+      //
+    },
+    handleInput() {
+      //
     }
   }
 }

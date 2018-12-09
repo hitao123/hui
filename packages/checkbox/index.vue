@@ -33,9 +33,13 @@ export default create({
         return this.parent ? this.parent.value && this.parent.value.indexOf(this.name) !== -1 : this.value;
       },
       set(val) {
-        const parentValue = this.parent.value.slice();
         if (this.parent) {
+          const parentValue = this.parent.value.slice();
           if (val) {
+            console.log()
+            if (this.parent.max && parentValue.length >= this.parent.max) {
+              return;
+            }
             if (parentValue.indexOf(this.name) === -1) {
               parentValue.push(this.name);
               this.parent.$emit('input', parentValue);

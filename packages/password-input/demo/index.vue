@@ -7,9 +7,8 @@
     <h-number-keyboard
       @input="handleInput"
       @delete="handleDelete"
-      @close="handleClose"
       :show="showKeyboard"
-      closeButtonText="关闭"
+      @blur="showKeyboard = false"
     />
   </div>
 </template>
@@ -18,8 +17,8 @@
 export default {
   data() {
     return {
-      value: '',
-      showKeyboard: false
+      value: '1',
+      showKeyboard: true
     }
   },
   methods: {
@@ -29,9 +28,6 @@ export default {
     },
     handleDelete() {
       this.value = this.value.slice(0, -1);
-    },
-    handleClose() {
-      this.showKeyboard = false;
     }
   }
 }

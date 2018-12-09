@@ -159,7 +159,3 @@ export default create({
   }
 });
 </script>
-
-<style>
-  /* stylelint-disable */
-</style>

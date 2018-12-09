@@ -8,6 +8,15 @@
       <h-checkbox v-model="checkbox3" disabled>复选框 a</h-checkbox>
       <h-checkbox v-model="checkbox4" disabled>复选框 b</h-checkbox>
     </demo-block>
+    <demo-block title="最多可选">
+      <h-checkbox-group v-model="result" :max="2">
+        <h-checkbox
+          v-for="(item, index) in list"
+          :key="index"
+          :name="item"
+        >复选框 {{ item }}</h-checkbox>
+      </h-checkbox-group>
+    </demo-block>
     <demo-block title="复选框组">
       <h-checkbox-group v-model="result">
         <h-checkbox
@@ -15,6 +24,21 @@
           :key="index"
           :name="item"
         >复选框 {{ item }}</h-checkbox>
+      </h-checkbox-group>
+    </demo-block>
+    <demo-block title="高级用法">
+      <h-checkbox-group v-model="result">
+        <h-cell-group>
+          <h-cell
+            v-for="item in list"
+            clickable
+            :key="item"
+            :title="`复选框 ${item}`"
+            @click="toggle(index)"
+          >
+            <h-checkbox :name="item" ref="checkboxes" />
+          </h-cell>
+        </h-cell-group>
       </h-checkbox-group>
     </demo-block>
   </demo-section>

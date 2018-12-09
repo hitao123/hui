@@ -1,5 +1,43 @@
 @import "./common/var.less";
 
 .h-search {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 6px 15px;
 
+  .h-cell {
+    flex: 1;
+    padding: 3px 10px 3px 35px;
+    border-radius: 4px;
+  }
+
+  &__action {
+    font-size: 14px;
+    line-height: 34px;
+    letter-spacing: 1px;
+  }
+
+  input {
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
+  }
+
+  .h-icon-search {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    z-index: 1;
+    font-size: 16px;
+    color: @gray-dark;
+    transform: translateY(-50%);
+  }
+  .h-icon-clear {
+    color: #bbb;
+  }
 }
