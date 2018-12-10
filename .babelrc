@@ -8,7 +8,7 @@
     }],
     "stage-2"
   ],
-  "plugins": ["transform-vue-jsx", "transform-runtime", "transform-object-rest-spread", "transform-object-assign"],
+  "plugins": ["transform-runtime"],
   "env": {
     "commonjs": {
       "presets": [
@@ -16,14 +16,14 @@
         [
           "env",
           {
-            "modules": "commonjs"
+            "modules": "commonjs",
+            "loose": true
           }
         ]
       ]
     },
     "test": {
-      "presets": ["env", "stage-2"],
-      "plugins": ["transform-vue-jsx", "syntax-dynamic-import", "transform-object-assign", "transform-object-rest-spread"]
+      "presets": ["env", "stage-2"]
     }
   }
 }

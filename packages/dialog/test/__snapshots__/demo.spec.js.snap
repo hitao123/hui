@@ -10,7 +10,7 @@ exports[`Dialog component should show Button Demo 1`] = `
 
 exports[`Dialog component should show Dialog 1`] = `
 <div class="h-dialog" style="display: none;" name="h-dialog-bounce">
-  <div>title</div>
+  <div class="h-dialog__header">title</div>
   <!---->
   <div class="h-hairline--top h-dialog__footer">
     <h-button-stub tag="button" type="default" size="large" class="h-dialog__cancel" style="display: none;">

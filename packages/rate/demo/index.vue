@@ -1,7 +1,7 @@
 <template>
   <div class="rate-demo">
     <h-rate :count="5" v-model="value1" @change="handleChange"></h-rate>
-    <h-rate :count="3" v-model="value2" color="#2ba"></h-rate>
+    <h-rate :count="3" v-model="value2" color="#f00"></h-rate>
     <h-rate :count="3" :disabled="true"></h-rate>
   </div>
 </template>

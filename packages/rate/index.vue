@@ -35,15 +35,15 @@ export default create({
     readonly: Boolean,
     disabledColor: {
       type: String,
-      default: '#bdbdbd'
+      default: '#f05a22'
     },
     color: {
       type: String,
-      default: '#ffd21e'
+      default: '#f60'
     },
     voidColor: {
       type: String,
-      default: '#c7c7c7'
+      default: '#f05a22'
     }
   },
   computed: {

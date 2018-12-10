@@ -36,7 +36,6 @@ export default create({
         if (this.parent) {
           const parentValue = this.parent.value.slice();
           if (val) {
-            console.log()
             if (this.parent.max && parentValue.length >= this.parent.max) {
               return;
             }

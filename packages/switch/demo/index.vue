@@ -10,7 +10,7 @@
       <h-switch v-model="checked3" loading />
     </demo-block>
     <demo-block title="高级用法">
-      <h-switch v-model="checked4" @change="handleChange" />
+      <h-switch :value="checked4" @input="handleInput" />
     </demo-block>
   </demo-section>
 </template>
@@ -22,26 +22,17 @@ export default {
       checked: false,
       checked2: true,
       checked3: true,
-      checked4: false
+      checked4: true
     }
   },
   methods: {
-    handleChange(value) {
-      if (value) {
-        this.$dialog.confirm({
-          title: '提醒',
-          message: '是否关掉开关'
-        }).then(() => {
-          this.checked4 = !value;
-        })
-      } else {
-        this.$dialog.confirm({
-          title: '提醒',
-          message: '是否打开开关'
-        }).then(() => {
-          this.checked4 = !value;
-        })
-      }
+    handleInput(value) {
+      this.$dialog.confirm({
+        title: '提醒',
+        message: '是否切换开关'
+      }).then(() => {
+        this.checked4 = value;
+      })
     }
   }
 }

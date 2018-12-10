@@ -1,24 +1,31 @@
 import Vue from 'vue';
 import HDialog from './dialog';
 
-const DialogConstructor = Vue.extend(HDialog);
+let instance
 
-let instance = new DialogConstructor({
-  el: document.createElement('div')
-});
+const initInstance = () => {
+  instance = new (Vue.extend(HDialog))({
+    el: document.createElement('div')
+  });
+
+  instance.$on('input', value => {
+    instance.value = value;
+  });
+
+  document.body.appendChild(instance.$el);
+};
 
 const Dialog = options => {
   return new Promise((resolve, reject) => {
-    instance.$on('input', value => {
-      instance.value = value;
-    });
-
-    document.body.appendChild(instance.$el);
+    if (!instance) {
+      initInstance();
+    }
 
     Object.assign(instance, {
       resolve,
-      reject
-    }, options);
+      reject,
+      ...options
+    });
   })
 }
 
@@ -41,15 +48,18 @@ Dialog.defaultOptions = {
 };
 
 Dialog.alert = options => Dialog(
-  Object.assign({}, Dialog.currentOptions, options)
-  // 下面这种方式 即使在 babel 有配置依旧不能使用该操作符，坑了一天依旧没解决
-  // ...Dialog.currentOptions,
-  // ...options
+  // Object.assign({}, Dialog.currentOptions, options)
+  // 下面这种方式 即使在 babel 有配置依旧不能使用该操作符，坑了一天依旧没解决，最后通过安装 babel-cli 解决了
+  // 原理可以再看看
+  ...Dialog.currentOptions,
+  ...options
 );
 
-Dialog.confirm = options => Dialog(
-  Object.assign({}, Dialog.currentOptions, { showCancelButton: true }, options)
-);
+Dialog.confirm = options => Dialog({
+  ...Dialog.currentOptions,
+  showCancelButton: true,
+  ...options
+});
 
 Dialog.close = () => {
   if (instance) {

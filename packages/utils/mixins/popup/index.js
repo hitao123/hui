@@ -34,7 +34,6 @@ export default {
       if (this.$isServer || this.opened) {
         return;
       }
-      console.log(this.zIndex, '==>');
       if (this.zIndex !== undefined) {
         context.zIndex = this.zIndex;
       }

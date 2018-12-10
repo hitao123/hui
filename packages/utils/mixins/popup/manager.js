@@ -2,6 +2,11 @@ import Vue from 'vue';
 import Modal from './Modal';
 import context from './context';
 
+const defaultConfig = {
+  className: '',
+  customStyle: {}
+};
+
 export default {
   open(vm, config) {
     const el = vm.$el;
@@ -39,7 +44,8 @@ export default {
       const { targetNode, config } = context.top;
       targetNode.appendChild(modal.$el);
       Object.assign(modal, {
-        config,
+        ...defaultConfig,
+        ...config,
         visible: true
       });
     }

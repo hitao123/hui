@@ -76,10 +76,10 @@ export default {
       text-align: center;
       background-clip: content-box;
       &:nth-child(odd) {
-        background-color: #39a9ed;
+        background-color: #f05a22;
       }
       &:nth-child(even) {
-        background-color: #66c6f2;
+        background-color: #faa800;
       }
     }
   }

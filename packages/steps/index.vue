@@ -19,7 +19,7 @@ export default create({
     active: Number,
     activeColor: {
       type: String,
-      default: '#06bf04'
+      default: '#f60'
     }
   },
   data() {

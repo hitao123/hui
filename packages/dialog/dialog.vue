@@ -8,10 +8,15 @@
         </slot>
       </div>
       <div class="h-hairline--top" :class="bem('footer', { 'buttons': showCancelButton && showConfirmButton })">
-        <h-button v-show="showCancelButton" size="large" :class="bem('cancel')" @click="handleAction('cancel')">
+        <h-button v-show="showCancelButton" size="large" :class="bem('cancel')"
+          @click="handleAction('cancel')"
+        >
           {{ cancelButtonText || '取消' }}
         </h-button>
-        <h-button v-show="showConfirmButton" size="large" :class="[bem('confirm'), { 'h-hairline--left': showCancelButton && showConfirmButton }]" @click="handleAction('confirm')">
+        <h-button v-show="showConfirmButton" size="large" :class="[bem('confirm'), {
+          'h-hairline--left': showCancelButton && showConfirmButton }]"
+          @click="handleAction('confirm')"
+        >
           {{ confirmButtonText || '确认' }}
         </h-button>
       </div>
@@ -31,6 +36,7 @@ export default create({
     className: String,
     title: String,
     message: String,
+    callback: Function,
     showCancelButton: Boolean,
     showConfirmButton: {
       type: Boolean,
@@ -57,17 +63,14 @@ export default create({
     [Button.name]: Button
   },
   methods: {
-    handleAction(type) {
-      this.$emit(type);
-      this.onClose();
+    handleAction(action) {
+      this.$emit(action);
+      this.onClose(action);
     },
-    onClose() {
+    onClose(action) {
       this.$emit('input', false);
+      this.callback && this.callback(action)
     }
   }
 })
 </script>
-
-<style>
-  /* stylelint-disable */
-</style>
