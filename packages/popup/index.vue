@@ -1,5 +1,5 @@
 <template>
-  <transition name="pop">
+  <transition :name="currentTransition">
     <div v-show="value" :class="bem({ [position]: position })">
       <slot></slot>
     </div>
@@ -14,9 +14,10 @@ export default create({
   name: 'popup',
   mixins: [Popup],
   props: {
+    transition: String,
     position: {
       type: String,
-      default: 'center'
+      default: ''
     },
     overlay: {
       type: Boolean,
@@ -25,6 +26,11 @@ export default create({
     closeOnClickOverlay: {
       type: Boolean,
       default: true
+    }
+  },
+  computed: {
+    currentTransition() {
+      return this.transition || (this.position === '' ? 'h-fade' : `popup-slide-${this.position}`);
     }
   }
 });
