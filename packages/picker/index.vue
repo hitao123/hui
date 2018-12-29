@@ -2,9 +2,9 @@
   <div :class="bem('')">
     <div :class="bem('toolbar')" class="h-hairline--top-bottom" v-if="showToolbar">
       <slot>
-        <div :class="bem('cancel')" @click="emit('cancel')">{{ cancalText || 'cancel' }}</div>
+        <div :class="bem('cancel')" @click="emit('cancel')">{{ cancalText || '取消' }}</div>
         <div :class="bem('title')" v-if="title" v-text="title"></div>
-        <div :class="bem('confirm')" @click="emit('confirm')">{{ confirmText || 'confirm' }}</div>
+        <div :class="bem('confirm')" @click="emit('confirm')">{{ confirmText || '确定' }}</div>
       </slot>
     </div>
     <div v-if="loading" :class="bem('loading')">
@@ -75,11 +75,21 @@ export default create({
       };
     },
     simple() {
-      // console.log(this.columns, [this.columns], this.columns.length && !this.columns[0].values);
       return this.columns.length && !this.columns[0].values;
     }
   },
+  // watch: {
+  //   columns() {
+  //     this.setColumns();
+  //   }
+  // },
   methods: {
+    setColumns() {
+      // const columns = this.simple ? [{ values: this.columns }] : this.columns;
+      // columns.forEach((columns, index) => {
+      //   this.setColumnValues(index, deepClone(columns.values));
+      // });
+    },
     // 通过索引获取 column 实例
     getColumn(index) {
       return this.children[index];

@@ -4,6 +4,7 @@ import App from './WapApp';
 import Hui from '../../packages';
 import routes from './router';
 import { DemoBlock, DemoSection, progress } from 'hui-doc';
+import './utils/touch-simulator';
 import '../../packages/less/src/common/normalize.less';
 import '../../packages/less/src/index.less';
 

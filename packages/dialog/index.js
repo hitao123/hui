@@ -47,13 +47,13 @@ Dialog.defaultOptions = {
   }
 };
 
-Dialog.alert = options => Dialog(
+Dialog.alert = options => Dialog({
   // Object.assign({}, Dialog.currentOptions, options)
   // 下面这种方式 即使在 babel 有配置依旧不能使用该操作符，坑了一天依旧没解决，最后通过安装 babel-cli 解决了
   // 原理可以再看看
   ...Dialog.currentOptions,
   ...options
-);
+});
 
 Dialog.confirm = options => Dialog({
   ...Dialog.currentOptions,

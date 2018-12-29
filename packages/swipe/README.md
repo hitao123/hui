@@ -2,7 +2,7 @@
 
 ### 使用指南
 ``` javascript
-import { Swipe, SwipeItem } from 'vant';
+import { Swipe, SwipeItem } from 'hui';
 
 Vue.use(Swipe).use(SwipeItem);
 ```
@@ -13,23 +13,23 @@ Vue.use(Swipe).use(SwipeItem);
 通过`autoplay`属性设置自动轮播间隔
 
 ```html
-<van-swipe :autoplay="3000">
-  <van-swipe-item>1</van-swipe-item>
-  <van-swipe-item>2</van-swipe-item>
-  <van-swipe-item>3</van-swipe-item>
-  <van-swipe-item>4</van-swipe-item>
-</van-swipe>
+<h-swipe :autoplay="3000">
+  <h-swipe-item>1</h-swipe-item>
+  <h-swipe-item>2</h-swipe-item>
+  <h-swipe-item>3</h-swipe-item>
+  <h-swipe-item>4</h-swipe-item>
+</h-swipe>
 ```
 
 #### 图片懒加载
 配合 [Lazyload](#/zh-CN/lazyload) 组件实现图片懒加载
 
 ```html
-<van-swipe :autoplay="3000">
-  <van-swipe-item v-for="(image, index) in images" :key="index">
+<h-swipe :autoplay="3000">
+  <h-swipe-item v-for="(image, index) in images" :key="index">
     <img v-lazy="image" />
-  </van-swipe-item>
-</van-swipe>
+  </h-swipe-item>
+</h-swipe>
 ```
 
 ```javascript
@@ -48,12 +48,12 @@ export default {
 #### 监听 change 事件
 
 ```html
-<van-swipe @change="onChange">
-  <van-swipe-item>1</van-swipe-item>
-  <van-swipe-item>2</van-swipe-item>
-  <van-swipe-item>3</van-swipe-item>
-  <van-swipe-item>4</van-swipe-item>
-</van-swipe>
+<h-swipe @change="onChange">
+  <h-swipe-item>1</h-swipe-item>
+  <h-swipe-item>2</h-swipe-item>
+  <h-swipe-item>3</h-swipe-item>
+  <h-swipe-item>4</h-swipe-item>
+</h-swipe>
 ```
 
 ```js
@@ -69,12 +69,12 @@ export default {
 #### 纵向滚动
 
 ```html
-<van-swipe :autoplay="3000" vertical>
-  <van-swipe-item>1</van-swipe-item>
-  <van-swipe-item>2</van-swipe-item>
-  <van-swipe-item>3</van-swipe-item>
-  <van-swipe-item>4</van-swipe-item>
-</van-swipe>
+<h-swipe :autoplay="3000" vertical>
+  <h-swipe-item>1</h-swipe-item>
+  <h-swipe-item>2</h-swipe-item>
+  <h-swipe-item>3</h-swipe-item>
+  <h-swipe-item>4</h-swipe-item>
+</h-swipe>
 ```
 
 ### API

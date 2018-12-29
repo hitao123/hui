@@ -1,13 +1,18 @@
 <template>
   <demo-section>
     <demo-block title="基础用法">
-      <h-picker showToolbar :columns="columns" title="title" ref="picker" @change="handleChange"></h-picker>
+      <h-picker showToolbar :columns="columns" title="title" ref="picker"
+        @change="handleChange"
+        @cancel="onCancel"
+        @confirm="onConfirm"
+      >
+      </h-picker>
     </demo-block>
     <demo-block title="多级联动">
       <h-picker :columns="columns1" @change="handleChange2"></h-picker>
     </demo-block>
     <demo-block title="加载状态">
-      <h-picker :columns="columns2" @change="handleChange3" :loading="true"></h-picker>
+      <h-picker :columns="columns2" @change="handleChange3" loading></h-picker>
     </demo-block>
   </demo-section>
 </template>
@@ -45,20 +50,21 @@ export default {
       columns2: ['2018', '2019', '2020', '2021', '2022', '2023']
     }
   },
-  created() {
-    this.$nextTick(() => {
-      // console.log(this.$refs['picker']);
-    })
-  },
   methods: {
     handleChange(picker, value, index) {
-      console.log(picker, value, index);
+      // console.log(picker, value, index);
     },
     handleChange2(picker, value, index) {
       picker.setColumnValues(1, citys[value[0]])
     },
     handleChange3() {
       //
+    },
+    onCancel(column, index) {
+      // console.log(column, index);
+    },
+    onConfirm(column, index) {
+      // console.log(column, index);
     }
   }
 }

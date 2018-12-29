@@ -52,13 +52,13 @@ export default {
         background-color: #66c6f2;
       }
     }
-  }
-  .demo-swipe-2 {
     img {
       box-sizing: border-box;
       width: 100%;
       height: 240px;
       padding: 30px 60px;
+      pointer-events: none;
+      background-color: #fff;
     }
   }
 </style>
