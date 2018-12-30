@@ -1,83 +1,51 @@
-## Swipe 轮播
+## SwitchCell 开关单元格
 
 ### 使用指南
 
 ``` javascript
-import { Swipe, SwipeItem } from 'vant';
+import { SwitchCell } from 'hui';
 
-Vue.use(Swipe).use(SwipeItem);
+Vue.use(SwitchCell);
 ```
 
 ### 代码演示
 
 #### 基础用法
 
-通过`autoplay`属性设置自动轮播间隔
-
 ```html
-<van-swipe :autoplay="3000">
-  <van-swipe-item>1</van-swipe-item>
-  <van-swipe-item>2</van-swipe-item>
-  <van-swipe-item>3</van-swipe-item>
-  <van-swipe-item>4</van-swipe-item>
-</van-swipe>
-```
-
-#### 图片懒加载
-
-配合 [Lazyload](#/zh-CN/lazyload) 组件实现图片懒加载
-
-```html
-<van-swipe :autoplay="3000">
-  <van-swipe-item v-for="(image, index) in images" :key="index">
-    <img v-lazy="image" />
-  </van-swipe-item>
-</van-swipe>
-```
-
-```javascript
-export default {
-  data() {
-    return {
-      images: [
-        'https://img.yzcdn.cn/1.jpg',
-        'https://img.yzcdn.cn/2.jpg'
-      ]
-    }
-  }
-}
-```
-
-#### 监听 change 事件
-
-```html
-<van-swipe @change="onChange">
-  <van-swipe-item>1</van-swipe-item>
-  <van-swipe-item>2</van-swipe-item>
-  <van-swipe-item>3</van-swipe-item>
-  <van-swipe-item>4</van-swipe-item>
-</van-swipe>
+<h-cell-group>
+  <h-switch-cell v-model="checked" title="标题" />
+</h-cell-group>
 ```
 
 ```js
 export default {
-  methods: {
-    onChange(index) {
-      Toast('当前 Swipe 索引：' + index);
+  data() {
+    return {
+      checked: true
     }
   }
 }
 ```
 
-#### 纵向滚动
+#### 禁用状态
+
+通过disabled属性可以将组件设置为禁用状态
 
 ```html
-<van-swipe :autoplay="3000" vertical>
-  <van-swipe-item>1</van-swipe-item>
-  <van-swipe-item>2</van-swipe-item>
-  <van-swipe-item>3</van-swipe-item>
-  <van-swipe-item>4</van-swipe-item>
-</van-swipe>
+<h-cell-group>
+  <h-switch-cell v-model="checked" disabled title="标题" />
+</h-cell-group>
+```
+
+#### 加载状态
+
+通过loading属性可以将组件设置为加载状态
+
+```html
+<h-cell-group>
+  <h-switch-cell v-model="checked" loading title="标题" />
+</h-cell-group>
 ```
 
 ### API
