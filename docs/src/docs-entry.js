@@ -16,6 +16,7 @@ export default {
   'datetime-picker.README': () => import('../../packages/datetime-picker/README.md'),
   'dialog.README': () => import('../../packages/dialog/README.md'),
   'field.README': () => import('../../packages/field/README.md'),
+  'hand-writing.README': () => import('../../packages/hand-writing/README.md'),
   'icon.README': () => import('../../packages/icon/README.md'),
   'lazyload.README': () => import('../../packages/lazyload/README.md'),
   'list.README': () => import('../../packages/list/README.md'),

@@ -11,6 +11,7 @@ import CollapseItem from './collapse-item';
 import DatetimePicker from './datetime-picker';
 import Dialog from './dialog';
 import Field from './field';
+import HandWriting from './hand-writing';
 import Icon from './icon';
 import Lazyload from './lazyload';
 import List from './list';
@@ -53,6 +54,7 @@ const components = [
   DatetimePicker,
   Dialog,
   Field,
+  HandWriting,
   Icon,
   Lazyload,
   List,
@@ -107,6 +109,7 @@ export {
   DatetimePicker,
   Dialog,
   Field,
+  HandWriting,
   Icon,
   Lazyload,
   List,

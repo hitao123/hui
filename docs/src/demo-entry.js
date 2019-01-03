@@ -18,6 +18,7 @@ export default {
   'datetime-picker': () => wrapper(import('../../packages/datetime-picker/demo'), 'datetime-picker'),
   'dialog': () => wrapper(import('../../packages/dialog/demo'), 'dialog'),
   'field': () => wrapper(import('../../packages/field/demo'), 'field'),
+  'hand-writing': () => wrapper(import('../../packages/hand-writing/demo'), 'hand-writing'),
   'icon': () => wrapper(import('../../packages/icon/demo'), 'icon'),
   'lazyload': () => wrapper(import('../../packages/lazyload/demo'), 'lazyload'),
   'list': () => wrapper(import('../../packages/list/demo'), 'list'),
