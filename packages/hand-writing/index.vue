@@ -1,15 +1,15 @@
 <template>
   <div :class="bem()">
-    <div>
+    <div :class="bem('container')">
       <div :class="bem('main')">
         <canvas :id="id" :class="bem('canvas')"></canvas>
       </div>
     </div>
-    <slot name="rewrite">
-      <div :class="bem('rewrite')">
+    <div :class="bem('rewrite')" @click="handleClick(action)">
+      <slot name="rewrite">
         <h-button size="large">{{ confirmText }}</h-button>
-      </div>
-    </slot>
+      </slot>
+    </div>
   </div>
 </template>
 
@@ -27,11 +27,15 @@ export default create({
     confirmText: {
       type: String,
       default: '重写'
+    },
+    action: {
+      type: String,
+      default: 'delete'
     }
   },
   data() {
     return {
-
+      draw: null
     }
   },
   components: {
@@ -45,8 +49,8 @@ export default create({
       const canvas = document.querySelector(`#${this.id}`);
       this.draw = new Draw(canvas);
     },
-    clear() {
-      //
+    handleClick(action) {
+      this.$emit(action, this.draw);
     }
   }
 })

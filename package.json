@@ -28,7 +28,8 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "test": "npm run unit -- -u",
     "commit": "git-cz",
-    "changelog": "conventional-changelog -p angular -i ./docs/markdown/changelog.README.md -s"
+    "changelog": "conventional-changelog -p angular -i ./docs/markdown/changelog.README.md -s",
+    "release": "np"
   },
   "repository": {
     "type": "git",

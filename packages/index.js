@@ -38,6 +38,7 @@ import Switch from './switch';
 import SwitchCell from './switch-cell';
 import Tab from './tab';
 import Tabs from './tabs';
+import TextMask from './text-mask';
 import Toast from './toast';
 import Uploader from './uploader';
 
@@ -81,6 +82,7 @@ const components = [
   SwitchCell,
   Tab,
   Tabs,
+  TextMask,
   Toast,
   Uploader
 ];
@@ -136,6 +138,7 @@ export {
   SwitchCell,
   Tab,
   Tabs,
+  TextMask,
   Toast,
   Uploader
 };

@@ -38,6 +38,7 @@ export default {
   'switch.README': () => import('../../packages/switch/README.md'),
   'switch-cell.README': () => import('../../packages/switch-cell/README.md'),
   'tab.README': () => import('../../packages/tab/README.md'),
+  'text-mask.README': () => import('../../packages/text-mask/README.md'),
   'toast.README': () => import('../../packages/toast/README.md'),
   'uploader.README': () => import('../../packages/uploader/README.md')
 };

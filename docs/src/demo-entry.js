@@ -40,6 +40,7 @@ export default {
   'switch': () => wrapper(import('../../packages/switch/demo'), 'switch'),
   'switch-cell': () => wrapper(import('../../packages/switch-cell/demo'), 'switch-cell'),
   'tab': () => wrapper(import('../../packages/tab/demo'), 'tab'),
+  'text-mask': () => wrapper(import('../../packages/text-mask/demo'), 'text-mask'),
   'toast': () => wrapper(import('../../packages/toast/demo'), 'toast'),
   'uploader': () => wrapper(import('../../packages/uploader/demo'), 'uploader')
 };

@@ -112,6 +112,10 @@ module.exports = {
               title: 'Field 输入框'
             },
             {
+              path: '/text-mask',
+              title: 'text-mask 输入框'
+            },
+            {
               path: '/number-keyboard',
               title: 'NumberKeyboard 数字键盘'
             },

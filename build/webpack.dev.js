@@ -132,11 +132,11 @@ module.exports = {
   //   clientLogLevel: 'warning',
   //   historyApiFallback: {
   //     rewrites: [
-  //       { from: /.*/, to: path.posix.join(__dirname, 'docs/dist/', 'index.html') },
+  //       { from: /.*/, to: path.posix.join(__dirname, '/', 'index.html') },
   //     ],
   //   },
   //   hot: true,
-  //   contentBase: path.join(__dirname, '../static'),
+  //   contentBase: false,
   //   compress: true,
   //   host: 'localhost',
   //   port: 8080,
