@@ -49,6 +49,8 @@ export default create({
       type: [Array, Function, Boolean, Object],
       required: true
     },
+    placeholderChar: String,
+    showMask: Boolean,
     label: {
       type: String
     },
@@ -65,7 +67,6 @@ export default create({
     errorMessage: {
       type: String
     },
-
     required: Boolean,
     clearable: Boolean,
     onIconClick: Function

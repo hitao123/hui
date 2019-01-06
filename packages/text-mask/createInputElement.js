@@ -1,6 +1,6 @@
 const emptyString = '';
 const strNone = 'none';
-const defaultPlaceholderChar = '_';
+const defaultPlaceholderChar = '\u2000';
 
 const isAndroid = typeof navigator !== 'undefined' && /Android/i.test(navigator.userAgent);
 const defer = typeof requestAnimationFrame !== 'undefined' ? requestAnimationFrame : setTimeout;
@@ -17,6 +17,11 @@ export function isArray(value) {
   return (Array.isArray && Array.isArray(value)) || value instanceof Array
 }
 
+/**
+ * 转换 mask 到 placeholder
+ * @param {Array[RegExp]} mask
+ * @param {String} placeholderChar
+ */
 export function convertMaskToPlaceholder(mask = [], placeholderChar = defaultPlaceholderChar) {
   if (!isArray(mask)) {
     throw new Error(
@@ -561,6 +566,39 @@ export function conformToMask(rawValue = emptyString, mask = [], config = {}) {
 
   return {conformedValue, meta: {someCharsRejected}}
 }
+/**
+ * 安全设置鼠标位置
+ * @param {*} element 当前激活 dom
+ * @param {*} selectionPosition 选择位置
+ * https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLInputElement/setSelectionRange
+ */
+function safeSetSelection(element, selectionPosition) {
+  if (document.activeElement === element) {
+    if (isAndroid) {
+      defer(() => element.setSelectionRange(selectionPosition, selectionPosition, strNone), 0)
+    } else {
+      element.setSelectionRange(selectionPosition, selectionPosition, strNone)
+    }
+  }
+}
+/**
+ * 获取安全的原生值，不能说是对象
+ * @param {*} inputValue
+ */
+function getSafeRawValue(inputValue) {
+  if (isString(inputValue)) {
+    return inputValue
+  } else if (isNumber(inputValue)) {
+    return String(inputValue)
+  } else if (inputValue === undefined || inputValue === null) {
+    return emptyString
+  } else {
+    throw new Error(
+      "The 'value' provided to Text Mask needs to be a string or a number. The value " +
+      `received was:\n\n ${JSON.stringify(inputValue)}`
+    )
+  }
+}
 
 export default function createTextMaskInputElement(config) {
   // Anything that we will need to keep between `update` calls, we will store in this `state` object.
@@ -622,7 +660,6 @@ export default function createTextMaskInputElement(config) {
 
       // `selectionEnd` indicates to us where the caret position is after the user has typed into the input
       const {selectionEnd: currentCaretPosition} = inputElement
-
       // We need to know what the `previousConformedValue` and `previousPlaceholder` is from the previous `update` call
       const {previousConformedValue, previousPlaceholder} = state
 
@@ -723,30 +760,5 @@ export default function createTextMaskInputElement(config) {
       inputElement.value = inputElementValue // set the input value
       safeSetSelection(inputElement, adjustedCaretPosition) // adjust caret position
     }
-  }
-}
-
-function safeSetSelection(element, selectionPosition) {
-  if (document.activeElement === element) {
-    if (isAndroid) {
-      defer(() => element.setSelectionRange(selectionPosition, selectionPosition, strNone), 0)
-    } else {
-      element.setSelectionRange(selectionPosition, selectionPosition, strNone)
-    }
-  }
-}
-
-function getSafeRawValue(inputValue) {
-  if (isString(inputValue)) {
-    return inputValue
-  } else if (isNumber(inputValue)) {
-    return String(inputValue)
-  } else if (inputValue === undefined || inputValue === null) {
-    return emptyString
-  } else {
-    throw new Error(
-      "The 'value' provided to Text Mask needs to be a string or a number. The value " +
-      `received was:\n\n ${JSON.stringify(inputValue)}`
-    )
   }
 }
