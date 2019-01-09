@@ -20,6 +20,7 @@ export default {
   'field': () => wrapper(import('../../packages/field/demo'), 'field'),
   'hand-writing': () => wrapper(import('../../packages/hand-writing/demo'), 'hand-writing'),
   'icon': () => wrapper(import('../../packages/icon/demo'), 'icon'),
+  'image-preview': () => wrapper(import('../../packages/image-preview/demo'), 'image-preview'),
   'lazyload': () => wrapper(import('../../packages/lazyload/demo'), 'lazyload'),
   'list': () => wrapper(import('../../packages/list/demo'), 'list'),
   'loading': () => wrapper(import('../../packages/loading/demo'), 'loading'),

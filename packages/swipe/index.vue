@@ -82,7 +82,7 @@ export default create({
   destroyed() {
     this.clear();
     if (!this.$isServer) {
-      off(window, 'resize', function() { console.log('resize'); }, true);
+      off(window, 'resize', function() { }, true);
     }
   },
   watch: {

@@ -18,6 +18,7 @@ export default {
   'field.README': () => import('../../packages/field/README.md'),
   'hand-writing.README': () => import('../../packages/hand-writing/README.md'),
   'icon.README': () => import('../../packages/icon/README.md'),
+  'image-preview.README': () => import('../../packages/image-preview/README.md'),
   'lazyload.README': () => import('../../packages/lazyload/README.md'),
   'list.README': () => import('../../packages/list/README.md'),
   'loading.README': () => import('../../packages/loading/README.md'),

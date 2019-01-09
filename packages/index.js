@@ -13,6 +13,7 @@ import Dialog from './dialog';
 import Field from './field';
 import HandWriting from './hand-writing';
 import Icon from './icon';
+import ImagePreview from './image-preview';
 import Lazyload from './lazyload';
 import List from './list';
 import Loading from './loading';
@@ -57,6 +58,7 @@ const components = [
   Field,
   HandWriting,
   Icon,
+  ImagePreview,
   Lazyload,
   List,
   Loading,
@@ -113,6 +115,7 @@ export {
   Field,
   HandWriting,
   Icon,
+  ImagePreview,
   Lazyload,
   List,
   Loading,
