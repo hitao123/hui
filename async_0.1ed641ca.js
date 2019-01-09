@@ -2587,6 +2587,10 @@ var Component = normalizeComponent(
       type: Boolean,
       default: true
     },
+    overlayClass: {
+      type: String,
+      default: 'h-image-preview__overlay'
+    },
     closeOnClickOverlay: {
       type: Boolean,
       default: true
@@ -2605,7 +2609,7 @@ var Component = normalizeComponent(
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(117);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1576f02a_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(238);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_88f7ec68_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(238);
 function injectStyle (ssrContext) {
   __webpack_require__(236)
 }
@@ -2625,7 +2629,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1576f02a_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_88f7ec68_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -2671,7 +2675,7 @@ var Component = normalizeComponent(
   mixins: [__WEBPACK_IMPORTED_MODULE_2__utils_mixins_touch__["a" /* default */]],
   props: {
     vertical: Boolean,
-    playDuration: Number,
+    autoplay: Number,
     loop: {
       type: Boolean,
       default: true
@@ -2736,6 +2740,13 @@ var Component = normalizeComponent(
   watch: {
     swipes: function swipes() {
       this.initialize();
+    },
+    autoplay: function autoplay(_autoplay) {
+      if (!_autoplay) {
+        this.clear();
+      } else {
+        this.autoPlay();
+      }
     }
   },
   methods: {
@@ -2784,7 +2795,10 @@ var Component = normalizeComponent(
     autoPlay: function autoPlay() {
       var _this = this;
 
-      if (this.count > 1) {
+      var autoplay = this.autoplay;
+
+
+      if (autoplay && this.count > 1) {
         this.clear();
         this.timer = setTimeout(function () {
           _this.swiping = true;
@@ -2795,7 +2809,7 @@ var Component = normalizeComponent(
             _this.move(1);
             _this.autoPlay();
           }, 30);
-        }, this.playDuration);
+        }, autoplay);
       }
     },
     clear: function clear() {
@@ -7663,7 +7677,7 @@ ImagePreview.install = function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_image_preview_vue__ = __webpack_require__(115);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5862092c_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_image_preview_vue__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_20f532d5_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_image_preview_vue__ = __webpack_require__(242);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -7680,7 +7694,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_image_preview_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5862092c_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_image_preview_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_20f532d5_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_image_preview_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -7701,7 +7715,7 @@ var content = __webpack_require__(237);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(6)("dc712586", content, true, {});
+var update = __webpack_require__(6)("bc6e4fb0", content, true, {});
 
 /***/ }),
 /* 237 */
@@ -9959,7 +9973,10 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(441);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3f6de92f_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(535);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_38875720_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(537);
+function injectStyle (ssrContext) {
+  __webpack_require__(535)
+}
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -9969,14 +9986,14 @@ var normalizeComponent = __webpack_require__(0)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3f6de92f_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_38875720_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -10198,6 +10215,33 @@ var Component = normalizeComponent(
 /* 533 */,
 /* 534 */,
 /* 535 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(536);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(6)("59c6d5f5", content, true, {});
+
+/***/ }),
+/* 536 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".demo-image-preview .h-button{margin-left:15px}.h-image-preview img{width:100%;height:300px;pointer-events:none}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 537 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

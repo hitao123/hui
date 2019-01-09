@@ -7,9 +7,9 @@ webpackJsonp([7],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(458);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_31505da8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(586);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_28e15704_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(588);
 function injectStyle (ssrContext) {
-  __webpack_require__(584)
+  __webpack_require__(586)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -27,7 +27,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_31505da8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_28e15704_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -79,21 +79,21 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 584:
+/***/ 586:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(585);
+var content = __webpack_require__(587);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(6)("6836a176", content, true, {});
+var update = __webpack_require__(6)("d820c386", content, true, {});
 
 /***/ }),
 
-/***/ 585:
+/***/ 587:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -108,11 +108,11 @@ exports.push([module.i, ".demo-swipe{margin-bottom:10px}.demo-swipe .h-swipe-ite
 
 /***/ }),
 
-/***/ 586:
+/***/ 588:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('demo-section',[_c('demo-block',{attrs:{"title":"基础用法"}},[_c('h-swipe',{attrs:{"play-duration":3000}},[_c('h-swipe-item',[_vm._v("1")]),_vm._v(" "),_c('h-swipe-item',[_vm._v("2")]),_vm._v(" "),_c('h-swipe-item',[_vm._v("3")]),_vm._v(" "),_c('h-swipe-item',[_vm._v("4")])],1)],1),_vm._v(" "),_c('demo-block',{attrs:{"title":"用法"}},[_c('h-swipe',{attrs:{"play-duration":4000}},_vm._l((_vm.images),function(image,index){return _c('h-swipe-item',{key:index},[_c('img',{attrs:{"src":image}})])}))],1),_vm._v(" "),_c('demo-block',{attrs:{"title":"高级用法"}},[_c('h-swipe',{attrs:{"play-duration":2000,"show-indicators":false}},[_c('h-swipe-item',[_vm._v("1")])],1)],1)],1)}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('demo-section',[_c('demo-block',{attrs:{"title":"基础用法"}},[_c('h-swipe',{attrs:{"autoplay":3000}},[_c('h-swipe-item',[_vm._v("1")]),_vm._v(" "),_c('h-swipe-item',[_vm._v("2")]),_vm._v(" "),_c('h-swipe-item',[_vm._v("3")]),_vm._v(" "),_c('h-swipe-item',[_vm._v("4")])],1)],1),_vm._v(" "),_c('demo-block',{attrs:{"title":"用法"}},[_c('h-swipe',{attrs:{"autoplay":4000}},_vm._l((_vm.images),function(image,index){return _c('h-swipe-item',{key:index},[_c('img',{attrs:{"src":image}})])}))],1),_vm._v(" "),_c('demo-block',{attrs:{"title":"高级用法"}},[_c('h-swipe',{attrs:{"autoplay":2000,"show-indicators":false}},[_c('h-swipe-item',[_vm._v("1")])],1)],1)],1)}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

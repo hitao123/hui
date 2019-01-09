@@ -1,15 +1,15 @@
-webpackJsonp([13],{
+webpackJsonp([12],{
 
-/***/ 366:
+/***/ 367:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(452);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(453);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_d13ea96c_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(568);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5a612224_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(573);
 function injectStyle (ssrContext) {
-  __webpack_require__(566)
+  __webpack_require__(571)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -27,7 +27,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_d13ea96c_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5a612224_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -39,19 +39,10 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 452:
+/***/ 453:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -64,29 +55,35 @@ var Component = normalizeComponent(
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
-      radio: '1',
-      radio1: '2'
+      value1: 2,
+      value2: 1
     };
+  },
+
+  methods: {
+    handleChange: function handleChange(index) {
+      console.log(index);
+    }
   }
 });
 
 /***/ }),
 
-/***/ 566:
+/***/ 571:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(567);
+var content = __webpack_require__(572);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(6)("20fe7830", content, true, {});
+var update = __webpack_require__(6)("4bf9ee98", content, true, {});
 
 /***/ }),
 
-/***/ 567:
+/***/ 572:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -94,18 +91,18 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".demo-radio .h-radio{margin-bottom:10px}", ""]);
+exports.push([module.i, ".rate-demo{margin:20px 30px}", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 568:
+/***/ 573:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('demo-section',[_c('demo-block',{attrs:{"title":"基本用法"}},[_c('h-radio-group',{model:{value:(_vm.radio),callback:function ($$v) {_vm.radio=$$v},expression:"radio"}},[_c('h-radio',{attrs:{"name":"1"}},[_vm._v("单选一")]),_vm._v(" "),_c('h-radio',{attrs:{"name":"2"}},[_vm._v("单选二")])],1)],1),_vm._v(" "),_c('demo-block',{attrs:{"title":"高级用法"}},[_c('h-radio-group',{attrs:{"disabled":true},model:{value:(_vm.radio1),callback:function ($$v) {_vm.radio1=$$v},expression:"radio1"}},[_c('h-radio',{attrs:{"name":"1"}},[_vm._v("单选一")]),_vm._v(" "),_c('h-radio',{attrs:{"name":"2"}},[_vm._v("单选二")])],1)],1)],1)}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"rate-demo"},[_c('h-rate',{attrs:{"count":5},on:{"change":_vm.handleChange},model:{value:(_vm.value1),callback:function ($$v) {_vm.value1=$$v},expression:"value1"}}),_vm._v(" "),_c('h-rate',{attrs:{"count":3,"color":"#f00"},model:{value:(_vm.value2),callback:function ($$v) {_vm.value2=$$v},expression:"value2"}}),_vm._v(" "),_c('h-rate',{attrs:{"count":3,"disabled":true}})],1)}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
