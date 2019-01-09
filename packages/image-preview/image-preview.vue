@@ -37,6 +37,10 @@ export default create({
       type: Boolean,
       default: true
     },
+    overlayClass: {
+      type: String,
+      default: 'h-image-preview__overlay'
+    },
     closeOnClickOverlay: {
       type: Boolean,
       default: true

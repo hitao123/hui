@@ -23,7 +23,7 @@ export default create({
   mixins: [Touch],
   props: {
     vertical: Boolean,
-    playDuration: Number,
+    autoplay: Number,
     loop: {
       type: Boolean,
       default: true
@@ -88,6 +88,13 @@ export default create({
   watch: {
     swipes() {
       this.initialize();
+    },
+    autoplay(autoplay) {
+      if (!autoplay) {
+        this.clear();
+      } else {
+        this.autoPlay();
+      }
     }
   },
   methods: {
@@ -128,7 +135,9 @@ export default create({
       }
     },
     autoPlay() {
-      if (this.count > 1) {
+      const { autoplay } = this;
+
+      if (autoplay && this.count > 1) {
         this.clear();
         this.timer = setTimeout(() => {
           this.swiping = true;
@@ -139,7 +148,7 @@ export default create({
             this.move(1);
             this.autoPlay();
           }, 30);
-        }, this.playDuration);
+        }, autoplay);
       }
     },
     clear() {

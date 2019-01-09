@@ -30,3 +30,17 @@ export default {
   }
 }
 </script>
+<style lang="less">
+.demo-image-preview {
+  .h-button {
+    margin-left: 15px;
+  }
+}
+.h-image-preview {
+  img {
+    width: 100%;
+    height: 300px;
+    pointer-events: none;
+  }
+}
+</style>
