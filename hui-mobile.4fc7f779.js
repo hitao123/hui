@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "async_" + ({}[chunkId]||chunkId) + "." + {"0":"1ed641ca","1":"2da02181","2":"33ead6f3","3":"cc1aa0b2","4":"08f2ce09","5":"5f905366","6":"8bf558f5","7":"d4c34001","8":"eb0555c5","9":"ffd18878","10":"ea099c59","11":"740fb42d","12":"94a62784","13":"d5de9409","14":"a13480e8","15":"26604490","16":"2ade0f15","17":"2254ac9c","18":"f80003a5","19":"ad394949","20":"47a34d91","21":"18217f3e","22":"471a2d53","23":"7290c33f","24":"1fb91520","25":"b75237ea","26":"9c46897e","27":"c1f1ac54","28":"b6869151","29":"fd61873c","30":"f1190437","31":"6ae02698","32":"ef6a3973","33":"2170c06e","34":"a84ebc5c","35":"1d0b0b6e","36":"1147d235","37":"471c22d3","38":"452bc78b","39":"8b551450","40":"ec509b00","41":"5b30f3cf","42":"e2bead90","43":"4e437a33","44":"fca38a4b","45":"5b10ca95","46":"a37ac5f3","47":"87397682","48":"d994a013","49":"6649c20c","50":"3b388362","51":"df75c0e1","52":"e22421c9","53":"1b239b29","54":"85c45103","55":"6c5f1b27","56":"feb5518e","57":"09c75d7d","58":"bceb2567","59":"ebccffef","60":"0a0aa873","61":"d4ab162b","62":"2af6eab8","63":"8a4615fc","64":"3e252867","65":"662cf7e6","66":"94038c37","67":"448c482e","68":"53074e6c","69":"5473b630","70":"b948796c","71":"fba21787","72":"818e1d2f","73":"64f451c3","74":"c5a2dfe4","75":"04a1924c"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "async_" + ({}[chunkId]||chunkId) + "." + {"0":"0f6380e0","1":"2da02181","2":"33ead6f3","3":"cc1aa0b2","4":"08f2ce09","5":"5f905366","6":"8bf558f5","7":"d4c34001","8":"eb0555c5","9":"ffd18878","10":"ea099c59","11":"740fb42d","12":"94a62784","13":"d5de9409","14":"a13480e8","15":"26604490","16":"2ade0f15","17":"2254ac9c","18":"f80003a5","19":"ad394949","20":"47a34d91","21":"18217f3e","22":"471a2d53","23":"6a81653d","24":"1fb91520","25":"b75237ea","26":"9c46897e","27":"c1f1ac54","28":"b6869151","29":"fd61873c","30":"f1190437","31":"6ae02698","32":"ef6a3973","33":"2170c06e","34":"a84ebc5c","35":"1d0b0b6e","36":"1147d235","37":"471c22d3","38":"452bc78b","39":"8b551450","40":"ec509b00","41":"5b30f3cf","42":"e2bead90","43":"4e437a33","44":"fca38a4b","45":"5b10ca95","46":"a37ac5f3","47":"87397682","48":"d994a013","49":"6649c20c","50":"3b388362","51":"df75c0e1","52":"e22421c9","53":"1b239b29","54":"85c45103","55":"6c5f1b27","56":"feb5518e","57":"09c75d7d","58":"bceb2567","59":"ebccffef","60":"0a0aa873","61":"d4ab162b","62":"2af6eab8","63":"8a4615fc","64":"3e252867","65":"662cf7e6","66":"94038c37","67":"448c482e","68":"53074e6c","69":"5473b630","70":"b948796c","71":"fba21787","72":"818e1d2f","73":"64f451c3","74":"c5a2dfe4","75":"04a1924c"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -20999,6 +20999,10 @@ var Component = normalizeComponent(
     action: {
       type: String,
       default: 'delete'
+    },
+    config: {
+      type: Object,
+      default: function _default() {}
     }
   },
   data: function data() {
@@ -21015,7 +21019,7 @@ var Component = normalizeComponent(
   methods: {
     initCanvas: function initCanvas() {
       var canvas = document.querySelector('#' + this.id);
-      this.draw = new __WEBPACK_IMPORTED_MODULE_2__draw__["a" /* default */](canvas);
+      this.draw = new __WEBPACK_IMPORTED_MODULE_2__draw__["a" /* default */](canvas, this.config);
     },
     handleClick: function handleClick(action) {
       this.$emit(action, this.draw);
@@ -25910,7 +25914,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(114);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f3f20adc_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_77de11e8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(233);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -25927,7 +25931,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f3f20adc_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_77de11e8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -25959,49 +25963,53 @@ function Draw(canvas) {
       width = _window$getComputedSt.width,
       height = _window$getComputedSt.height;
 
-  width = width.replace('px', '');
-  height = height.replace('px', '');
+  width = config.width || width;
+  height = config.height || height;
+  width = typeof width === 'number' ? width : width.replace('px', '');
+  height = typeof height === 'number' ? height : height.replace('px', '');
 
   this.canvas = canvas;
-  this.context = canvas.getContext('2d');
+  this.ctx = canvas.getContext('2d');
   this.width = width;
   this.height = height;
 
   canvas.width = width;
   canvas.height = height;
 
-  var context = this.context;
+  var ctx = this.ctx;
 
-  context.lineWidth = 4;
-  context.strokeStyle = 'black';
-  context.lineCap = 'round';
-  context.lineJoin = 'round';
+  ctx.lineWidth = 4; // 线条粗细
+  ctx.strokeStyle = 'black'; // 填充颜色
+  ctx.lineCap = 'round'; // 线条
+  ctx.lineJoin = 'round'; // 线条连接处圆形
 
-  __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign___default()({}, context, config);
+  __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign___default()(ctx, config);
 
   var isMobile = /phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone/i.test(navigator.userAgent);
 
   var _canvas$getBoundingCl = canvas.getBoundingClientRect(),
       left = _canvas$getBoundingCl.left,
-      top = _canvas$getBoundingCl.top;
+      top = _canvas$getBoundingCl.top; // 距离窗口左和上的距离
+
 
   var point = {};
   var pressed = false;
 
+  // pc 端
   if (!isMobile) {
-    context.shadowBlur = 1;
-    context.shadowColor = 'black';
+    ctx.shadowBlur = 1; // 线条两边模糊 消除锯齿
+    ctx.shadowColor = 'black'; // 线条模糊颜色
   }
 
   var paint = function paint(signal) {
     switch (signal) {
       case 1:
-        context.beginPath();
-        context.moveTo(point.x, point.y);
+        ctx.beginPath();
+        ctx.moveTo(point.x, point.y);
         break;
       case 2:
-        context.lineTo(point.x, point.y);
-        context.stroke();
+        ctx.lineTo(point.x, point.y);
+        ctx.stroke();
         break;
       default:
     }
@@ -26037,6 +26045,11 @@ function Draw(canvas) {
   } else {
     canvas.addEventListener('mousedown', start);
     canvas.addEventListener('mousemove', optimizedMove);
+    ['mouseup', 'mouseleave'].forEach(function (event) {
+      canvas.addEventListener(event, function () {
+        pressed = false;
+      });
+    });
   }
 }
 
@@ -26081,7 +26094,7 @@ Draw.prototype.rotate = function (degree) {
     }
 
     var canvas = document.createElement('canvas');
-    var context = canvas.getContext('2d');
+    var ctx = canvas.getContext('2d');
     var height = image.height;
     var width = image.width;
     var degreePI = degree * Math.PI / 180;
@@ -26091,22 +26104,22 @@ Draw.prototype.rotate = function (degree) {
       case -90:
         canvas.width = height;
         canvas.height = width;
-        context.rotate(degreePI);
-        context.drawImage(image, -width, 0);
+        ctx.rotate(degreePI);
+        ctx.drawImage(image, -width, 0);
         break;
       // 顺时针旋转90°
       case 90:
         canvas.width = height;
         canvas.height = width;
-        context.rotate(degreePI);
-        context.drawImage(image, 0, -height);
+        ctx.rotate(degreePI);
+        ctx.drawImage(image, 0, -height);
         break;
       // 顺时针旋转180°
       case 180:
         canvas.width = width;
         canvas.height = height;
-        context.rotate(degreePI);
-        context.drawImage(image, -width, -height);
+        ctx.rotate(degreePI);
+        ctx.drawImage(image, -width, -height);
         break;
       default:
     }
@@ -26123,15 +26136,15 @@ Draw.prototype.drawImage = function (src) {
   img.onload = function () {
     console.log(img, this);
     // 铺底色
-    this.context.fillStyle = '#fff';
-    this.context.drawImage(img, 0, 0, this.width, this.height);
+    this.ctx.fillStyle = '#fff';
+    this.ctx.drawImage(img, 0, 0, this.width, this.height);
   }.bind(this);
 };
 /**
  * 清除画布
  */
 Draw.prototype.clear = function () {
-  this.context.clearRect(0, 0, this.width, this.height);
+  this.ctx.clearRect(0, 0, this.width, this.height);
 };
 
 /**

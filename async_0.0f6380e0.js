@@ -2513,6 +2513,10 @@ var Component = normalizeComponent(
     action: {
       type: String,
       default: 'delete'
+    },
+    config: {
+      type: Object,
+      default: function _default() {}
     }
   },
   data: function data() {
@@ -2529,7 +2533,7 @@ var Component = normalizeComponent(
   methods: {
     initCanvas: function initCanvas() {
       var canvas = document.querySelector('#' + this.id);
-      this.draw = new __WEBPACK_IMPORTED_MODULE_2__draw__["a" /* default */](canvas);
+      this.draw = new __WEBPACK_IMPORTED_MODULE_2__draw__["a" /* default */](canvas, this.config);
     },
     handleClick: function handleClick(action) {
       this.$emit(action, this.draw);
@@ -7384,7 +7388,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(114);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f3f20adc_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_77de11e8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(233);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -7401,7 +7405,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_index_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f3f20adc_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_77de11e8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -7433,49 +7437,53 @@ function Draw(canvas) {
       width = _window$getComputedSt.width,
       height = _window$getComputedSt.height;
 
-  width = width.replace('px', '');
-  height = height.replace('px', '');
+  width = config.width || width;
+  height = config.height || height;
+  width = typeof width === 'number' ? width : width.replace('px', '');
+  height = typeof height === 'number' ? height : height.replace('px', '');
 
   this.canvas = canvas;
-  this.context = canvas.getContext('2d');
+  this.ctx = canvas.getContext('2d');
   this.width = width;
   this.height = height;
 
   canvas.width = width;
   canvas.height = height;
 
-  var context = this.context;
+  var ctx = this.ctx;
 
-  context.lineWidth = 4;
-  context.strokeStyle = 'black';
-  context.lineCap = 'round';
-  context.lineJoin = 'round';
+  ctx.lineWidth = 4; // 线条粗细
+  ctx.strokeStyle = 'black'; // 填充颜色
+  ctx.lineCap = 'round'; // 线条
+  ctx.lineJoin = 'round'; // 线条连接处圆形
 
-  __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign___default()({}, context, config);
+  __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign___default()(ctx, config);
 
   var isMobile = /phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone/i.test(navigator.userAgent);
 
   var _canvas$getBoundingCl = canvas.getBoundingClientRect(),
       left = _canvas$getBoundingCl.left,
-      top = _canvas$getBoundingCl.top;
+      top = _canvas$getBoundingCl.top; // 距离窗口左和上的距离
+
 
   var point = {};
   var pressed = false;
 
+  // pc 端
   if (!isMobile) {
-    context.shadowBlur = 1;
-    context.shadowColor = 'black';
+    ctx.shadowBlur = 1; // 线条两边模糊 消除锯齿
+    ctx.shadowColor = 'black'; // 线条模糊颜色
   }
 
   var paint = function paint(signal) {
     switch (signal) {
       case 1:
-        context.beginPath();
-        context.moveTo(point.x, point.y);
+        ctx.beginPath();
+        ctx.moveTo(point.x, point.y);
         break;
       case 2:
-        context.lineTo(point.x, point.y);
-        context.stroke();
+        ctx.lineTo(point.x, point.y);
+        ctx.stroke();
         break;
       default:
     }
@@ -7511,6 +7519,11 @@ function Draw(canvas) {
   } else {
     canvas.addEventListener('mousedown', start);
     canvas.addEventListener('mousemove', optimizedMove);
+    ['mouseup', 'mouseleave'].forEach(function (event) {
+      canvas.addEventListener(event, function () {
+        pressed = false;
+      });
+    });
   }
 }
 
@@ -7555,7 +7568,7 @@ Draw.prototype.rotate = function (degree) {
     }
 
     var canvas = document.createElement('canvas');
-    var context = canvas.getContext('2d');
+    var ctx = canvas.getContext('2d');
     var height = image.height;
     var width = image.width;
     var degreePI = degree * Math.PI / 180;
@@ -7565,22 +7578,22 @@ Draw.prototype.rotate = function (degree) {
       case -90:
         canvas.width = height;
         canvas.height = width;
-        context.rotate(degreePI);
-        context.drawImage(image, -width, 0);
+        ctx.rotate(degreePI);
+        ctx.drawImage(image, -width, 0);
         break;
       // 顺时针旋转90°
       case 90:
         canvas.width = height;
         canvas.height = width;
-        context.rotate(degreePI);
-        context.drawImage(image, 0, -height);
+        ctx.rotate(degreePI);
+        ctx.drawImage(image, 0, -height);
         break;
       // 顺时针旋转180°
       case 180:
         canvas.width = width;
         canvas.height = height;
-        context.rotate(degreePI);
-        context.drawImage(image, -width, -height);
+        ctx.rotate(degreePI);
+        ctx.drawImage(image, -width, -height);
         break;
       default:
     }
@@ -7597,15 +7610,15 @@ Draw.prototype.drawImage = function (src) {
   img.onload = function () {
     console.log(img, this);
     // 铺底色
-    this.context.fillStyle = '#fff';
-    this.context.drawImage(img, 0, 0, this.width, this.height);
+    this.ctx.fillStyle = '#fff';
+    this.ctx.drawImage(img, 0, 0, this.width, this.height);
   }.bind(this);
 };
 /**
  * 清除画布
  */
 Draw.prototype.clear = function () {
-  this.context.clearRect(0, 0, this.width, this.height);
+  this.ctx.clearRect(0, 0, this.width, this.height);
 };
 
 /**
