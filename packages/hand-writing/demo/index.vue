@@ -1,14 +1,15 @@
 <template>
   <demo-section>
     <demo-block title="基础用法">
-      <h-hand-writing @delete="handleClick"></h-hand-writing>
+      <h-hand-writing @delete="handleClick" :config="config"></h-hand-writing>
     </demo-block>
-    <demo-block title="高级用法">
+    <!-- <demo-block title="高级用法">
       <h-hand-writing id="canvas2"
         @download="handleDownLoad"
         @draw="handleDraw"
         @blob="handleBlob"
         :action="action"
+        :config="config"
       >
         <div slot="rewrite" class="demo-rewrite">
           <h-button size="large" @click="action = 'download'">下载</h-button>
@@ -16,7 +17,7 @@
           <h-button size="large" @click="action = 'blob'">获取 Blob对象</h-button>
         </div>
       </h-hand-writing>
-    </demo-block>
+    </demo-block> -->
   </demo-section>
 </template>
 
@@ -25,7 +26,12 @@ export default {
   data() {
     return {
       action: 'delete',
-      url: 'https://img.xiami.net/images/appv5/common/21873/58d54521900f9_ZaG9_1490371873.jpg'
+      url: 'https://img.xiami.net/images/appv5/common/21873/58d54521900f9_ZaG9_1490371873.jpg',
+      config: {
+        height: 100,
+        lineWidth: 2,
+        strokeStyle: 'red'
+      }
     }
   },
   methods: {

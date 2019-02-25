@@ -31,6 +31,10 @@ export default create({
     action: {
       type: String,
       default: 'delete'
+    },
+    config: {
+      type: Object,
+      default: () => {}
     }
   },
   data() {
@@ -47,7 +51,7 @@ export default create({
   methods: {
     initCanvas() {
       const canvas = document.querySelector(`#${this.id}`);
-      this.draw = new Draw(canvas);
+      this.draw = new Draw(canvas, this.config);
     },
     handleClick(action) {
       this.$emit(action, this.draw);
