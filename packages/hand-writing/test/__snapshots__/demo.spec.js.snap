@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <div class="h-hand-writing">
+      <div class="h-hand-writing__container">
+        <div class="h-hand-writing__main"><canvas id="canvas" class="h-hand-writing__canvas"></canvas></div>
+      </div>
+      <div class="h-hand-writing__rewrite"><button class="h-button h-button--default h-button--large">
+          <!----> <span class="h-button__text">重写</span></button></div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,24 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dialog component should show Button Demo 1`] = `
-<div class="demo-dialog">
-  <h-button>点击dialog</h-button>
-  <h-button>点击dialog2</h-button>
-  <h-dialog show-cancel-button="" message="&lt;div style=&quot;font-weight: bold;&quot;&gt;message&lt;/div&gt;" title="title" cancelButtonText="cancel" confirmButtonText="confirm"></h-dialog>
-</div>
-`;
-
-exports[`Dialog component should show Dialog 1`] = `
-<div class="h-dialog" style="display: none;" name="h-dialog-bounce">
-  <div class="h-dialog__header">title</div>
-  <!---->
-  <div class="h-hairline--top h-dialog__footer">
-    <h-button-stub tag="button" type="default" size="large" class="h-dialog__cancel" style="display: none;">
-      cancel
-    </h-button-stub>
-    <h-button-stub tag="button" type="default" size="large" class="h-dialog__confirm">
-      confirm
-    </h-button-stub>
+exports[`renders demo correctly 1`] = `
+<div>
+  <div><button class="h-button h-button--default h-button--normal">
+      <!----> <span class="h-button__text">有标题dialog</span></button> <button class="h-button h-button--default h-button--normal">
+      <!----> <span class="h-button__text">无标题dialog</span></button> <button class="h-button h-button--default h-button--normal">
+      <!----> <span class="h-button__text">确认信息</span></button>
+    <div name="h-dialog-bounce" class="h-dialog" style="display:none;">
+      <div class="h-dialog__header">标题</div>
+      <div class="h-dialog__content">
+        <div class="h-dialog__message">消息</div>
+      </div>
+      <div class="h-hairline--top h-dialog__footer h-dialog__footer--buttons"><button class="h-button h-button--default h-button--large h-dialog__cancel">
+          <!----> <span class="h-button__text">
+        取消
+      </span></button> <button class="h-button h-button--default h-button--large h-dialog__confirm h-hairline--left">
+          <!----> <span class="h-button__text">
+        确定
+      </span></button></div>
+    </div>
+  </div>
+  <div><button class="h-button h-button--default h-button--normal">
+      <!----> <span class="h-button__text">高级用法</span></button>
+    <div name="h-dialog-bounce" class="h-dialog" style="display:none;">
+      <div class="h-dialog__header">标题</div>
+      <div class="h-dialog__content">
+        <div placeholder="请输入用户名" class="h-cell h-hairline h-field">
+          <!---->
+          <div class="h-cell__title"><span>用户名</span>
+            <!---->
+          </div>
+          <div class="h-cell__value">
+            <div class="h-field__body"><input type="input" placeholder="请输入用户名" class="h-field__control">
+              <!---->
+              <!---->
+              <!---->
+            </div>
+            <!---->
+          </div>
+          <!---->
+        </div>
+        <div placeholder="请输入密码" class="h-cell h-hairline h-field">
+          <!---->
+          <div class="h-cell__title"><span>密码</span>
+            <!---->
+          </div>
+          <div class="h-cell__value">
+            <div class="h-field__body"><input type="password" placeholder="请输入密码" class="h-field__control">
+              <!---->
+              <!---->
+              <!---->
+            </div>
+            <!---->
+          </div>
+          <!---->
+        </div>
+        <div class="h-cell h-hairline">
+          <!---->
+          <div class="h-cell__title"><span>单元格</span>
+            <!---->
+          </div>
+          <div class="h-cell__value"><span>内容</span></div>
+          <!---->
+        </div>
+      </div>
+      <div class="h-hairline--top h-dialog__footer h-dialog__footer--buttons"><button class="h-button h-button--default h-button--large h-dialog__cancel">
+          <!----> <span class="h-button__text">
+        取消
+      </span></button> <button class="h-button h-button--default h-button--large h-dialog__confirm h-hairline--left">
+          <!----> <span class="h-button__text">
+        确定
+      </span></button></div>
+    </div>
   </div>
 </div>
 `;

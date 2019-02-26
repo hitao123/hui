@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div class="demo-pull">
+  <div class="h-pull-refresh">
+    <div class="h-pull-refresh__track" style="transition:0ms;transform:translate3d(0, 0px, 0);">
+      <div class="h-pull-refresh__head">
+        <!---->
+        <!---->
+        <!---->
+      </div>
+    </div>
+  </div>
+</div>
+`;

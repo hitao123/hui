@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <div placeholder="请输入身份证" class="h-cell h-hairline h-text-mask">
+      <!---->
+      <div class="h-cell__title"><span>身份证号</span>
+        <!---->
+      </div>
+      <div class="h-cell__value">
+        <div class="h-text-mask__body"><input type="input" placeholder="请输入身份证" value="" class="h-text-mask__control">
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <!---->
+    </div>
+    <div placeholder="请输入银行卡号" class="h-cell h-hairline h-text-mask">
+      <!---->
+      <div class="h-cell__title"><span>银行卡号</span>
+        <!---->
+      </div>
+      <div class="h-cell__value">
+        <div class="h-text-mask__body"><input type="input" placeholder="请输入银行卡号" value="" class="h-text-mask__control">
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <!---->
+    </div>
+    <div placeholder="请输入手机号" class="h-cell h-hairline h-text-mask">
+      <!---->
+      <div class="h-cell__title"><span>手机号</span>
+        <!---->
+      </div>
+      <div class="h-cell__value">
+        <div class="h-text-mask__body"><input type="input" placeholder="请输入手机号" value="" class="h-text-mask__control">
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+  <div>
+    <div placeholder="请输入银行卡号" guide="true" class="h-cell h-hairline h-text-mask">
+      <!---->
+      <div class="h-cell__title"><span>银行卡</span>
+        <!---->
+      </div>
+      <div class="h-cell__value">
+        <div class="h-text-mask__body"><input type="input" placeholder="请输入银行卡号" guide="true" value="" class="h-text-mask__control">
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</div>
+`;

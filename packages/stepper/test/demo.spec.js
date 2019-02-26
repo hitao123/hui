@@ -1,5 +1,4 @@
-describe('stepper component', () => {
-  it('should show stepper', () => {
+import Demo from '../demo';
+import demoTest from '../../../test/unit/demo-test';
 
-  });
-});
+demoTest(Demo);

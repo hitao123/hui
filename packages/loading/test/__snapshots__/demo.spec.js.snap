@@ -3,12 +3,12 @@
 exports[`renders demo correctly 1`] = `
 <div>
   <div>
-    <h-loading></h-loading>
-    <h-loading color="white"></h-loading>
+    <div class="h-loading h-loading--circular h-loading--black"><span class="h-loading__spinner h-loading__spinner--circular"> <svg viewBox="25 25 50 50" class="h-loading__circular"><circle cx="50" cy="50" r="20" fill="none"></circle></svg></span></div>
+    <div class="h-loading h-loading--circular h-loading--white"><span class="h-loading__spinner h-loading__spinner--circular"> <svg viewBox="25 25 50 50" class="h-loading__circular"><circle cx="50" cy="50" r="20" fill="none"></circle></svg></span></div>
   </div>
   <div>
-    <h-loading type="spinner"></h-loading>
-    <h-loading type="spinner" color="white"></h-loading>
+    <div class="h-loading h-loading--spinner h-loading--black"><span class="h-loading__spinner h-loading__spinner--spinner"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <!----></span></div>
+    <div class="h-loading h-loading--spinner h-loading--white"><span class="h-loading__spinner h-loading__spinner--spinner"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <!----></span></div>
   </div>
 </div>
 `;

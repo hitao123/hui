@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div class="demo-stepper">
+    <div class="h-stepper"><button class="h-stepper__minus"></button> <input type="number" value="5" class="h-stepper__input"> <button class="h-stepper__plus"></button></div>
+  </div>
+  <div class="demo-stepper">
+    <div class="h-stepper"><button class="h-stepper__minus h-stepper__minus--disabled"></button> <input type="number" value="1" class="h-stepper__input"> <button class="h-stepper__plus"></button></div>
+  </div>
+  <div class="demo-stepper">
+    <div class="h-stepper"><button class="h-stepper__minus h-stepper__minus--disabled"></button> <input type="number" disabled="disabled" value="1" class="h-stepper__input"> <button class="h-stepper__plus h-stepper__plus--disabled"></button></div>
+  </div>
+</div>
+`;

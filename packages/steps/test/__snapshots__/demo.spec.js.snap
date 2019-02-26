@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <div class="h-steps h-steps--horizontal">
+      <div class="h-steps__items">
+        <div class="h-step h-step--horizontal h-step--finish">
+          <div class="h-step__title">第一步</div>
+          <div class="h-step__circle-container"><i class="h-step__circle"></i></div>
+          <div class="h-step__line"></div>
+        </div>
+        <div class="h-step h-step--horizontal h-step--process">
+          <div class="h-step__title" style="color:#f60;">第二步</div>
+          <div class="h-step__circle-container"><i class="h-icon h-icon-checked" style="color:#f60;font-size:undefined;"></i></div>
+          <div class="h-step__line"></div>
+        </div>
+        <div class="h-step h-step--horizontal">
+          <div class="h-step__title">完成</div>
+          <div class="h-step__circle-container"><i class="h-step__circle"></i></div>
+          <div class="h-step__line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div icon="logistics" title="标题" description="描述信息" class="h-steps h-steps--horizontal">
+      <div class="h-steps__items">
+        <div class="h-step h-step--horizontal h-step--finish">
+          <div class="h-step__title">第一步</div>
+          <div class="h-step__circle-container"><i class="h-step__circle"></i></div>
+          <div class="h-step__line"></div>
+        </div>
+        <div class="h-step h-step--horizontal h-step--finish">
+          <div class="h-step__title">第二步</div>
+          <div class="h-step__circle-container"><i class="h-step__circle"></i></div>
+          <div class="h-step__line"></div>
+        </div>
+        <div class="h-step h-step--horizontal h-step--process">
+          <div class="h-step__title" style="color:#f60;">完成</div>
+          <div class="h-step__circle-container"><i class="h-icon h-icon-checked" style="color:#f60;font-size:undefined;"></i></div>
+          <div class="h-step__line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="h-steps h-steps--vertical">
+      <div class="h-steps__items">
+        <div class="h-step h-step--vertical h-step--process">
+          <div class="h-step__title" style="color:#f60;">
+            <h3>【城市】物流状态1</h3>
+            <p>2016-07-12 12:40</p>
+          </div>
+          <div class="h-step__circle-container"><i class="h-icon h-icon-checked" style="color:#f60;font-size:undefined;"></i></div>
+          <div class="h-step__line"></div>
+        </div>
+        <div class="h-step h-step--vertical">
+          <div class="h-step__title">
+            <h3>【城市】物流状态2</h3>
+            <p>2016-07-11 10:00</p>
+          </div>
+          <div class="h-step__circle-container"><i class="h-step__circle"></i></div>
+          <div class="h-step__line"></div>
+        </div>
+        <div class="h-step h-step--vertical">
+          <div class="h-step__title">
+            <h3>快件已发货</h3>
+            <p>2016-07-10 09:30</p>
+          </div>
+          <div class="h-step__circle-container"><i class="h-step__circle"></i></div>
+          <div class="h-step__line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

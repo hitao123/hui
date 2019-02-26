@@ -1,30 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dialog component should show Button Demo 1`] = `
-<demo-section>
-  <demo-block title="基本用法">
-    <h-button>默认键盘</h-button>
-    <h-number-keyboard show="true" close-button-text="关闭" extra-key="."></h-number-keyboard>
-  </demo-block>
-</demo-section>
-`;
-
-exports[`Dialog component should show Dialog 1`] = `
-<div class="h-number-keyboard" style="display: none;" name="h-slide-bottom">
-  <div class="h-hairline--top h-number-keyboard__title"><span></span> <span class="h-number-keyboard__close">close</span></div>
-  <div class="h-number-keyboard__body">
-    <key-stub text="1" type=""></key-stub>
-    <key-stub text="2" type=""></key-stub>
-    <key-stub text="3" type=""></key-stub>
-    <key-stub text="4" type=""></key-stub>
-    <key-stub text="5" type=""></key-stub>
-    <key-stub text="6" type=""></key-stub>
-    <key-stub text="7" type=""></key-stub>
-    <key-stub text="8" type=""></key-stub>
-    <key-stub text="9" type=""></key-stub>
-    <key-stub text="" type="gray"></key-stub>
-    <key-stub text="0" type=""></key-stub>
-    <key-stub text="delete" type="gray,delete"></key-stub>
+exports[`renders demo correctly 1`] = `
+<div>
+  <div><button class="h-button h-button--default h-button--normal">
+      <!----> <span class="h-button__text">默认键盘</span></button>
+    <div name="h-slide-bottom" class="h-number-keyboard">
+      <div class="h-hairline--top h-number-keyboard__title"><span></span> <span class="h-number-keyboard__close">关闭</span></div>
+      <div class="h-number-keyboard__body"><i class="h-hairline h-key">1</i><i class="h-hairline h-key">2</i><i class="h-hairline h-key">3</i><i class="h-hairline h-key">4</i><i class="h-hairline h-key">5</i><i class="h-hairline h-key">6</i><i class="h-hairline h-key">7</i><i class="h-hairline h-key">8</i><i class="h-hairline h-key">9</i><i class="h-hairline h-key h-key h-key--gray">.</i><i class="h-hairline h-key">0</i><i class="h-hairline h-key h-key h-key--gray h-key h-key--delete">delete</i></div>
+    </div>
   </div>
 </div>
 `;

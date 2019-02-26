@@ -1,49 +1,93 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Cell component should show Cell 1`] = `
-<div class="h-cell h-hairline">
-  <!---->
-  <div class="h-cell__title"><span>Cell</span>
-    <!---->
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <div class="h-cell-group h-hairline--top-bottom">
+      <div class="h-cell h-hairline">
+        <!---->
+        <div class="h-cell__title"><span>单元格</span>
+          <!---->
+        </div>
+        <div class="h-cell__value"><span>内容</span></div>
+        <!---->
+      </div>
+      <div class="h-cell h-hairline">
+        <!---->
+        <div class="h-cell__title"><span>单元格</span>
+          <div class="h-cell__label">描述信息</div>
+        </div>
+        <div class="h-cell__value"><span>内容</span></div>
+        <!---->
+      </div>
+    </div>
   </div>
-  <!---->
-  <!---->
+  <div>
+    <div class="h-cell-group h-hairline--top-bottom">
+      <div class="h-cell h-hairline">
+        <!---->
+        <!---->
+        <div class="h-cell__value h-cell__value--alone"><span>内容</span></div>
+        <!---->
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="h-cell-group h-hairline--top-bottom">
+      <div class="h-cell h-hairline"><i class="h-icon h-icon-location h-cell__left-icon" style="color:undefined;font-size:undefined;"></i>
+        <div class="h-cell__title"><span>单元格</span>
+          <!---->
+        </div>
+        <!---->
+        <!---->
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="h-cell-group h-hairline--top-bottom">
+      <div class="h-cell h-cell--clickable h-hairline">
+        <!---->
+        <div class="h-cell__title"><span>单元格</span>
+          <!---->
+        </div>
+        <!----> <i class="h-icon h-icon-arrow h-cell__right-icon" style="color:undefined;font-size:undefined;"></i>
+      </div>
+      <div class="h-cell h-cell--clickable h-hairline">
+        <!---->
+        <div class="h-cell__title"><span>单元格</span>
+          <!---->
+        </div>
+        <div class="h-cell__value"><span>内容</span></div> <i class="h-icon h-icon-arrow h-cell__right-icon" style="color:undefined;font-size:undefined;"></i>
+      </div>
+      <div class="h-cell h-cell--clickable h-hairline">
+        <!---->
+        <div class="h-cell__title"><span>单元格</span>
+          <!---->
+        </div>
+        <div class="h-cell__value"><span>内容</span></div> <i class="h-icon h-icon-arrow h-cell__right-icon h-cell__right-icon--down" style="color:undefined;font-size:undefined;"></i>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="h-cell-group h-hairline--top-bottom">
+      <div class="h-cell h-cell--clickable h-hairline"><i class="h-icon h-icon-shop h-cell__left-icon" style="color:undefined;font-size:undefined;"></i>
+        <div class="h-cell__title"><span class="h-cell-text">单元格</span></div>
+        <div class="h-cell__value"><span>内容</span></div> <i class="h-icon h-icon-arrow h-cell__right-icon" style="color:undefined;font-size:undefined;"></i>
+      </div>
+      <div class="h-cell h-cell--clickable h-hairline"><i class="h-icon h-icon-location h-cell__left-icon" style="color:undefined;font-size:undefined;"></i>
+        <div class="h-cell__title"><span>单元格</span>
+          <!---->
+        </div>
+        <!----> <i class="h-icon h-icon-arrow h-cell__right-icon" style="color:undefined;font-size:undefined;"></i>
+      </div>
+      <div class="h-cell h-hairline">
+        <!---->
+        <div class="h-cell__title"><span>单元格</span>
+          <!---->
+        </div>
+        <!----> <i class="h-cell__right-icon h-icon h-icon-search" style="color:undefined;font-size:undefined;"></i>
+      </div>
+    </div>
+  </div>
 </div>
-`;
-
-exports[`Cell component should show CellDemo 1`] = `
-<demo-section>
-  <demo-block title="基础用法">
-    <h-cell-group>
-      <h-cell title="单元格" value="内容"></h-cell>
-      <h-cell title="单元格" value="内容" label="描述信息"></h-cell>
-    </h-cell-group>
-  </demo-block>
-  <demo-block title="只设置 value">
-    <h-cell-group>
-      <h-cell value="内容"></h-cell>
-    </h-cell-group>
-  </demo-block>
-  <demo-block title="设置icon">
-    <h-cell-group>
-      <h-cell title="单元格" icon="location"></h-cell>
-    </h-cell-group>
-  </demo-block>
-  <demo-block title="展示箭头">
-    <h-cell-group>
-      <h-cell title="单元格" is-link=""></h-cell>
-      <h-cell title="单元格" is-link="" value="内容"></h-cell>
-      <h-cell title="单元格" is-link="" arrow-direction="down" value="内容"></h-cell>
-    </h-cell-group>
-  </demo-block>
-  <demo-block title="高级用法">
-    <h-cell-group>
-      <h-cell value="内容" icon="shop" is-link=""><template><span class="h-cell-text">单元格</span></template></h-cell>
-      <h-cell title="单元格" icon="location" is-link=""></h-cell>
-      <h-cell title="单元格">
-        <h-icon slot="right-icon" name="search" class="h-cell__right-icon"></h-icon>
-      </h-cell>
-    </h-cell-group>
-  </demo-block>
-</demo-section>
 `;

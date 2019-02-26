@@ -1,5 +1,4 @@
-describe('textMask component', () => {
-  it('should show textMask', () => {
+import Demo from '../demo';
+import demoTest from '../../../test/unit/demo-test';
 
-  });
-});
+demoTest(Demo);

@@ -1,8 +1,4 @@
-import { renderToString } from '@vue/server-test-utils';
-import TabDemo from '../demo/index.vue';
+import Demo from '../demo';
+import demoTest from '../../../test/unit/demo-test';
 
-describe('Dialog component', () => {
-  it('should show Button Demo', () => {
-    expect(renderToString(TabDemo)).toMatchSnapshot();
-  });
-});
+demoTest(Demo);

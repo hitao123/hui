@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <div class="h-row">
+      <div class="h-col h-col--8">span: 8</div>
+      <div class="h-col h-col--8">span: 8</div>
+      <div class="h-col h-col--8">span: 8</div>
+    </div>
+    <div class="h-row">
+      <div class="h-col h-col--4">span: 4</div>
+      <div class="h-col h-col--10 h-col--offset-4">offset: 4, span: 10</div>
+    </div>
+    <div class="h-row">
+      <div class="h-col h-col--12 h-col--offset-12">offset: 12, span: 12</div>
+    </div>
+  </div>
+  <div>
+    <div class="h-row" style="margin-left:-10px;margin-right:-10px;">
+      <div class="h-col h-col--8" style="padding-left:10px;padding-right:10px;">span 8</div>
+      <div class="h-col h-col--8" style="padding-left:10px;padding-right:10px;">span 8</div>
+      <div class="h-col h-col--8" style="padding-left:10px;padding-right:10px;">span 8</div>
+    </div>
+  </div>
+  <div>
+    <div class="h-row h-row--flex">
+      <div class="h-col h-col--6">span: 6</div>
+      <div class="h-col h-col--6">span: 6</div>
+      <div class="h-col h-col--6">span: 6</div>
+    </div>
+    <div class="h-row h-row--flex h-row--justify-center">
+      <div class="h-col h-col--6">span: 6</div>
+      <div class="h-col h-col--6">span: 6</div>
+      <div class="h-col h-col--6">span: 6</div>
+    </div>
+    <div class="h-row h-row--flex h-row--justify-end">
+      <div class="h-col h-col--6">span: 6</div>
+      <div class="h-col h-col--6">span: 6</div>
+      <div class="h-col h-col--6">span: 6</div>
+    </div>
+    <div class="h-row h-row--flex h-row--justify-space-between">
+      <div class="h-col h-col--6">span: 6</div>
+      <div class="h-col h-col--6">span: 6</div>
+      <div class="h-col h-col--6">span: 6</div>
+    </div>
+    <div class="h-row h-row--flex h-row--justify-space-around">
+      <div class="h-col h-col--6">span: 6</div>
+      <div class="h-col h-col--6">span: 6</div>
+      <div class="h-col h-col--6">span: 6</div>
+    </div>
+  </div>
+</div>
+`;

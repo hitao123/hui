@@ -1,5 +1,4 @@
-describe('pull-refresh component', () => {
-  it('should show pull-refresh', () => {
+import Demo from '../demo';
+import demoTest from '../../../test/unit/demo-test';
 
-  });
-});
+demoTest(Demo);

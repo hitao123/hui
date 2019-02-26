@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div><button class="h-button h-button--default h-button--normal">
+      <!----> <span class="h-button__text">popup</span></button>
+    <div name="h-fade" class="h-popup" style="display:none;">
+      popup
+    </div>
+  </div>
+  <div><button class="h-button h-button--default h-button--normal">
+      <!----> <span class="h-button__text">底部弹出</span></button> <button class="h-button h-button--default h-button--normal">
+      <!----> <span class="h-button__text">顶部弹出</span></button> <button class="h-button h-button--default h-button--normal">
+      <!----> <span class="h-button__text">右侧弹出</span></button>
+    <div name="popup-slide-bottom" class="h-popup h-popup--bottom" style="display:none;">
+      <div class="h-picker">
+        <div class="h-hairline--top-bottom h-picker__toolbar">
+          <div class="h-picker__cancel">取消</div>
+          <!---->
+          <div class="h-picker__confirm">确定</div>
+        </div>
+        <!---->
+        <div class="h-picker__columns" style="height:220px;">
+          <div class="h-picker-column" style="height:220px;">
+            <ul style="transition:0ms;transform:translate3d(0, 88px, 0);line-height:44px;">
+              <li class="h-ellipsis h-picker-column__item h-picker-column__item--selected" style="height:44px;">杭州</li>
+              <li class="h-ellipsis h-picker-column__item" style="height:44px;">宁波</li>
+              <li class="h-ellipsis h-picker-column__item" style="height:44px;">温州</li>
+              <li class="h-ellipsis h-picker-column__item" style="height:44px;">嘉兴</li>
+              <li class="h-ellipsis h-picker-column__item" style="height:44px;">湖州</li>
+            </ul>
+          </div>
+          <div class="h-hairline--top-bottom h-picker__frame" style="height:44px;"></div>
+        </div>
+      </div>
+    </div>
+    <div name="popup-slide-top" class="h-popup h-popup--top" style="display:none;">
+      top
+    </div>
+    <div name="popup-slide-right" class="h-popup h-popup--right" style="display:none;"><button class="h-button h-button--default h-button--normal">
+        <!----> <span class="h-button__text">右侧关闭</span></button></div>
+  </div>
+</div>
+`;

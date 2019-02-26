@@ -1,5 +1,4 @@
-describe('steps component', () => {
-  it('should show steps', () => {
+import Demo from '../demo';
+import demoTest from '../../../test/unit/demo-test';
 
-  });
-});
+demoTest(Demo);

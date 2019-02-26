@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import { renderToString } from '@vue/server-test-utils';
+import Vant from '../../packages';
 
 const empty = {
   template: '<div><slot></slot></div>',
@@ -8,6 +9,7 @@ const empty = {
 
 Vue.component('demo-block', empty);
 Vue.component('demo-section', empty);
+Vue.use(Vant);
 
 export default function(Demo) {
   test(`renders demo correctly`, () => {

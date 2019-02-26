@@ -1,14 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dialog component should show Dialog 1`] = `
-<div class="h-password-input">
-  <ul class="h-hairline--surround h-password-input__security">
-    <li class="h-hairline"><i style="visibility: visible;"></i></li>
-    <li class="h-hairline"><i style="visibility: visible;"></i></li>
-    <li class="h-hairline"><i style="visibility: visible;"></i></li>
-    <li class="h-hairline"><i style="visibility: visible;"></i></li>
-    <li class="h-hairline"><i style="visibility: hidden;"></i></li>
-    <li class="h-hairline"><i style="visibility: hidden;"></i></li>
-  </ul>
+exports[`renders demo correctly 1`] = `
+<div class="demo-number">
+  <div class="h-password-input">
+    <ul class="h-hairline--surround h-password-input__security">
+      <li class="h-hairline"><i style="visibility:visible;"></i></li>
+      <li class="h-hairline"><i style="visibility:hidden;"></i></li>
+      <li class="h-hairline"><i style="visibility:hidden;"></i></li>
+      <li class="h-hairline"><i style="visibility:hidden;"></i></li>
+      <li class="h-hairline"><i style="visibility:hidden;"></i></li>
+      <li class="h-hairline"><i style="visibility:hidden;"></i></li>
+    </ul>
+  </div>
+  <div name="h-slide-bottom" class="h-number-keyboard">
+    <!---->
+    <div class="h-number-keyboard__body"><i class="h-hairline h-key">1</i><i class="h-hairline h-key">2</i><i class="h-hairline h-key">3</i><i class="h-hairline h-key">4</i><i class="h-hairline h-key">5</i><i class="h-hairline h-key">6</i><i class="h-hairline h-key">7</i><i class="h-hairline h-key">8</i><i class="h-hairline h-key">9</i><i class="h-hairline h-key h-key h-key--gray"></i><i class="h-hairline h-key">0</i><i class="h-hairline h-key h-key h-key--gray h-key h-key--delete">delete</i></div>
+  </div>
 </div>
 `;

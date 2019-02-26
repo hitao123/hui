@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <div class="h-picker">
+      <div class="h-hairline--top-bottom h-picker__toolbar">
+        <div class="h-picker__cancel">取消</div>
+        <div class="h-picker__title">title</div>
+        <div class="h-picker__confirm">确定</div>
+      </div>
+      <!---->
+      <div class="h-picker__columns" style="height:220px;">
+        <div class="h-picker-column" style="height:220px;">
+          <ul style="transition:0ms;transform:translate3d(0, 88px, 0);line-height:44px;">
+            <li class="h-ellipsis h-picker-column__item h-picker-column__item--selected" style="height:44px;">北京</li>
+            <li class="h-ellipsis h-picker-column__item h-picker-column__item--disabled" style="height:44px;">上海</li>
+            <li class="h-ellipsis h-picker-column__item" style="height:44px;">广州</li>
+            <li class="h-ellipsis h-picker-column__item" style="height:44px;">深圳</li>
+          </ul>
+        </div>
+        <div class="h-hairline--top-bottom h-picker__frame" style="height:44px;"></div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="h-picker">
+      <!---->
+      <!---->
+      <div class="h-picker__columns" style="height:220px;">
+        <div class="h-picker-column" style="height:220px;">
+          <ul style="transition:0ms;transform:translate3d(0, 88px, 0);line-height:44px;">
+            <li class="h-ellipsis h-picker-column__item h-picker-column__item--selected" style="height:44px;">浙江</li>
+            <li class="h-ellipsis h-picker-column__item" style="height:44px;">福建</li>
+          </ul>
+        </div>
+        <div class="h-picker-column" style="height:220px;">
+          <ul style="transition:0ms;transform:translate3d(0, 88px, 0);line-height:44px;">
+            <li class="h-ellipsis h-picker-column__item h-picker-column__item--selected" style="height:44px;">杭州</li>
+            <li class="h-ellipsis h-picker-column__item" style="height:44px;">宁波</li>
+            <li class="h-ellipsis h-picker-column__item" style="height:44px;">温州</li>
+            <li class="h-ellipsis h-picker-column__item" style="height:44px;">嘉兴</li>
+            <li class="h-ellipsis h-picker-column__item" style="height:44px;">湖州</li>
+          </ul>
+        </div>
+        <div class="h-hairline--top-bottom h-picker__frame" style="height:44px;"></div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="h-picker">
+      <!---->
+      <div class="h-picker__loading">
+        <div class="h-loading h-loading--circular h-loading--black"><span class="h-loading__spinner h-loading__spinner--circular"> <svg viewBox="25 25 50 50" class="h-loading__circular"><circle cx="50" cy="50" r="20" fill="none"></circle></svg></span></div>
+      </div>
+      <div class="h-picker__columns" style="height:220px;">
+        <div class="h-picker-column" style="height:220px;">
+          <ul style="transition:0ms;transform:translate3d(0, 88px, 0);line-height:44px;">
+            <li class="h-ellipsis h-picker-column__item h-picker-column__item--selected" style="height:44px;">2018</li>
+            <li class="h-ellipsis h-picker-column__item" style="height:44px;">2019</li>
+            <li class="h-ellipsis h-picker-column__item" style="height:44px;">2020</li>
+            <li class="h-ellipsis h-picker-column__item" style="height:44px;">2021</li>
+            <li class="h-ellipsis h-picker-column__item" style="height:44px;">2022</li>
+            <li class="h-ellipsis h-picker-column__item" style="height:44px;">2023</li>
+          </ul>
+        </div>
+        <div class="h-hairline--top-bottom h-picker__frame" style="height:44px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

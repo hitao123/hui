@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div class="demo-sms">
+  <div class="margin20">
+    <div class="h-sms-input"><label for="sms-input1" class="h-sms-input__label">
+        <ul class="h-sms-input__block">
+          <li class="h-sms-input__item h-sms-input__item--active"><i class="h-sms-input__item-inner"></i></li>
+          <li class="h-sms-input__item"><i class="h-sms-input__item-inner"></i></li>
+          <li class="h-sms-input__item"><i class="h-sms-input__item-inner"></i></li>
+          <li class="h-sms-input__item"><i class="h-sms-input__item-inner"></i></li>
+        </ul>
+      </label> <input id="sms-input1" name="sms" maxlength="4" type="tel" autocomplete="off" autocorrect="off" value="" class="h-sms-input__input-code"></div>
+  </div>
+  <div class="margin20">
+    <div class="h-sms-input"><label for="sms-input2" class="h-sms-input__label">
+        <ul class="h-sms-input__block">
+          <li class="h-sms-input__item h-sms-input__item--active h-sms-input__item--square"><i class="h-sms-input__item-inner"></i></li>
+          <li class="h-sms-input__item h-sms-input__item--square"><i class="h-sms-input__item-inner"></i></li>
+          <li class="h-sms-input__item h-sms-input__item--square"><i class="h-sms-input__item-inner"></i></li>
+          <li class="h-sms-input__item h-sms-input__item--square"><i class="h-sms-input__item-inner"></i></li>
+        </ul>
+      </label> <input id="sms-input2" name="sms" maxlength="4" type="tel" autocomplete="off" autocorrect="off" value="" class="h-sms-input__input-code"></div>
+  </div>
+</div>
+`;

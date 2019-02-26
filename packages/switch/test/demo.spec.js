@@ -1,5 +1,4 @@
-describe('Swipe component', () => {
-  it('should show Swipe', () => {
+import Demo from '../demo';
+import demoTest from '../../../test/unit/demo-test';
 
-  });
-});
+demoTest(Demo);

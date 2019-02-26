@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div><button class="h-button h-button--default h-button--normal">
+      <!----> <span class="h-button__text">图片预览</span></button></div>
+  <div><button class="h-button h-button--default h-button--normal">
+      <!----> <span class="h-button__text"></span></button></div>
+</div>
+`;

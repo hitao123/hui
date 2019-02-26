@@ -1,20 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dialog component should show Button Demo 1`] = `
+exports[`renders demo correctly 1`] = `
 <div class="tab-demo">
-  <h-tabs>
-    <h-tab title="title1">
-      内容1
-    </h-tab>
-    <h-tab title="title2">
-      内容2
-    </h-tab>
-    <h-tab title="title3">
-      内容3
-    </h-tab>
-    <h-tab title="title4">
-      内容4
-    </h-tab>
-  </h-tabs>
+  <div>
+    <div class="h-hairline--top-bottom">
+      <div class="h-tabs__nav">
+        <div class="h-tabs__line"></div>
+      </div>
+    </div>
+    <div class="h-tabs__content">
+      <div class="h-tab__pane" style="display:none;">
+        <!---->
+        <!---->
+      </div>
+      <div class="h-tab__pane" style="display:none;">
+        <!---->
+        <!---->
+      </div>
+      <div class="h-tab__pane" style="display:none;">
+        <!---->
+        <!---->
+      </div>
+      <div class="h-tab__pane" style="display:none;">
+        <!---->
+        <!---->
+      </div>
+    </div>
+  </div>
 </div>
 `;

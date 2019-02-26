@@ -1,13 +1,4 @@
-import { shallowMount } from '@vue/test-utils';
-import passwordInput from '../index.vue';
+import Demo from '../demo';
+import demoTest from '../../../test/unit/demo-test';
 
-describe('Dialog component', () => {
-  it('should show Dialog', () => {
-    const warpper = shallowMount(passwordInput, {
-      propsData: {
-        value: '1234'
-      }
-    });
-    expect(warpper.html()).toMatchSnapshot();
-  });
-});
+demoTest(Demo);
