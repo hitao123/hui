@@ -6,7 +6,7 @@
         <icon name="close"></icon>
       </div>
       <ul v-else class="h-hairline--bottom">
-        <li v-for="(item, index) in actions" :key="index" :class="[bem('item'), 'h-hairline--top']">
+        <li v-for="(item, index) in actions" :key="index" :class="[bem('item'), 'h-hairline--top']" @click="onSelect($event, item)">
           <template v-if="!item.loading">
             <span :class="bem('name')">{{ item.name }}</span>
             <span :class="bem('subname')" v-if="item.subname">{{ item.subname }}</span>
@@ -53,7 +53,13 @@ export default create({
   },
   methods: {
     onCancel() {
+      this.$emit('input', false);
       this.$emit('cancel');
+    },
+    onSelect(event, item) {
+      if (!item.disabled && !item.loading) {
+        this.$emit('select', item);
+      }
     }
   }
 })

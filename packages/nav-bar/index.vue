@@ -2,7 +2,7 @@
   <div :class="bem({ fixed })" class="h-hairline--bottom" :style="style">
     <div :class="bem('left')" @click="$emit('click-left')">
       <slot name="left">
-        <h-icon v-if="leftArrow" name="arrow"  :class="bem('arrow')" ></h-icon>
+        <icon v-if="leftArrow" name="arrow"  :class="bem('arrow')" ></icon>
         <div v-if="leftText" :class="bem('text')">{{ leftText }}</div>
       </slot>
     </div>

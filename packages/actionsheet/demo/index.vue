@@ -12,7 +12,7 @@
     <h-actionsheet v-model="visible" title="title">
       <p>内容</p>
     </h-actionsheet>
-    <h-actionsheet v-model="visible1" :actions="actions"></h-actionsheet>
+    <h-actionsheet v-model="visible1" :actions="actions" @select="onSelect"></h-actionsheet>
     <h-actionsheet v-model="visible2" title="title" cancelText="取消">
 
     </h-actionsheet>
@@ -49,6 +49,11 @@ export default {
     },
     handleClick2() {
       this.visible1 = true;
+    },
+    onSelect(item) {
+      // 点击选项时默认不会关闭菜单，可以手动关闭
+      this.show = false;
+      this.$toast(item.name);
     }
   }
 }

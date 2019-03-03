@@ -1,6 +1,7 @@
 ## Loading 加载
 
 ### 使用指南
+
 ``` javascript
 import { Loading } from 'hui';
 

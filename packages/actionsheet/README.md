@@ -1,6 +1,7 @@
 ## Actionsheet 上拉菜单
 
 ### 使用指南
+
 ``` javascript
 import { Actionsheet } from 'hui';
 
@@ -10,6 +11,7 @@ Vue.use(Actionsheet);
 ### 代码演示
 
 #### 基础用法
+
 需要传入一个`actions`的数组，数组的每一项是一个对象，对象属性见文档下方表格。
 
 ```html
@@ -87,8 +89,6 @@ export default {
 | cancel-text | 取消按钮文字，为空时不展示取消按钮 | `String` | - |
 | overlay | 是否显示遮罩层 | `Boolean` | `true` |
 | close-on-click-overlay | 点击遮罩是否关闭菜单 | `Boolean` | `true` |
-| lazy-render | 是否在首次显示弹层时才渲染 DOM 节点 | `Boolean` | `true` |
-| get-container | 指定挂载的节点，可以传入 CSS 选择器，<br>或一个返回 DOM 节点的函数 | `String | () => HTMLElement` | - |
 
 ### Event
 
