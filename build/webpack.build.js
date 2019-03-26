@@ -7,6 +7,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 delete config.serve;
 
 module.exports = Object.assign(config, {
+  mode: 'production',
   entry: {
     'hui': './packages/index.js'
   },

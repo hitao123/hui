@@ -6,6 +6,7 @@ const merge = require('webpack-merge')
 delete config.devServer;
 
 module.exports = merge(config, {
+  mode: 'production',
   output: {
     path: path.join(__dirname, '../docs/dist'),
     publicPath: 'https://hitao123.github.io/hui/',
