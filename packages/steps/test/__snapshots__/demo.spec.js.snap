@@ -12,7 +12,7 @@ exports[`renders demo correctly 1`] = `
         </div>
         <div class="h-step h-step--horizontal h-step--process">
           <div class="h-step__title" style="color:#f60;">第二步</div>
-          <div class="h-step__circle-container"><i class="h-icon h-icon-checked" style="color:#f60;font-size:undefined;"></i></div>
+          <div class="h-step__circle-container"><i class="h-icon h-icon-checked" style="color:#f60;"></i></div>
           <div class="h-step__line"></div>
         </div>
         <div class="h-step h-step--horizontal">
@@ -38,7 +38,7 @@ exports[`renders demo correctly 1`] = `
         </div>
         <div class="h-step h-step--horizontal h-step--process">
           <div class="h-step__title" style="color:#f60;">完成</div>
-          <div class="h-step__circle-container"><i class="h-icon h-icon-checked" style="color:#f60;font-size:undefined;"></i></div>
+          <div class="h-step__circle-container"><i class="h-icon h-icon-checked" style="color:#f60;"></i></div>
           <div class="h-step__line"></div>
         </div>
       </div>
@@ -52,7 +52,7 @@ exports[`renders demo correctly 1`] = `
             <h3>【城市】物流状态1</h3>
             <p>2016-07-12 12:40</p>
           </div>
-          <div class="h-step__circle-container"><i class="h-icon h-icon-checked" style="color:#f60;font-size:undefined;"></i></div>
+          <div class="h-step__circle-container"><i class="h-icon h-icon-checked" style="color:#f60;"></i></div>
           <div class="h-step__line"></div>
         </div>
         <div class="h-step h-step--vertical">

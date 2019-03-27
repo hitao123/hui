@@ -4,43 +4,43 @@ exports[`renders demo correctly 1`] = `
 <div>
   <div>
     <div class="h-checkbox">
-      <div class="h-checkbox__icon h-checkbox__icon--round"><i class="h-icon h-icon-success" style="color:undefined;font-size:undefined;"></i></div> <span class="h-checkbox__label">原型复选框</span>
+      <div class="h-checkbox__icon h-checkbox__icon--round"><i class="h-icon h-icon-success"></i></div> <span class="h-checkbox__label">原型复选框</span>
     </div>
     <div class="h-checkbox">
-      <div class="h-checkbox__icon h-checkbox__icon--square"><i class="h-icon h-icon-success" style="color:undefined;font-size:undefined;"></i></div> <span class="h-checkbox__label">方形复选框</span>
+      <div class="h-checkbox__icon h-checkbox__icon--square"><i class="h-icon h-icon-success"></i></div> <span class="h-checkbox__label">方形复选框</span>
     </div>
   </div>
   <div>
     <div class="h-checkbox">
-      <div class="h-checkbox__icon h-checkbox__icon--round h-checkbox__icon--disabled h-checkbox__icon--checked"><i class="h-icon h-icon-success" style="color:undefined;font-size:undefined;"></i></div> <span class="h-checkbox__label">复选框 a</span>
+      <div class="h-checkbox__icon h-checkbox__icon--round h-checkbox__icon--disabled h-checkbox__icon--checked"><i class="h-icon h-icon-success"></i></div> <span class="h-checkbox__label">复选框 a</span>
     </div>
     <div class="h-checkbox">
-      <div class="h-checkbox__icon h-checkbox__icon--round h-checkbox__icon--disabled"><i class="h-icon h-icon-success" style="color:undefined;font-size:undefined;"></i></div> <span class="h-checkbox__label">复选框 b</span>
-    </div>
-  </div>
-  <div>
-    <div class="h-checkbox-group">
-      <div class="h-checkbox">
-        <div class="h-checkbox__icon h-checkbox__icon--round h-checkbox__icon--checked"><i class="h-icon h-icon-success" style="color:undefined;font-size:undefined;"></i></div> <span class="h-checkbox__label">复选框 a</span>
-      </div>
-      <div class="h-checkbox">
-        <div class="h-checkbox__icon h-checkbox__icon--round h-checkbox__icon--checked"><i class="h-icon h-icon-success" style="color:undefined;font-size:undefined;"></i></div> <span class="h-checkbox__label">复选框 b</span>
-      </div>
-      <div class="h-checkbox">
-        <div class="h-checkbox__icon h-checkbox__icon--round"><i class="h-icon h-icon-success" style="color:undefined;font-size:undefined;"></i></div> <span class="h-checkbox__label">复选框 c</span>
-      </div>
+      <div class="h-checkbox__icon h-checkbox__icon--round h-checkbox__icon--disabled"><i class="h-icon h-icon-success"></i></div> <span class="h-checkbox__label">复选框 b</span>
     </div>
   </div>
   <div>
     <div class="h-checkbox-group">
       <div class="h-checkbox">
-        <div class="h-checkbox__icon h-checkbox__icon--round"><i class="h-icon h-icon-success" style="color:undefined;font-size:undefined;"></i></div> <span class="h-checkbox__label">复选框 a</span>
+        <div class="h-checkbox__icon h-checkbox__icon--round h-checkbox__icon--checked"><i class="h-icon h-icon-success"></i></div> <span class="h-checkbox__label">复选框 a</span>
       </div>
       <div class="h-checkbox">
-        <div class="h-checkbox__icon h-checkbox__icon--round"><i class="h-icon h-icon-success" style="color:undefined;font-size:undefined;"></i></div> <span class="h-checkbox__label">复选框 b</span>
+        <div class="h-checkbox__icon h-checkbox__icon--round h-checkbox__icon--checked"><i class="h-icon h-icon-success"></i></div> <span class="h-checkbox__label">复选框 b</span>
       </div>
       <div class="h-checkbox">
-        <div class="h-checkbox__icon h-checkbox__icon--round"><i class="h-icon h-icon-success" style="color:undefined;font-size:undefined;"></i></div> <span class="h-checkbox__label">复选框 c</span>
+        <div class="h-checkbox__icon h-checkbox__icon--round"><i class="h-icon h-icon-success"></i></div> <span class="h-checkbox__label">复选框 c</span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="h-checkbox-group">
+      <div class="h-checkbox">
+        <div class="h-checkbox__icon h-checkbox__icon--round"><i class="h-icon h-icon-success"></i></div> <span class="h-checkbox__label">复选框 a</span>
+      </div>
+      <div class="h-checkbox">
+        <div class="h-checkbox__icon h-checkbox__icon--round"><i class="h-icon h-icon-success"></i></div> <span class="h-checkbox__label">复选框 b</span>
+      </div>
+      <div class="h-checkbox">
+        <div class="h-checkbox__icon h-checkbox__icon--round"><i class="h-icon h-icon-success"></i></div> <span class="h-checkbox__label">复选框 c</span>
       </div>
     </div>
   </div>
@@ -54,7 +54,7 @@ exports[`renders demo correctly 1`] = `
           </div>
           <div class="h-cell__value">
             <div class="h-checkbox">
-              <div class="h-checkbox__icon h-checkbox__icon--round h-checkbox__icon--checked"><i class="h-icon h-icon-success" style="color:undefined;font-size:undefined;"></i></div>
+              <div class="h-checkbox__icon h-checkbox__icon--round h-checkbox__icon--checked"><i class="h-icon h-icon-success"></i></div>
               <!---->
             </div>
           </div>
@@ -67,7 +67,7 @@ exports[`renders demo correctly 1`] = `
           </div>
           <div class="h-cell__value">
             <div class="h-checkbox">
-              <div class="h-checkbox__icon h-checkbox__icon--round"><i class="h-icon h-icon-success" style="color:undefined;font-size:undefined;"></i></div>
+              <div class="h-checkbox__icon h-checkbox__icon--round"><i class="h-icon h-icon-success"></i></div>
               <!---->
             </div>
           </div>
@@ -80,7 +80,7 @@ exports[`renders demo correctly 1`] = `
           </div>
           <div class="h-cell__value">
             <div class="h-checkbox">
-              <div class="h-checkbox__icon h-checkbox__icon--round"><i class="h-icon h-icon-success" style="color:undefined;font-size:undefined;"></i></div>
+              <div class="h-checkbox__icon h-checkbox__icon--round"><i class="h-icon h-icon-success"></i></div>
               <!---->
             </div>
           </div>

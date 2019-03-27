@@ -10,7 +10,7 @@ exports[`renders demo correctly 1`] = `
       <!----> <span class="h-button__text">action 取消</span></button></div>
   <div name="slide-bottom" class="h-actionsheet h-actionsheet--withtitle" style="display:none;">
     <div class="h-hairline--top-bottom h-actionsheet__header">
-      <div>title</div> <i class="h-icon h-icon-close" style="color:undefined;font-size:undefined;"></i>
+      <div>title</div> <i class="h-icon h-icon-close"></i>
     </div>
     <div class="h-actionsheet__content">
       <p>内容</p>
@@ -30,7 +30,7 @@ exports[`renders demo correctly 1`] = `
   </div>
   <div name="slide-bottom" class="h-actionsheet h-actionsheet--withtitle" style="display:none;">
     <div class="h-hairline--top-bottom h-actionsheet__header">
-      <div>title</div> <i class="h-icon h-icon-close" style="color:undefined;font-size:undefined;"></i>
+      <div>title</div> <i class="h-icon h-icon-close"></i>
     </div>
     <div class="h-actionsheet__cancel h-hairline--top">取消</div>
   </div>

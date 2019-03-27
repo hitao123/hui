@@ -43,13 +43,6 @@ export default {
   font-family: Dosis, "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   text-align: center;
 
-  &__youzan {
-    display: block;
-    width: 32px;
-    height: 32px;
-    margin: 25px 0 0;
-  }
-
   &__logo {
     width: 120px;
     height: 120px;
@@ -64,5 +57,22 @@ export default {
     font-size: 15px;
     color: #455a64;
   }
+}
+
+// .h-doc-header {
+//   &__top-nav {
+//     li {
+
+//     }
+//   }
+// }
+
+#search-form { /* stylelint-disable-line */
+  width: 200px;
+  margin-top: -5px;
+  font-size: 14px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 </style>
