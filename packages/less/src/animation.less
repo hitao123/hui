@@ -1,0 +1,31 @@
+@import "./common/var.less";
+
+@keyframes h-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes h-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.h-fade {
+  &-enter-active {
+    animation: @animation-duration-base h-fade-in;
+  }
+
+  &-leave-active {
+    animation: @animation-duration-base h-fade-out;
+  }
+}
