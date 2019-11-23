@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[75],{193:function(t,e,n){"use strict";n.r(e);var l={},o=n(0),s=Object(o.a)(l,function(){var t=this.$createElement,e=this._self._c||t;return e("demo-section",[e("demo-block",{attrs:{title:"基本用法"}})],1)},[],!1,null,null,null);e.default=s.exports}}]);
