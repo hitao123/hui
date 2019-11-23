@@ -19,7 +19,7 @@
     "dev": "npm run build:entry && webpack-dev-server --inline --progress --config build/webpack.dev.js",
     "lint": "eslint --ext .js,.vue src test/unit && stylelint \"packages/*.less\"",
     "build:entry": "node build/build-entry",
-    "build:hui": "cross-env NODE_ENV=production webpack --color --config build/webpack.build.js && cross-env NODE_ENV=production webpack -p --color --config build/webpack.build.js",
+    "build:doc": "cross-env NODE_ENV=production webpack --color --config build/webpack.build.js && cross-env NODE_ENV=production webpack -p --color --config build/webpack.build.js",
     "build:components": "node build/build-components.js --color",
     "build:style": "gulp --gulpfile packages/less/gulpfile.js --color --silent",
     "build:style-entry": "node build/build-style-entry.js",
