@@ -7,6 +7,7 @@
       simulator="mobile.html"
       :simulators="simulators"
       :current-simulator="currentSimulator"
+      :search-config="searchConfig"
     >
       <router-view />
     </h-doc>
@@ -14,10 +15,11 @@
 </template>
 
 <script>
-import docConfig from './doc.config';
+import docConfig, {searchConfig} from './doc.config';
 
 export default {
   data() {
+    this.searchConfig = searchConfig;
     return {
       simulators: [`mobile.html${location.hash}`],
       demoURL: ''

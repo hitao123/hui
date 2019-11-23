@@ -1,7 +1,15 @@
-module.exports = {
+import pkgJson from '../../package.json';
+
+export const searchConfig = {
+  apiKey: '152e16751e1d4c73051594d1c118915a',
+  indexName: 'hitao123_hui'
+};
+
+export default {
   header: {
     logo: {
       title: 'Hui',
+      version: pkgJson.version,
       href: '#/'
     },
     nav: {
