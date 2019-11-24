@@ -4,14 +4,18 @@ import componentDemos from './demo-entry'
 import DemoList from './components/DemoList'
 import './utils/iframe-router';
 
-const registerRoute = (isDemo) => {
+/**
+ * @param {boolean} isMobile
+ * 是否在模拟器
+ */
+const registerRoute = (isMobile) => {
   const route = [{
     path: '*',
     redirect: to => `/`
   }];
 
   Object.keys(docConfig).forEach((item) => {
-    if (isDemo) {
+    if (isMobile) {
       route.push({
         path: `/`,
         component: DemoList
@@ -27,11 +31,9 @@ const registerRoute = (isDemo) => {
     navs.forEach(nav => {
       if (nav.groups) {
         nav.groups.forEach(group => {
-          // console.log(group, '=====group')
           group.list.forEach(page => addRoute(page))
         })
       } else {
-        // console.log(nav, 'nav===>')
         addRoute(nav)
       }
     });
@@ -41,21 +43,21 @@ const registerRoute = (isDemo) => {
     let { path } = page;
     if (path) {
       path = path.replace('/', '');
-      // console.log(path, '🐶')
       let component
-      // if (path === 'demo') {
-      //   component = DemosPage;
-      // } else {
-      //   component = componentDemos[path]
-      // }
-      component = isDemo ? componentDemos[path] : componentDocs[`${path}.README`]
-      // console.log(component, '🐎🐎')
+
+      component = isMobile ? componentDemos[path] : componentDocs[`${path}.README`]
+
       if (!component) {
         return;
       }
-      if (route.name === path) {
-        return;
+
+      for (let i = 0; i < route.length; i++) {
+        const hasRoutePath = route[i].path && route[i].path.replace('/', '');
+        if (hasRoutePath === path) {
+          return;
+        }
       }
+
       route.push({
         name: path,
         component,
@@ -67,7 +69,7 @@ const registerRoute = (isDemo) => {
       })
     }
   }
-  console.log(route);
+
   return route;
 }
 

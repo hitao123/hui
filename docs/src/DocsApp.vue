@@ -61,14 +61,6 @@ export default {
   }
 }
 
-// .h-doc-header {
-//   &__top-nav {
-//     li {
-
-//     }
-//   }
-// }
-
 #search-form { /* stylelint-disable-line */
   width: 200px;
   margin-top: -5px;
