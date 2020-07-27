@@ -3,6 +3,10 @@
     <div
       :style="trackStyle"
       :class="bem('track')"
+      @touchstart="onTouchStart"
+      @touchmove="onTouchMove"
+      @touchend="onTouchEnd"
+      @touchcancel="onTouchEnd"
     >
       <slot></slot>
     </div>
@@ -16,7 +20,7 @@
 <script>
 import create from '../utils/create';
 import Touch from '../utils/mixins/touch';
-import { off } from '../utils/event';
+import { on, off, preventDefault } from '../utils/event';
 
 export default create({
   name: 'swipe',
@@ -43,6 +47,10 @@ export default create({
     showIndicators: {
       type: Boolean,
       default: true
+    },
+    touchable: {
+      type: Boolean,
+      default: true
     }
   },
   data() {
@@ -50,6 +58,8 @@ export default create({
       computedWidth: 0,
       computedHeight: 0,
       offset: 0,
+      deltaX: 0,
+      deltaY: 0,
       active: 0,
       swipes: [],
       swiping: false
@@ -69,6 +79,9 @@ export default create({
     size() {
       return this[this.vertical ? 'computedHeight' : 'computedWidth'];
     },
+    delta() {
+      return this.vertical ? this.deltaY : this.deltaX;
+    },
     trackSize() {
       return this.count * this.size;
     },
@@ -78,11 +91,15 @@ export default create({
   },
   mounted() {
     this.initialize();
+
+    if (!this.$isServer) {
+      on(window, 'resize', this.onResize, true);
+    }
   },
   destroyed() {
     this.clear();
     if (!this.$isServer) {
-      off(window, 'resize', function() { }, true);
+      off(window, 'resize', this.onResize, true);
     }
   },
   watch: {
@@ -112,26 +129,36 @@ export default create({
       });
       this.autoPlay();
     },
-    move(move = 0, offset = 0) {
-      const { active, count, swipes, trackSize } = this;
+    move({ pace = 0, offset = 0 }) {
+      const { active, count, swipes, trackSize, delta } = this;
       const atFirst = active === 0;
       const atLast = active === count - 1;
-      // 这里不加，动画会不连续
-      swipes[0].offset = atLast ? trackSize : 0;
-      swipes[count - 1].offset = atFirst ? -trackSize : 0;
+      const outOfBounds = (atFirst && (offset > 0 || pace < 0)) || (atLast && (offset > 0 || pace > 0))
 
-      if (move && active + move >= -1 && active + move <= count) {
-        this.active += move;
+      if (outOfBounds || count <= 1) {
+        return;
+      }
+
+      if (swipes[0]) {
+        swipes[0].offset = atLast && (delta < 0 || pace > 0) ? trackSize : 0;
+      }
+
+      if (swipes[count - 1]) {
+        swipes[count - 1].offset = atFirst && (delta > 0 || pace < 0) ? -trackSize : 0;
+      }
+
+      if (pace && active + pace >= -1 && active + pace <= count) {
+        this.active += pace;
       }
 
       this.offset = offset - this.active * this.size;
     },
     correctPosition() {
       if (this.active <= -1) {
-        this.move(this.count);
+        this.move({ pace: this.count });
       }
       if (this.active >= this.count) {
-        this.move(-this.count);
+        this.move({ pace: -this.count });
       }
     },
     autoPlay() {
@@ -141,11 +168,11 @@ export default create({
         this.clear();
         this.timer = setTimeout(() => {
           this.swiping = true;
+          this.resetTouchStatus();
           this.correctPosition();
-          // 递归达到同样效果 setInterval
           setTimeout(() => {
             this.swiping = false;
-            this.move(1);
+            this.move({ pace: 1 });
             this.autoPlay();
           }, 30);
         }, autoplay);
@@ -153,6 +180,39 @@ export default create({
     },
     clear() {
       clearTimeout(this.timer);
+    },
+    onTouchStart(event) {
+      if (!this.touchable) {
+        return;
+      }
+      this.clear();
+      this.swiping = true;
+      this.touchStart(event);
+      this.correctPosition();
+    },
+    onTouchMove(event) {
+      if (!this.touchable || !this.swiping) {
+        return;
+      }
+      this.touchMove(event);
+      preventDefault(event, true);
+      this.move({ offset: Math.min(Math.max(this.delta, -this.size), this.size) })
+    },
+    onTouchEnd(event) {
+      if (!this.touchable || !this.swiping) {
+        return;
+      }
+
+      if (this.delta) {
+        const offset = this.vertical ? this.offsetY : this.offsetX;
+        this.move({ pace: offset > 0 ? (this.delta > 0 ? -1 : 1) : 0 })
+      }
+
+      this.swiping = false;
+      this.autoPlay();
+    },
+    onResize() {
+      this.initialize();
     }
   }
 })

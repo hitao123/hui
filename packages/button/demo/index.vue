@@ -18,11 +18,11 @@
     </demo-block>
     <demo-block title="按钮大小">
       <div class="demo-button-row">
-        <h-button size="large">大号按钮</h-button>
+        <h-button size="large" type="primary">大号按钮</h-button>
       </div>
-      <h-button size="normal">普通按钮</h-button>
-      <h-button size="small">小型按钮</h-button>
-      <h-button size="mini">迷你按钮</h-button>
+      <h-button size="normal" type="primary">普通按钮</h-button>
+      <h-button size="small" type="primary">小型按钮</h-button>
+      <h-button size="mini" type="primary">迷你按钮</h-button>
     </demo-block>
     <demo-block title="禁用状态">
       <h-button @click="handleClick" type="primary" disabled>禁用状态</h-button>
@@ -50,6 +50,12 @@ export default {
   .demo-button {
     &-row {
       margin-bottom: 10px;
+    }
+    .h-button--normal:not(:last-child) {
+      margin-right: 16px;
+    }
+    .h-button--small {
+      margin-right: 16px;
     }
   }
 </style>

@@ -17,10 +17,10 @@ exports[`renders demo correctly 1`] = `
       <!----> <span class="h-button__text">危险按钮</span></button>
   </div>
   <div>
-    <div class="demo-button-row"><button class="h-button h-button--default h-button--large">
-        <!----> <span class="h-button__text">大号按钮</span></button></div> <button class="h-button h-button--default h-button--normal">
-      <!----> <span class="h-button__text">普通按钮</span></button> <button class="h-button h-button--default h-button--small">
-      <!----> <span class="h-button__text">小型按钮</span></button> <button class="h-button h-button--default h-button--mini">
+    <div class="demo-button-row"><button class="h-button h-button--primary h-button--large">
+        <!----> <span class="h-button__text">大号按钮</span></button></div> <button class="h-button h-button--primary h-button--normal">
+      <!----> <span class="h-button__text">普通按钮</span></button> <button class="h-button h-button--primary h-button--small">
+      <!----> <span class="h-button__text">小型按钮</span></button> <button class="h-button h-button--primary h-button--mini">
       <!----> <span class="h-button__text">迷你按钮</span></button>
   </div>
   <div><button disabled="disabled" class="h-button h-button--primary h-button--normal h-button--disabled">
