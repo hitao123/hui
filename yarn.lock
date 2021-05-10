@@ -4940,8 +4940,8 @@ hoopy@^0.1.2:
   resolved "https://registry.yarnpkg.com/hoopy/-/hoopy-0.1.4.tgz#609207d661100033a9a9402ad3dea677381c1b1d"
 
 hosted-git-info@^2.1.4:
-  version "2.7.1"
-  resolved "http://registry.npm.taobao.org/hosted-git-info/download/hosted-git-info-2.7.1.tgz#97f236977bd6e125408930ff6de3eec6281ec047"
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
 
 hpack.js@^2.1.6:
   version "2.1.6"
@@ -5078,9 +5078,9 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/https-browserify/download/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
-hui-doc@^1.1.7:
-  version "1.1.7"
-  resolved "http://registry.npm.taobao.org/hui-doc/download/hui-doc-1.1.7.tgz#ce3e22932a8b345963265a92cb4737192bf19b58"
+hui-doc@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/hui-doc/-/hui-doc-1.1.8.tgz#db77ef9209222c23531837da710cc6dfc06fd68f"
   dependencies:
     cheerio "0.22.0"
     commander "^2.17.1"
