@@ -5078,9 +5078,9 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/https-browserify/download/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
-hui-doc@^1.1.7:
-  version "1.1.7"
-  resolved "http://registry.npm.taobao.org/hui-doc/download/hui-doc-1.1.7.tgz#ce3e22932a8b345963265a92cb4737192bf19b58"
+hui-doc@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/hui-doc/-/hui-doc-1.1.8.tgz#db77ef9209222c23531837da710cc6dfc06fd68f"
   dependencies:
     cheerio "0.22.0"
     commander "^2.17.1"
@@ -9916,8 +9916,8 @@ tmp@^0.0.33:
     os-tmpdir "~1.0.2"
 
 tmpl@1.0.x:
-  version "1.0.4"
-  resolved "http://registry.npm.taobao.org/tmpl/download/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.5.tgz#8683e0b902bb9c20c4f726e3c0b69f36518c07cc"
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
